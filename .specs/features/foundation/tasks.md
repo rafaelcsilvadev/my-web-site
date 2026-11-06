@@ -275,10 +275,10 @@ T17 → T18
 
 **Done when**:
 
-- [ ] `tests/helpers/contrast.test.ts` written first and seen failing
-- [ ] Tests: `#000000` vs `#FFFFFF` = 21; same color = 1; `#881E9B` on `#0B0B10` < 3; `readThemeTokens` returns the declared colors from a sample `@theme` block and ignores other rules
-- [ ] Gate check passes: `pnpm test`
-- [ ] Test count: 4+ new tests pass
+- [x] `tests/helpers/contrast.test.ts` written first and seen failing
+- [x] Tests: `#000000` vs `#FFFFFF` = 21; same color = 1; `#881E9B` on `#0B0B10` < 3; `readThemeTokens` returns the declared colors from a sample `@theme` block and ignores other rules
+- [x] Gate check passes: `pnpm test`
+- [x] Test count: 4+ new tests pass
 
 **Tests**: unit
 **Gate**: quick
