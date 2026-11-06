@@ -493,11 +493,11 @@ T17 → T18
 
 **Done when**:
 
-- [ ] `tests/app/layout.test.tsx` and `tests/app/page.test.tsx` written first and seen failing (fonts mocked with `vi.mock`)
-- [ ] Tests: `renderToStaticMarkup` of the layout contains `<html lang="pt-BR"` and both font variable classes and the children; exported `metadata` equals `buildSiteMetadata` output; exported `viewport` has theme color `#0B0B10`; page renders one `h1` with the site name
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test && pnpm build`
-- [ ] `pnpm start` then `curl -s -o /dev/null -w "%{http_code}" localhost:3000/` returns `200`, and the HTML contains `<html lang="pt-BR"`, `og:title`, `theme-color`
-- [ ] Test count: 5+ new tests pass
+- [x] `tests/app/layout.test.tsx` and `tests/app/page.test.tsx` written first and seen failing (fonts mocked with `vi.mock`)
+- [x] Tests: `renderToStaticMarkup` of the layout contains `<html lang="pt-BR"` and both font variable classes and the children; exported `metadata` equals `buildSiteMetadata` output; exported `viewport` has theme color `#0B0B10`; page renders one `h1` with the site name
+- [x] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test && pnpm build`
+- [x] `pnpm start` then `curl -s -o /dev/null -w "%{http_code}" localhost:3000/` returns `200`, and the HTML contains `<html lang="pt-BR"`, `og:title`, `theme-color`
+- [x] Test count: 5+ new tests pass
 
 **Tests**: unit
 **Gate**: build
