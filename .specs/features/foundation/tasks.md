@@ -193,11 +193,11 @@ T17 → T18
 
 **Done when**:
 
-- [ ] `tests/lint/boundaries.test.ts` written first and seen failing (rules absent), then passing
-- [ ] Uses `ESLint.lintText` with `filePath`: `src/models/x.ts` importing `react` → error; `src/services/x.ts` importing `next/image` → error; `src/app/x.ts` importing `../../ui/a` → error
-- [ ] Clean files in the same paths → 0 errors; `src/components/ui/button` import → 0 errors (regex anchored)
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
-- [ ] Test count: 3 test files, 7+ tests pass
+- [x] `tests/lint/boundaries.test.ts` written first and seen failing (rules absent), then passing
+- [x] Uses `ESLint.lintText` with `filePath`: `src/models/x.ts` importing `react` → error; `src/services/x.ts` importing `next/image` → error; `src/app/x.ts` importing `../../ui/a` → error
+- [x] Clean files in the same paths → 0 errors; `src/components/ui/button` import → 0 errors (regex anchored)
+- [x] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test` (typescript pinned to ~6.0.3: typescript-eslint 8.72 rejects TS 7; decision: option A)
+- [x] Test count: 3 test files, 7+ tests pass
 
 **Tests**: unit
 **Gate**: full
