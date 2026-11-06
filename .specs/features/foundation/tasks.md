@@ -140,13 +140,13 @@ T17 → T18
 
 **Done when**:
 
-- [ ] `tests/tsconfig.test.ts` written first and seen failing, then passing
-- [ ] Test asserts `compilerOptions.strict === true` and the `@/*` alias
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test` (lint may have no source yet and must exit 0)
-- [ ] Test count: 2 test files, 2+ tests pass
+- [x] `tests/tsconfig.test.ts` written first and seen failing, then passing
+- [x] Test asserts `compilerOptions.strict === true` and the `@/*` alias
+- [x] Gate check passes: `pnpm typecheck && pnpm test` (lint excluded: ESLint 10 exits 2 without `eslint.config.*`, which T4 creates; decision: option A)
+- [x] Test count: 2 test files, 3 tests pass
 
 **Tests**: unit
-**Gate**: full
+**Gate**: quick + typecheck (lint joins the gate from T4)
 
 **Commit**: `chore: add strict TypeScript config`
 
@@ -168,11 +168,11 @@ T17 → T18
 **Done when**:
 
 - [ ] `pnpm test` still passes with the existing tests
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
+- [ ] Gate check passes: `pnpm typecheck && pnpm test` (no lint config until T4)
 - [ ] Test count: 2 test files unchanged (no silent deletions)
 
 **Tests**: none (config; exercised by T5 and T13 per the matrix)
-**Gate**: full
+**Gate**: quick + typecheck
 
 **Commit**: `chore: add Vitest config with jsdom and path alias`
 
