@@ -549,10 +549,10 @@ T17 → T18
 
 **Done when**:
 
-- [ ] `tests/structure.test.ts` written first and seen failing (`src/viewmodels/` missing), then passing
-- [ ] Tests: the six directories exist; every mirrored test has a matching source file
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test && pnpm build`
-- [ ] Test count: 2+ new tests pass
+- [x] `tests/structure.test.ts` written first and seen failing (`src/viewmodels/` missing), then passing
+- [x] Tests: the six directories exist; every mirrored test has a matching source file
+- [x] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test && pnpm build`
+- [x] Test count: 2+ new tests pass
 
 **Tests**: unit
 **Gate**: build
