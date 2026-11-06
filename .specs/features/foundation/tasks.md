@@ -167,9 +167,9 @@ T17 → T18
 
 **Done when**:
 
-- [ ] `pnpm test` still passes with the existing tests
-- [ ] Gate check passes: `pnpm typecheck && pnpm test` (no lint config until T4)
-- [ ] Test count: 2 test files unchanged (no silent deletions)
+- [x] `pnpm test` still passes with the existing tests
+- [x] Gate check passes: `pnpm typecheck && pnpm test` (no lint config until T4)
+- [x] Test count: 2 test files unchanged (no silent deletions)
 
 **Tests**: none (config; exercised by T5 and T13 per the matrix)
 **Gate**: quick + typecheck
