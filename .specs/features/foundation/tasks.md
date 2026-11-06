@@ -439,10 +439,10 @@ T17 → T18
 
 **Done when**:
 
-- [ ] `tests/components/HomePlaceholder.test.tsx` written first and seen failing
-- [ ] Tests: exactly one `h1` with the given title; `main` landmark present; no hardcoded text (title comes from props)
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
-- [ ] Test count: 3 new tests pass
+- [x] `tests/components/HomePlaceholder.test.tsx` written first and seen failing
+- [x] Tests: exactly one `h1` with the given title; `main` landmark present; no hardcoded text (title comes from props)
+- [x] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
+- [x] Test count: 3 new tests pass
 
 **Tests**: unit
 **Gate**: full
