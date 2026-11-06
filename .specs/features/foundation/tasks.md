@@ -329,9 +329,9 @@ T17 → T18
 
 **Done when**:
 
-- [ ] File exports the `@tailwindcss/postcss` plugin
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
-- [ ] Test count: unchanged (no silent deletions); effect is verified by the T15 build
+- [x] File exports the `@tailwindcss/postcss` plugin
+- [x] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
+- [x] Test count: unchanged (no silent deletions); effect is verified by the T15 build
 
 **Tests**: none (config; per the matrix)
 **Gate**: full
