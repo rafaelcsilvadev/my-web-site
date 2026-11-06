@@ -112,11 +112,11 @@ T17 → T18
 
 **Done when**:
 
-- [ ] `tests/scripts.test.ts` written first and seen failing (scripts missing), then passing
-- [ ] Test asserts the 6 scripts exist with the commands above
-- [ ] `pnpm install` succeeds and `pnpm-lock.yaml` is created
-- [ ] Gate check passes: `pnpm test`
-- [ ] Test count: 1 test file, 1 test passes (no silent deletions)
+- [x] `tests/scripts.test.ts` written first and seen failing (scripts missing), then passing
+- [x] Test asserts the 6 scripts exist with the commands above
+- [x] `pnpm install` succeeds and `pnpm-lock.yaml` is created
+- [x] Gate check passes: `pnpm test`
+- [x] Test count: 1 test file, 1 test passes (no silent deletions)
 
 **Tests**: unit
 **Gate**: quick
