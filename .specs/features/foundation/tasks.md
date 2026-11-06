@@ -521,11 +521,11 @@ T17 → T18
 
 **Done when**:
 
-- [ ] `tests/app/not-found.test.tsx` written first and seen failing
-- [ ] Test: output shows the `notFound` title and a link to `/`
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test && pnpm build`
-- [ ] `pnpm start` then `curl` checks: `/nao-existe` → `404`; `/og-image.png` → `200` with `content-type: image/png`; `/favicon.svg` → `200`; `/` → `200`; the page and CSS contain no `fonts.googleapis.com`
-- [ ] Test count: 2+ new tests pass
+- [x] `tests/app/not-found.test.tsx` written first and seen failing
+- [x] Test: output shows the `notFound` title and a link to `/`
+- [x] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test && pnpm build`
+- [x] `pnpm start` then `curl` checks: `/nao-existe` → `404`; `/og-image.png` → `200` with `content-type: image/png`; `/favicon.svg` → `200`; `/` → `200`; the page and CSS contain no `fonts.googleapis.com`
+- [x] Test count: 2+ new tests pass
 
 **Tests**: unit
 **Gate**: build
