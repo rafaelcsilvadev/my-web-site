@@ -185,11 +185,11 @@ T24 → T25
 
 **Done when**:
 
-- [ ] `tests/content/home.test.ts` written first and seen failing (module missing)
-- [ ] Test asserts the five nav labels/section ids in order, footer text, back-to-top href `#top`, main id `conteudo`
-- [ ] Model file imports nothing from React/Next (ESLint boundary passes)
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
-- [ ] Test count: previous count + at least 4 tests
+- [x] `tests/content/home.test.ts` written first and seen failing (module missing)
+- [x] Test asserts the five nav labels/section ids in order, footer text, back-to-top href `#top`, main id `conteudo`
+- [x] Model file imports nothing from React/Next (ESLint boundary passes)
+- [x] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
+- [x] Test count: previous count + at least 4 tests
 
 **Tests**: unit
 **Gate**: full
