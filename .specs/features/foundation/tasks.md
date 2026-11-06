@@ -466,10 +466,10 @@ T17 → T18
 
 **Done when**:
 
-- [ ] `tests/components/NotFoundView.test.tsx` written first and seen failing
-- [ ] Tests: `h1` shows the title; message shown; link with `href="/"` shows the back label
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
-- [ ] Test count: 3 new tests pass
+- [x] `tests/components/NotFoundView.test.tsx` written first and seen failing
+- [x] Tests: `h1` shows the title; message shown; link with `href="/"` shows the back label
+- [x] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
+- [x] Test count: 3 new tests pass
 
 **Tests**: unit
 **Gate**: full
