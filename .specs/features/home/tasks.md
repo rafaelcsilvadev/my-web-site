@@ -157,11 +157,11 @@ T24 → T25
 
 **Done when**:
 
-- [ ] Test added first and seen failing (file missing)
-- [ ] File starts with `%PDF` and is non-empty
-- [ ] Allow-list test lists the PDF
-- [ ] Gate check passes: `pnpm test`
-- [ ] Test count: previous count + 2 tests, none removed
+- [x] Test added first and seen failing (file missing)
+- [x] File starts with `%PDF` and is non-empty
+- [x] Allow-list test lists the PDF
+- [x] Gate check passes: `pnpm test`
+- [x] Test count: previous count + 2 tests, none removed
 
 **Tests**: unit
 **Gate**: quick

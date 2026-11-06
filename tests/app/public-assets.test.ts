@@ -13,6 +13,7 @@ const expectedAssets = [
   "favicon.svg",
   "og-image.png",
   "rafael-portrait.png",
+  "cv-rafael-couto-silva.pdf",
 ];
 
 describe("public assets", () => {
@@ -36,6 +37,12 @@ describe("public assets", () => {
     expect(bytes.subarray(12, 16).toString("ascii")).toBe("IHDR");
     expect(bytes.readUInt32BE(16)).toBe(1254);
     expect(bytes.readUInt32BE(20)).toBe(1254);
+  });
+
+  it("serves cv-rafael-couto-silva.pdf as a non-empty PDF", () => {
+    const bytes = readFileSync(join(publicDir, "cv-rafael-couto-silva.pdf"));
+    expect(bytes.length).toBeGreaterThan(0);
+    expect(bytes.subarray(0, 4).toString("ascii")).toBe("%PDF");
   });
 
   it("contains no image besides the expected ones", () => {
