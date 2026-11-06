@@ -12,6 +12,7 @@ const expectedAssets = [
   "favicon.ico",
   "favicon.svg",
   "og-image.png",
+  "rafael-portrait.png",
 ];
 
 describe("public assets", () => {
@@ -26,6 +27,15 @@ describe("public assets", () => {
     expect(bytes.subarray(12, 16).toString("ascii")).toBe("IHDR");
     expect(bytes.readUInt32BE(16)).toBe(1200);
     expect(bytes.readUInt32BE(20)).toBe(630);
+  });
+
+  it("serves rafael-portrait.png as a 1254x1254 PNG", () => {
+    const bytes = readFileSync(join(publicDir, "rafael-portrait.png"));
+    const signature = bytes.subarray(0, 8).toString("hex");
+    expect(signature).toBe("89504e470d0a1a0a");
+    expect(bytes.subarray(12, 16).toString("ascii")).toBe("IHDR");
+    expect(bytes.readUInt32BE(16)).toBe(1254);
+    expect(bytes.readUInt32BE(20)).toBe(1254);
   });
 
   it("contains no image besides the expected ones", () => {
