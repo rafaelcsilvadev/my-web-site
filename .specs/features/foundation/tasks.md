@@ -248,10 +248,10 @@ T17 → T18
 
 **Done when**:
 
-- [ ] `tests/content/site.test.ts` written first and seen failing
-- [ ] Tests assert exact name, title, description and OG alt strings, and that every `notFound` field is a non-empty string
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
-- [ ] Test count: 5 new tests pass
+- [x] `tests/content/site.test.ts` written first and seen failing
+- [x] Tests assert exact name, title, description and OG alt strings, and that every `notFound` field is a non-empty string
+- [x] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
+- [x] Test count: 5 new tests pass
 
 **Tests**: unit
 **Gate**: full
