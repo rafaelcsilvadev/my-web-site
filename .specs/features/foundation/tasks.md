@@ -329,9 +329,9 @@ T17 → T18
 
 **Done when**:
 
-- [ ] File exports the `@tailwindcss/postcss` plugin
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
-- [ ] Test count: unchanged (no silent deletions); effect is verified by the T15 build
+- [x] File exports the `@tailwindcss/postcss` plugin
+- [x] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
+- [x] Test count: unchanged (no silent deletions); effect is verified by the T15 build
 
 **Tests**: none (config; per the matrix)
 **Gate**: full
@@ -355,13 +355,13 @@ T17 → T18
 
 **Done when**:
 
-- [ ] `tests/app/tokens.test.ts` written first and seen failing
-- [ ] Tests: each color token equals its spec value; `--font-sans` and `--font-mono` reference the font variables; `body` sets bg, fg, `color-scheme: dark`
-- [ ] Contrast: `fg`, `fg-muted`, `brand-text` on `bg` each ≥ 4.5
-- [ ] Focus rule is `2px solid #E3B5F0` with `3px` offset; `prefers-reduced-motion: reduce` block disables transition and animation
-- [ ] No `src/**` file uses `text-brand` (regex `\btext-brand(?![-\w])`) or `color: var(--color-brand)`
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
-- [ ] Test count: 12+ new tests pass
+- [x] `tests/app/tokens.test.ts` written first and seen failing
+- [x] Tests: each color token equals its spec value; `--font-sans` and `--font-mono` reference the font variables; `body` sets bg, fg, `color-scheme: dark`
+- [x] Contrast: `fg`, `fg-muted`, `brand-text` on `bg` each ≥ 4.5
+- [x] Focus rule is `2px solid #E3B5F0` with `3px` offset; `prefers-reduced-motion: reduce` block disables transition and animation
+- [x] No `src/**` file uses `text-brand` (regex `\btext-brand(?![-\w])`) or `color: var(--color-brand)`
+- [x] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
+- [x] Test count: 12+ new tests pass
 
 **Tests**: unit
 **Gate**: full

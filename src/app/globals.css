@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0B0B10;
+  --color-card-from: #16161F;
+  --color-card-to: #101018;
+  /* Fills, borders and glow only. Never a text color. */
+  --color-brand: #881E9B;
+  --color-brand-text: #C77DDB;
+  --color-brand-light: #E3B5F0;
+  --color-brand-hover: #9B2BAF;
+  --color-brand-pressed: #6F1780;
+  --color-fg: #ECEAF3;
+  --color-fg-muted: #A9A6BA;
+  --color-line: rgb(255 255 255 / 0.08);
+
+  --font-sans: var(--font-manrope);
+  --font-mono: var(--font-jetbrains-mono);
+}
+
+@layer base {
+  body {
+    background: var(--color-bg);
+    color: var(--color-fg);
+    color-scheme: dark;
+    font-family: var(--font-sans);
+  }
+
+  :focus-visible {
+    outline: 2px solid #E3B5F0;
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation: none !important;
+      transition: none !important;
+    }
+  }
+}
