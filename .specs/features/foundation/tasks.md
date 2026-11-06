@@ -412,10 +412,10 @@ T17 → T18
 
 **Done when**:
 
-- [ ] `tests/app/site-metadata.test.ts` written first and seen failing
-- [ ] Tests: every OG and Twitter value from the spec; `og:url` ends with `/`; image and `og:url` use the given `siteUrl`; serialized object does not contain `SEU-DOMINIO`; injecting alternate content changes title and OG title; every icon and image path resolves to a file in `public/`
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
-- [ ] Test count: 12+ new tests pass
+- [x] `tests/app/site-metadata.test.ts` written first and seen failing
+- [x] Tests: every OG and Twitter value from the spec; `og:url` ends with `/`; image and `og:url` use the given `siteUrl`; serialized object does not contain `SEU-DOMINIO`; injecting alternate content changes title and OG title; every icon and image path resolves to a file in `public/`
+- [x] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
+- [x] Test count: 12+ new tests pass
 
 **Tests**: unit
 **Gate**: full
