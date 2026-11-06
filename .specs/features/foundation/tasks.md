@@ -275,10 +275,10 @@ T17 → T18
 
 **Done when**:
 
-- [ ] `tests/helpers/contrast.test.ts` written first and seen failing
-- [ ] Tests: `#000000` vs `#FFFFFF` = 21; same color = 1; `#881E9B` on `#0B0B10` < 3; `readThemeTokens` returns the declared colors from a sample `@theme` block and ignores other rules
-- [ ] Gate check passes: `pnpm test`
-- [ ] Test count: 4+ new tests pass
+- [x] `tests/helpers/contrast.test.ts` written first and seen failing
+- [x] Tests: `#000000` vs `#FFFFFF` = 21; same color = 1; `#881E9B` on `#0B0B10` < 3; `readThemeTokens` returns the declared colors from a sample `@theme` block and ignores other rules
+- [x] Gate check passes: `pnpm test`
+- [x] Test count: 4+ new tests pass
 
 **Tests**: unit
 **Gate**: quick
@@ -302,10 +302,10 @@ T17 → T18
 
 **Done when**:
 
-- [ ] `tests/app/public-assets.test.ts` written first and seen failing
-- [ ] Tests: the 7 files exist; `og-image.png` has the PNG signature and IHDR size 1200×630; no other image is present in `public/`
-- [ ] Gate check passes: `pnpm test`
-- [ ] Test count: 3+ new tests pass
+- [x] `tests/app/public-assets.test.ts` written first and seen failing
+- [x] Tests: the 7 files exist; `og-image.png` has the PNG signature and IHDR size 1200×630; no other image is present in `public/`
+- [x] Gate check passes: `pnpm test`
+- [x] Test count: 3+ new tests pass
 
 **Tests**: unit
 **Gate**: quick
