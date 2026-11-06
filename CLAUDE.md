@@ -46,7 +46,15 @@ Static-first portfolio site. Public content is in PT-BR.
 
 - Next.js (App Router) + TypeScript (strict) + Tailwind CSS.
 - Tests: Vitest + Testing Library, in a top-level `tests/` directory that mirrors `src/`.
-- Package manager: pnpm. Exact scripts (dev, build, lint, test): record here once the app is scaffolded.
+- Package manager: pnpm. Scripts (`package.json`):
+  - `pnpm dev`: start the dev server.
+  - `pnpm build`: production build.
+  - `pnpm start`: serve the production build.
+  - `pnpm lint`: ESLint (also enforces the MVVM import boundaries).
+  - `pnpm typecheck`: `tsc --noEmit`.
+  - `pnpm test`: Vitest, single run.
+  - Full gate: `pnpm lint && pnpm typecheck && pnpm test && pnpm build`.
+- Env: `NEXT_PUBLIC_SITE_URL` is the public origin (http/https) used for canonical, Open Graph and Twitter URLs. Falls back to `http://localhost:3000` when empty. See `.env.example`.
 
 ### Architecture: MVVM
 
@@ -60,6 +68,7 @@ Static-first portfolio site. Public content is in PT-BR.
 
 - Code, identifiers, comments, tests and commits: English.
 - All user-facing text: PT-BR, kept in one place (`src/content/`), never hardcoded in components. `<html lang="pt-BR">`.
+- Review rule: components in `src/components/` and `src/app/` hold no hardcoded PT-BR strings. Reject any PR that inlines user-facing text instead of reading it from `src/content/`.
 
 ### External design inputs: `ui/`
 

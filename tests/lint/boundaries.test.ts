@@ -29,6 +29,11 @@ describe("MVVM import boundaries", () => {
     expect(errors.map((e) => e.ruleId)).toContain("no-restricted-imports");
   });
 
+  it("rejects bare ui/ imports from anywhere in src", async () => {
+    const errors = await lint("src/app/x.ts", 'import "ui/a";\n');
+    expect(errors.map((e) => e.ruleId)).toContain("no-restricted-imports");
+  });
+
   it("allows clean files in models and services", async () => {
     expect(await lint("src/models/x.ts", "export const a = 1;\n")).toHaveLength(0);
     expect(await lint("src/services/x.ts", "export const a = 1;\n")).toHaveLength(0);

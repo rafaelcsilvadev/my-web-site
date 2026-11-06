@@ -576,9 +576,9 @@ T17 → T18
 
 **Done when**:
 
-- [ ] Every script named in `CLAUDE.md` exists in `package.json`
-- [ ] Full build gate passes: `pnpm lint && pnpm typecheck && pnpm test && pnpm build`
-- [ ] Test count: all earlier tests still pass (no silent deletions)
+- [x] Every script named in `CLAUDE.md` exists in `package.json`
+- [x] Full build gate passes: `pnpm lint && pnpm typecheck && pnpm test && pnpm build`
+- [x] Test count: all earlier tests still pass (no silent deletions)
 
 **Tests**: none (docs; per the matrix)
 **Gate**: build
