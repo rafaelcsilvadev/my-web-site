@@ -385,10 +385,10 @@ T17 → T18
 
 **Done when**:
 
-- [ ] `tests/app/fonts.test.ts` written first and seen failing; it asserts on source text because `next/font/google` cannot run under Vitest
-- [ ] Tests: `fonts.ts` imports from `next/font/google`; declares both CSS variable names; no file under `src/` references `fonts.googleapis.com`
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
-- [ ] Test count: 3 new tests pass
+- [x] `tests/app/fonts.test.ts` written first and seen failing; it asserts on source text because `next/font/google` cannot run under Vitest
+- [x] Tests: `fonts.ts` imports from `next/font/google`; declares both CSS variable names; no file under `src/` references `fonts.googleapis.com`
+- [x] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
+- [x] Test count: 3 new tests pass
 
 **Tests**: unit
 **Gate**: full
