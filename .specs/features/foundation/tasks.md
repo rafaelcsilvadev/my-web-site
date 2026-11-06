@@ -221,10 +221,10 @@ T17 → T18
 
 **Done when**:
 
-- [ ] `tests/services/site-url.test.ts` written first and seen failing
-- [ ] Tests: undefined → fallback; `""` and `"  "` → fallback; `https://a.com/` → `https://a.com`; `https://a.com//` → `https://a.com`; `https://a.com` unchanged; `ftp://a.com` throws; `not a url` throws; message contains `NEXT_PUBLIC_SITE_URL`
-- [ ] Gate check passes: `pnpm test`
-- [ ] Test count: 8 new tests pass
+- [x] `tests/services/site-url.test.ts` written first and seen failing
+- [x] Tests: undefined → fallback; `""` and `"  "` → fallback; `https://a.com/` → `https://a.com`; `https://a.com//` → `https://a.com`; `https://a.com` unchanged; `ftp://a.com` throws; `not a url` throws; message contains `NEXT_PUBLIC_SITE_URL`
+- [x] Gate check passes: `pnpm test`
+- [x] Test count: 8 new tests pass
 
 **Tests**: unit
 **Gate**: quick
