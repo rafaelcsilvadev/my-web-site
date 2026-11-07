@@ -471,13 +471,13 @@ T24 → T25
 
 **Done when**:
 
-- [ ] Tests written first and seen failing: content test (all strings above verbatim) and `tests/components/ProjectCard.test.tsx`
-- [ ] Card shows context, `h3` title, description, every metric label and value, every tag
-- [ ] "Ver o caso" link has the card's `caseLink` href; repo link has `target="_blank"` and `rel="noopener noreferrer"`; without `repoLink` no repo link renders
-- [ ] Empty `metrics` or `tags` renders no container for them
-- [ ] No PT-BR literal in source
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
-- [ ] Test count: previous count + at least 9 tests
+- [x] Tests written first and seen failing: content test (all strings above verbatim) and `tests/components/ProjectCard.test.tsx`
+- [x] Card shows context, `h3` title, description, every metric label and value, every tag
+- [x] "Ver o caso" link has the card's `caseLink` href; repo link has `target="_blank"` and `rel="noopener noreferrer"`; without `repoLink` no repo link renders
+- [x] Empty `metrics` or `tags` renders no container for them
+- [x] No PT-BR literal in source
+- [x] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
+- [x] Test count: previous count + at least 9 tests
 
 **Tests**: unit
 **Gate**: full
