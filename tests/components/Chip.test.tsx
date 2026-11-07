@@ -14,6 +14,6 @@ describe("Chip", () => {
     const { rerender } = render(<Chip label="Any label" />);
     expect(screen.getByText("Any label")).not.toHaveClass("border-brand-text");
     rerender(<Chip label="Any label" main />);
-    expect(screen.getByText("Any label")).toHaveClass("border-brand-text");
+    expect(screen.getByText("Any label")).toHaveClass("border-brand-text", "bg-brand/15");
   });
 });
