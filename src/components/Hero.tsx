@@ -10,10 +10,10 @@ export function Hero({ hero }: HeroProps) {
   const { label, headline, badge, intro, stackLine, actions, portrait } = hero;
 
   return (
-    <section className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-16 md:grid-cols-2 md:py-24">
+    <section aria-labelledby="hero-title" className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-16 md:grid-cols-2 md:py-24">
       <div className="flex flex-col items-start gap-6">
         <p className="font-mono text-sm text-brand-light">{label}</p>
-        <h1 className="text-4xl font-extrabold tracking-tight text-fg md:text-5xl">{headline}</h1>
+        <h1 id="hero-title" className="text-4xl font-extrabold tracking-tight text-fg md:text-5xl">{headline}</h1>
         <p className="flex items-center gap-3 text-sm text-fg-muted">
           <span className="rounded-full border border-brand-text px-3 py-1 font-mono text-xs text-brand-light">
             {badge.label}
