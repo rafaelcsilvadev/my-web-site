@@ -326,12 +326,12 @@ T24 → T25
 
 **Done when**:
 
-- [ ] `tests/viewmodels/use-mobile-menu.test.tsx` written first (`renderHook`) and seen failing
-- [ ] Initial state closed; `toggle` opens, second `toggle` closes; `close` closes
-- [ ] Escape closes when open and does nothing when closed
-- [ ] After close and after unmount no `keydown` listener remains (spy on `add/removeEventListener`)
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
-- [ ] Test count: previous count + at least 6 tests
+- [x] `tests/viewmodels/use-mobile-menu.test.tsx` written first (`renderHook`) and seen failing
+- [x] Initial state closed; `toggle` opens, second `toggle` closes; `close` closes
+- [x] Escape closes when open and does nothing when closed
+- [x] After close and after unmount no `keydown` listener remains (spy on `add/removeEventListener`)
+- [x] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
+- [x] Test count: previous count + at least 6 tests
 
 **Tests**: unit
 **Gate**: full
