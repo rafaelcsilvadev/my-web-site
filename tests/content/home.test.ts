@@ -242,3 +242,41 @@ describe("homeContent.stack", () => {
     ]);
   });
 });
+
+describe("homeContent.method", () => {
+  const { method } = homeContent;
+
+  it("labels the human and AI rows", () => {
+    expect(method.humanLabel).toBe("Eu");
+    expect(method.aiLabel).toBe("IA");
+  });
+
+  it("lists the six steps numbered 01 to 06 with their titles, in order", () => {
+    expect(method.steps.map((s) => [s.number, s.title])).toEqual([
+      ["01", "Spec"],
+      ["02", "Design"],
+      ["03", "Tarefas"],
+      ["04", "Teste vermelho"],
+      ["05", "Código"],
+      ["06", "PR com revisão humana"],
+    ]);
+  });
+
+  it("has every Eu and IA line verbatim", () => {
+    expect(method.steps.map((s) => [s.human, s.ai])).toEqual([
+      [
+        "Entendo o projeto e decido o que cada feature precisa.",
+        "Me ajuda a entender o projeto e cria a spec de cada feature.",
+      ],
+      ["Decido a arquitetura e os contratos.", undefined],
+      ["Aprovo o recorte: uma tarefa por branch e por PR.", undefined],
+      ["Reviso os testes no PR.", "Cria os testes com TDD: o teste vermelho vem antes do código."],
+      ["Exijo commits pequenos.", "Implementa até o teste passar."],
+      ["Reviso cada Pull Request antes do merge.", "Me envia o link do PR."],
+    ]);
+  });
+
+  it("highlights only the red test step", () => {
+    expect(method.steps.filter((s) => s.highlight).map((s) => s.title)).toEqual(["Teste vermelho"]);
+  });
+});
