@@ -73,3 +73,49 @@ describe("homeContent.hero", () => {
     });
   });
 });
+
+describe("homeContent.projects", () => {
+  const { projects } = homeContent;
+  const [avaria, trello] = projects.items;
+
+  it("has the section header and exactly two cards in order", () => {
+    expect(projects.sectionId).toBe("projetos");
+    expect(projects.eyebrow).toBe("01 · Destaques");
+    expect(projects.title).toBe("Projetos em destaque");
+    expect(projects.items.map((item) => item.title)).toEqual(["Avaria", "My Trello Version"]);
+  });
+
+  it("has the Avaria card strings verbatim", () => {
+    expect(avaria.context).toEqual(["Trabalho · Mobs2", "App + API"]);
+    expect(avaria.description).toBe(
+      "Melhoria de uma versão difícil de manter, proposta por mim ainda como dev júnior e aprovada. Passei a responder pelas decisões técnicas. Rodou em produção por mais de 4 anos, para mais de 1 mil clientes.",
+    );
+    expect(avaria.metrics).toEqual([
+      { label: "Em produção", value: "+4 anos" },
+      { label: "Clientes", value: "+1 mil" },
+      { label: "Decisão de stack", value: "AdonisJS" },
+    ]);
+    expect(avaria.tags).toEqual(["TypeScript", "React Native", "Node.js · AdonisJS", "SQL Server"]);
+    expect(avaria.caseLink).toEqual({ label: "Ver o caso", href: "/casos/avaria" });
+    expect(avaria.repoLink).toBeUndefined();
+  });
+
+  it("has the My Trello Version card strings verbatim", () => {
+    expect(trello.context).toEqual(["Projeto pessoal · solo", "Código aberto"]);
+    expect(trello.description).toBe(
+      "Nasceu de uma dor real: eu queria um app de tarefas mais simples, gratuito e customizado. Feito sozinho, do requisito ao código, com especificação antes do código, TDD e revisão humana de cada Pull Request.",
+    );
+    expect(trello.metrics).toEqual([
+      { label: "PRs mergeados", value: "~456" },
+      { label: "commits na main", value: "~1.400" },
+      { label: "arquivos de teste", value: "~238" },
+    ]);
+    expect(trello.tags).toEqual(["NestJS", "React 19", "PostgreSQL", "Docker"]);
+    expect(trello.caseLink).toEqual({ label: "Ver o caso", href: "/casos/my-trello-version" });
+    expect(trello.repoLink).toEqual({
+      label: "Repositório no GitHub",
+      href: "https://github.com/rafaelcsilvadev/my-trello-version",
+      external: true,
+    });
+  });
+});

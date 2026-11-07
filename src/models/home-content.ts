@@ -9,6 +9,17 @@ export interface Metric {
   value: string;
 }
 
+export interface ProjectItem {
+  id: string;
+  context: string[];
+  title: string;
+  description: string;
+  metrics: Metric[];
+  tags: string[];
+  caseLink: Link;
+  repoLink?: Link;
+}
+
 export interface HomeContent {
   chrome: {
     skipLinkLabel: string;
@@ -27,4 +38,5 @@ export interface HomeContent {
     actions: { contact: Link; cv: Link };
     portrait: { src: string; width: number; height: number; alt: string; caption: string };
   };
+  projects: { sectionId: string; eyebrow: string; title: string; items: ProjectItem[] };
 }

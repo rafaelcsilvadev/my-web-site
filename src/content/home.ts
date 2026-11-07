@@ -42,5 +42,44 @@ export const homeContent: HomeContent = {
       alt: "Retrato profissional de Rafael Couto Silva em um setup roxo",
       caption: "Retrato criado com IA a partir de uma foto minha",
     },
+  },  projects: {
+    sectionId: "projetos",
+    eyebrow: "01 · Destaques",
+    title: "Projetos em destaque",
+    items: [
+      {
+        id: "avaria",
+        context: ["Trabalho · Mobs2", "App + API"],
+        title: "Avaria",
+        description:
+          "Melhoria de uma versão difícil de manter, proposta por mim ainda como dev júnior e aprovada. Passei a responder pelas decisões técnicas. Rodou em produção por mais de 4 anos, para mais de 1 mil clientes.",
+        metrics: [
+          { label: "Em produção", value: "+4 anos" },
+          { label: "Clientes", value: "+1 mil" },
+          { label: "Decisão de stack", value: "AdonisJS" },
+        ],
+        tags: ["TypeScript", "React Native", "Node.js · AdonisJS", "SQL Server"],
+        caseLink: { label: "Ver o caso", href: "/casos/avaria" },
+      },
+      {
+        id: "my-trello-version",
+        context: ["Projeto pessoal · solo", "Código aberto"],
+        title: "My Trello Version",
+        description:
+          "Nasceu de uma dor real: eu queria um app de tarefas mais simples, gratuito e customizado. Feito sozinho, do requisito ao código, com especificação antes do código, TDD e revisão humana de cada Pull Request.",
+        metrics: [
+          { label: "PRs mergeados", value: "~456" },
+          { label: "commits na main", value: "~1.400" },
+          { label: "arquivos de teste", value: "~238" },
+        ],
+        tags: ["NestJS", "React 19", "PostgreSQL", "Docker"],
+        caseLink: { label: "Ver o caso", href: "/casos/my-trello-version" },
+        repoLink: {
+          label: "Repositório no GitHub",
+          href: "https://github.com/rafaelcsilvadev/my-trello-version",
+          external: true,
+        },
+      },
+    ],
   },
 };
