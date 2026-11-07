@@ -51,6 +51,14 @@ describe("Hero", () => {
     expect(img).toHaveAttribute("height", "1254");
   });
 
+  it("serves the portrait with priority since it is the LCP element", () => {
+    render(<Hero hero={hero} />);
+    const img = screen.getByRole("img", {
+      name: "Retrato profissional de Rafael Couto Silva em um setup roxo",
+    });
+    expect(img).not.toHaveAttribute("loading", "lazy");
+  });
+
   it("renders the portrait caption in a figcaption", () => {
     render(<Hero hero={hero} />);
     const caption = screen.getByText("Retrato criado com IA a partir de uma foto minha");
