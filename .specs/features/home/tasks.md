@@ -9,7 +9,7 @@ Implement these tasks with the `tlc-spec-driven` skill: **activate it by name an
 ---
 
 **Design**: `.specs/features/home/design.md`
-**Status**: Draft
+**Status**: Approved
 
 ---
 
@@ -129,11 +129,11 @@ T24 → T25
 
 **Done when**:
 
-- [ ] Test added first and seen failing (file missing, allow-list rejects nothing yet)
-- [ ] `public/rafael-portrait.png` is a PNG, 1254 x 1254
-- [ ] The "no image besides the expected ones" test lists the new file
-- [ ] Gate check passes: `pnpm test`
-- [ ] Test count: previous count + 2 tests, none removed
+- [x] Test added first and seen failing (file missing, allow-list rejects nothing yet)
+- [x] `public/rafael-portrait.png` is a PNG, 1254 x 1254
+- [x] The "no image besides the expected ones" test lists the new file
+- [x] Gate check passes: `pnpm test`
+- [x] Test count: previous count + 2 tests, none removed
 
 **Tests**: unit
 **Gate**: quick
@@ -355,11 +355,11 @@ T24 → T25
 
 **Done when**:
 
-- [ ] `tests/components/SkipLink.test.tsx` written first and seen failing
-- [ ] Renders a link with the given label and `href="#conteudo"`; has the focus-reveal class (`sr-only` + `focus:not-sr-only`)
-- [ ] No PT-BR literal in source
-- [ ] Gate check passes: `pnpm test`
-- [ ] Test count: previous count + at least 3 tests
+- [x] `tests/components/SkipLink.test.tsx` written first and seen failing
+- [x] Renders a link with the given label and `href="#conteudo"`; has the focus-reveal class (`sr-only` + `focus:not-sr-only`)
+- [x] No PT-BR literal in source
+- [x] Gate check passes: `pnpm test`
+- [x] Test count: previous count + at least 3 tests
 
 **Tests**: unit
 **Gate**: quick
