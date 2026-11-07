@@ -161,6 +161,11 @@ export const homeContent: HomeContent = {
     ],
   },
   method: {
+    sectionId: "metodo",
+    eyebrow: "04 · Método (SDD)",
+    title: "Especificação antes do código",
+    intro:
+      "Desenvolvimento guiado por especificações, com a IA onde ela ajuda e eu revisando cada PR antes do merge. É o ciclo que uso no My Trello Version.",
     humanLabel: "Eu",
     aiLabel: "IA",
     steps: [
@@ -196,5 +201,7 @@ export const homeContent: HomeContent = {
         ai: "Me envia o link do PR.",
       },
     ],
+    summary: "~456 PRs mergeados · ~238 arquivos de teste · CI com checagens obrigatórias",
+    link: { label: "Ver o método no My Trello Version", href: "/casos/my-trello-version" },
   },
 };

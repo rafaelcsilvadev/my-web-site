@@ -246,6 +246,29 @@ describe("homeContent.stack", () => {
 describe("homeContent.method", () => {
   const { method } = homeContent;
 
+  it("has the section id, eyebrow, title and intro", () => {
+    expect(method.sectionId).toBe("metodo");
+    expect(method.eyebrow).toBe("04 · Método (SDD)");
+    expect(method.title).toBe("Especificação antes do código");
+    expect(method.intro).toBe(
+      "Desenvolvimento guiado por especificações, com a IA onde ela ajuda e eu revisando cada PR antes do merge. É o ciclo que uso no My Trello Version.",
+    );
+  });
+
+  it("has the summary line and the case link", () => {
+    expect(method.summary).toBe(
+      "~456 PRs mergeados · ~238 arquivos de teste · CI com checagens obrigatórias",
+    );
+    expect(method.link).toEqual({
+      label: "Ver o método no My Trello Version",
+      href: "/casos/my-trello-version",
+    });
+  });
+
+  it("never contains the design review marker '[conferir'", () => {
+    expect(JSON.stringify(method)).not.toContain("[conferir");
+  });
+
   it("labels the human and AI rows", () => {
     expect(method.humanLabel).toBe("Eu");
     expect(method.aiLabel).toBe("IA");
