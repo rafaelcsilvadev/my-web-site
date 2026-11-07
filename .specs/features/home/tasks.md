@@ -822,10 +822,10 @@ T24 → T25
 
 **Done when**:
 
-- [ ] Each guard seen failing by temporarily injecting one violation (a PT-BR literal, `text-brand`, `w-[400px]`, `[PERÍODO]`) and then reverting it
-- [ ] All guards pass on the real source
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test && pnpm build`
-- [ ] Test count: previous count + at least 5 tests, none removed
+- [x] Each guard seen failing by temporarily injecting one violation (a PT-BR literal, `text-brand`, `w-[400px]`, `[PERÍODO]`) and then reverting it
+- [x] All guards pass on the real source
+- [x] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test && pnpm build`
+- [x] Test count: previous count + at least 5 tests, none removed
 
 **Tests**: unit
 **Gate**: build
