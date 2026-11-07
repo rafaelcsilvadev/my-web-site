@@ -761,13 +761,13 @@ T24 → T25
 
 **Done when**:
 
-- [ ] Tests written first and seen failing: content test (every value and href above verbatim; e-mail is `rafacsilva016@gmail.com`, not the design typo) and `tests/components/ContactSection.test.tsx`
-- [ ] "Baixar CV" has the PDF `href` and `download`
-- [ ] The WhatsApp button and card both point to `https://wa.me/5524999644346` with `rel="noopener noreferrer"` and `target="_blank"`
-- [ ] LinkedIn and GitHub cards are external; e-mail card is `mailto:` with no `target`
-- [ ] `id="contato"`, `scroll-mt-24`; no PT-BR literal in source
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
-- [ ] Test count: previous count + at least 9 tests
+- [x] Tests written first and seen failing: content test (every value and href above verbatim; e-mail is `rafacsilva016@gmail.com`, not the design typo) and `tests/components/ContactSection.test.tsx`
+- [x] "Baixar CV" has the PDF `href` and `download`
+- [x] The WhatsApp button and card both point to `https://wa.me/5524999644346` with `rel="noopener noreferrer"` and `target="_blank"`
+- [x] LinkedIn and GitHub cards are external; e-mail card is `mailto:` with no `target`
+- [x] `id="contato"`, `scroll-mt-24`; no PT-BR literal in source
+- [x] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
+- [x] Test count: previous count + at least 9 tests
 
 **Tests**: unit
 **Gate**: full

@@ -45,6 +45,14 @@ export interface MethodStepView extends Omit<MethodStep, "highlight"> {
   highlight: boolean;
 }
 
+export interface ContactCardItem {
+  icon: "mail" | "linkedin" | "github" | "whatsapp";
+  label: string;
+  value: string;
+  href: string;
+  external?: boolean;
+}
+
 export interface HomeContent {
   chrome: {
     skipLinkLabel: string;
@@ -83,5 +91,14 @@ export interface HomeContent {
     steps: MethodStep[];
     summary: string;
     link: Link;
+  };
+  contact: {
+    sectionId: string;
+    eyebrow: string;
+    title: string;
+    lead: string;
+    cv: Link;
+    whatsapp: Link;
+    cards: ContactCardItem[];
   };
 }
