@@ -73,4 +73,5 @@ export interface HomeContent {
     otherLabel: string;
     others: string[];
   };
+  method: { humanLabel: string; aiLabel: string; steps: MethodStep[] };
 }

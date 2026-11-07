@@ -160,4 +160,41 @@ export const homeContent: HomeContent = {
       "SQL Server",
     ],
   },
+  method: {
+    humanLabel: "Eu",
+    aiLabel: "IA",
+    steps: [
+      {
+        number: "01",
+        title: "Spec",
+        human: "Entendo o projeto e decido o que cada feature precisa.",
+        ai: "Me ajuda a entender o projeto e cria a spec de cada feature.",
+      },
+      { number: "02", title: "Design", human: "Decido a arquitetura e os contratos." },
+      {
+        number: "03",
+        title: "Tarefas",
+        human: "Aprovo o recorte: uma tarefa por branch e por PR.",
+      },
+      {
+        number: "04",
+        title: "Teste vermelho",
+        human: "Reviso os testes no PR.",
+        ai: "Cria os testes com TDD: o teste vermelho vem antes do código.",
+        highlight: true,
+      },
+      {
+        number: "05",
+        title: "Código",
+        human: "Exijo commits pequenos.",
+        ai: "Implementa até o teste passar.",
+      },
+      {
+        number: "06",
+        title: "PR com revisão humana",
+        human: "Reviso cada Pull Request antes do merge.",
+        ai: "Me envia o link do PR.",
+      },
+    ],
+  },
 };

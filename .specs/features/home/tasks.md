@@ -674,12 +674,12 @@ T24 → T25
 
 **Done when**:
 
-- [ ] Tests written first and seen failing: content test (six steps, numbers 01-06, every Eu/IA line verbatim; Design and Tarefas have no IA) and `tests/components/MethodStep.test.tsx`
-- [ ] "Eu" row always renders; "IA" row renders only when text exists
-- [ ] `highlight` adds the red-test style class; default does not
-- [ ] No PT-BR literal in source
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
-- [ ] Test count: previous count + at least 8 tests
+- [x] Tests written first and seen failing: content test (six steps, numbers 01-06, every Eu/IA line verbatim; Design and Tarefas have no IA) and `tests/components/MethodStep.test.tsx`
+- [x] "Eu" row always renders; "IA" row renders only when text exists
+- [x] `highlight` adds the red-test style class; default does not
+- [x] No PT-BR literal in source
+- [x] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
+- [x] Test count: previous count + at least 8 tests
 
 **Tests**: unit
 **Gate**: full
