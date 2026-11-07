@@ -59,6 +59,16 @@ describe("Hero", () => {
     expect(img).not.toHaveAttribute("loading", "lazy");
   });
 
+  it("names the hero section by its h1", () => {
+    render(<Hero hero={hero} />);
+    const h1 = screen.getByRole("heading", { level: 1 });
+    expect(h1.id).not.toBe("");
+    expect(screen.getByRole("region", { name: h1.textContent ?? "" })).toHaveAttribute(
+      "aria-labelledby",
+      h1.id,
+    );
+  });
+
   it("renders the portrait caption in a figcaption", () => {
     render(<Hero hero={hero} />);
     const caption = screen.getByText("Retrato criado com IA a partir de uma foto minha");
