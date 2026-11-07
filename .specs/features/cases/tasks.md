@@ -144,9 +144,9 @@ T24 → T25
 
 **Done when**:
 
-- [ ] File exports every type in the Design Notes and imports nothing from React/Next (ESLint boundary passes)
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
-- [ ] Test count: same as before (no tests added or removed)
+- [x] File exports every type in the Design Notes and imports nothing from React/Next (ESLint boundary passes)
+- [x] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
+- [x] Test count: same as before (no tests added or removed)
 
 **Tests**: none
 **Gate**: full
@@ -170,11 +170,11 @@ T24 → T25
 
 **Done when**:
 
-- [ ] Test added first in `tests/app/public-assets.test.ts` and seen failing (file missing, allow-list rejects nothing yet)
-- [ ] `public/my-trello-version-board.png` is a PNG, 1797 x 915, copied from `ui/images/Screenshot from 2026-11-05 19-38-39.png`
-- [ ] The "no image besides the expected ones" test lists the new file
-- [ ] Gate check passes: `pnpm test`
-- [ ] Test count: previous count + at least 2 tests, none removed
+- [x] Test added first in `tests/app/public-assets.test.ts` and seen failing (file missing, allow-list rejects nothing yet)
+- [x] `public/my-trello-version-board.png` is a PNG, 1797 x 915, copied from `ui/images/Screenshot from 2026-11-05 19-38-39.png`
+- [x] The "no image besides the expected ones" test lists the new file
+- [x] Gate check passes: `pnpm test`
+- [x] Test count: previous count + at least 2 tests, none removed
 
 **Tests**: unit
 **Gate**: quick
