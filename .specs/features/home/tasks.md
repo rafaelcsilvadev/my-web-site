@@ -241,13 +241,13 @@ T24 → T25
 
 **Done when**:
 
-- [ ] `tests/components/ButtonLink.test.tsx` written first and seen failing
-- [ ] Internal link has `href` and no `target`/`rel`
-- [ ] External link has `target="_blank"` and `rel="noopener noreferrer"`
-- [ ] `download` prop sets the `download` attribute; icon renders when given
-- [ ] No PT-BR literal in the source (regex scan like `HomePlaceholder.test.tsx`)
-- [ ] Gate check passes: `pnpm test`
-- [ ] Test count: previous count + at least 5 tests
+- [x] `tests/components/ButtonLink.test.tsx` written first and seen failing
+- [x] Internal link has `href` and no `target`/`rel`
+- [x] External link has `target="_blank"` and `rel="noopener noreferrer"`
+- [x] `download` prop sets the `download` attribute; icon renders when given
+- [x] No PT-BR literal in the source (regex scan like `HomePlaceholder.test.tsx`)
+- [x] Gate check passes: `pnpm test`
+- [x] Test count: previous count + at least 5 tests
 
 **Tests**: unit
 **Gate**: quick
