@@ -271,10 +271,10 @@ T24 → T25
 
 **Done when**:
 
-- [ ] `tests/components/Chip.test.tsx` written first and seen failing
-- [ ] Renders the label text; `main` adds the brand border class, default does not
-- [ ] Gate check passes: `pnpm test`
-- [ ] Test count: previous count + at least 2 tests
+- [x] `tests/components/Chip.test.tsx` written first and seen failing
+- [x] Renders the label text; `main` adds the brand border class, default does not
+- [x] Gate check passes: `pnpm test`
+- [x] Test count: previous count + at least 2 tests
 
 **Tests**: unit
 **Gate**: quick
