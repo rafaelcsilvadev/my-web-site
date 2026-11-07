@@ -209,3 +209,36 @@ describe("homeContent.experience", () => {
     expect(JSON.stringify(experience)).not.toContain("[PERÍODO]");
   });
 });
+
+describe("homeContent.stack", () => {
+  const { stack } = homeContent;
+
+  it("has the section heading and id", () => {
+    expect(stack.sectionId).toBe("stack");
+    expect(stack.eyebrow).toBe("03 · Stack");
+    expect(stack.title).toBe("Onde sou mais forte");
+  });
+
+  it("lists TypeScript, React and Node as the main thread, in order", () => {
+    expect(stack.main).toEqual([
+      { name: "TypeScript", note: "fio principal" },
+      { name: "React", note: "fio principal" },
+      { name: "Node", note: "fio principal" },
+    ]);
+  });
+
+  it("lists the nine other technologies verbatim, in order, under its label", () => {
+    expect(stack.otherLabel).toBe("também já trabalhei com");
+    expect(stack.others).toEqual([
+      "Next.js",
+      "React Native",
+      "Flutter",
+      "Laravel",
+      "Vue.js",
+      "AdonisJS",
+      ".NET",
+      "Angular",
+      "SQL Server",
+    ]);
+  });
+});
