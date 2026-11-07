@@ -14,13 +14,13 @@ export function ContactCard({ icon, label, value, href, external }: ContactCardP
   return (
     <a
       href={href}
-      className="flex items-center gap-4 rounded-2xl border border-line bg-linear-to-b from-card-from to-card-to p-5 transition-colors hover:border-brand-text focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-light"
+      className="flex items-center gap-3.5 rounded-xl border border-line bg-white/[0.03] px-4 py-3.5 transition-colors hover:border-brand-text focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-light"
       {...externalProps}
     >
-      <Icon name={icon} className="size-6 shrink-0 text-brand-light" />
+      <Icon name={icon} className="size-4 shrink-0 text-brand-light" />
       <span className="flex min-w-0 flex-col">
-        <span className="font-mono text-xs uppercase text-fg-muted">{label}</span>
-        <span className="truncate font-semibold text-fg">{value}</span>
+        <span className="font-semibold text-fg">{label}</span>
+        <span className="truncate font-mono text-xs text-fg-muted">{value}</span>
       </span>
     </a>
   );

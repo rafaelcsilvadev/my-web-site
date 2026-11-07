@@ -17,16 +17,18 @@ export function ContactSection({ contact }: ContactSectionProps) {
       aria-labelledby={headingId}
       className="mx-auto max-w-6xl scroll-mt-24 px-6 py-16 md:py-24"
     >
-      <SectionHeading eyebrow={eyebrow} title={title} id={headingId} />
-      <p className="mt-4 max-w-3xl text-fg-muted">{lead}</p>
-      <div className="mt-8 flex flex-wrap gap-4">
-        <ButtonLink link={cv} variant="primary" icon="download" download />
-        <ButtonLink link={whatsapp} variant="ghost" icon="whatsapp" />
-      </div>
-      <div className="mt-10 grid gap-4 md:grid-cols-2">
-        {cards.map((card) => (
-          <ContactCard key={card.icon} {...card} />
-        ))}
+      <div className="rounded-2xl border border-line bg-linear-to-b from-card-from to-card-to bg-[radial-gradient(ellipse_at_top_right,rgb(136_30_155/0.3),transparent_55%)] p-8 md:p-10">
+        <SectionHeading eyebrow={eyebrow} title={title} id={headingId} />
+        <p className="mt-4 max-w-3xl text-fg-muted">{lead}</p>
+        <div className="mt-8 flex flex-wrap gap-4">
+          <ButtonLink link={cv} variant="primary" icon="download" download />
+          <ButtonLink link={whatsapp} variant="ghost" icon="whatsapp" />
+        </div>
+        <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {cards.map((card) => (
+            <ContactCard key={card.icon} {...card} />
+          ))}
+        </div>
       </div>
     </section>
   );
