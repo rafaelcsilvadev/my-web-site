@@ -198,11 +198,11 @@ T24 → T25
 
 **Done when**:
 
-- [ ] `tests/content/avaria-case.test.ts` written first and seen failing (module missing)
-- [ ] Test asserts verbatim: eyebrow, title, intro, three facts, sections 01 Problema / 02 Decisão / 03 Resultado with their paragraphs, the "Por que AdonisJS" callout and its two reasons, three metrics, four stack chips, and the closing "Próximo caso" card with its three actions and hrefs
-- [ ] Test asserts section ids are unique, `href`s are `/`, `/casos/my-trello-version`, `/#contato`, `/cv-rafael-couto-silva.pdf`, and `[conferir` appears nowhere
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
-- [ ] Test count: previous count + at least 6 tests
+- [x] `tests/content/avaria-case.test.ts` written first and seen failing (module missing)
+- [x] Test asserts verbatim: eyebrow, title, intro, three facts, sections 01 Problema / 02 Decisão / 03 Resultado with their paragraphs, the "Por que AdonisJS" callout and its two reasons, three metrics, four stack chips, and the closing "Próximo caso" card with its three actions and hrefs
+- [x] Test asserts section ids are unique, `href`s are `/`, `/casos/my-trello-version`, `/#contato`, `/cv-rafael-couto-silva.pdf`, and `[conferir` appears nowhere
+- [x] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
+- [x] Test count: previous count + at least 6 tests
 
 **Tests**: unit
 **Gate**: full
