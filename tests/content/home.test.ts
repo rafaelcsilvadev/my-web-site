@@ -141,10 +141,11 @@ describe("homeContent.experience", () => {
     expect(experience.entries.map((entry) => entry.company)).toEqual([
       "Mobs2",
       "Duo Technology",
-      "Globals · Missão Crítica",
+      "Globals",
     ]);
+    expect(globals.companyDetail).toBe("· Missão Crítica");
     expect(mobs2.duration).toBe("4 anos");
-    expect(mobs2.period).toBeUndefined();
+    expect(mobs2.period).toBe("jun. de 2021 - set. de 2025");
     expect(duo.period).toBe("ago. de 2025 - set. de 2026");
     expect(globals.period).toBe("nov. de 2022 - jan. de 2023");
   });

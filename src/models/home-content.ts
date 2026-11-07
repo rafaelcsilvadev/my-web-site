@@ -24,11 +24,13 @@ export interface ProjectItem {
 
 export interface ExperienceEntry {
   company: string;
+  companyDetail?: string;
   period?: string;
   duration?: string;
   role: string;
   achievements: { lead?: string; text: string }[];
   tags: string[];
+  mainTags: string[];
   note?: string;
   link?: Link;
 }

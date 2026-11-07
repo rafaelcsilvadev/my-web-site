@@ -95,6 +95,7 @@ export const homeContent: HomeContent = {
       {
         company: "Mobs2",
         duration: "4 anos",
+        period: "jun. de 2021 - set. de 2025",
         role: "Desenvolvedor Full Stack",
         achievements: [
           {
@@ -112,6 +113,7 @@ export const homeContent: HomeContent = {
           },
         ],
         tags: ["React Native", "Node.js", "React", "Next.js", "Flutter", "Laravel", "Vue.js", "SQL Server", "Azure DevOps"],
+        mainTags: ["React Native", "Node.js", "React"],
         note: "Squads com UX, QA e back-end. Entregas por CI/CD e queries otimizadas.",
         link: { label: "Ver o caso Avaria", href: "/casos/avaria" },
       },
@@ -126,10 +128,12 @@ export const homeContent: HomeContent = {
           },
         ],
         tags: ["Node.js", "React Native", "Angular", "Jest", "DDD · SOLID"],
+        mainTags: ["Node.js", "React Native"],
         note: "Claude Code no dia a dia, com revisão de todo código gerado antes do PR.",
       },
       {
-        company: "Globals · Missão Crítica",
+        company: "Globals",
+        companyDetail: "· Missão Crítica",
         period: "nov. de 2022 - jan. de 2023",
         role: "Desenvolvedor Full Stack",
         achievements: [
@@ -141,6 +145,7 @@ export const homeContent: HomeContent = {
           },
         ],
         tags: [".NET", "Angular", "Integração com hardware"],
+        mainTags: [".NET", "Angular"],
       },
     ],
   },

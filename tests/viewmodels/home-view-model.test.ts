@@ -11,6 +11,7 @@ const entry: ExperienceEntry = {
   role: "Desenvolvedor Full Stack",
   achievements: [{ lead: "FOCO.", text: "Plataforma interna." }, { text: "Coral." }],
   tags: ["Node.js", "Jest"],
+  mainTags: ["Node.js"],
   note: "Nota.",
   link: { label: "Ver o caso", href: "/casos/x" },
 };
