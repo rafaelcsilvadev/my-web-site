@@ -501,12 +501,12 @@ T24 → T25
 
 **Done when**:
 
-- [ ] `tests/components/ProjectsSection.test.tsx` written first and seen failing
-- [ ] Region found by name "Projetos em destaque"; `id="projetos"`; `scroll-mt-24`
-- [ ] Two `h3` (Avaria, My Trello Version) under one `h2`, in that order
-- [ ] No PT-BR literal in source
-- [ ] Gate check passes: `pnpm test`
-- [ ] Test count: previous count + at least 4 tests
+- [x] `tests/components/ProjectsSection.test.tsx` written first and seen failing
+- [x] Region found by name "Projetos em destaque"; `id="projetos"`; `scroll-mt-24`
+- [x] Two `h3` (Avaria, My Trello Version) under one `h2`, in that order
+- [x] No PT-BR literal in source
+- [x] Gate check passes: `pnpm test`
+- [x] Test count: previous count + at least 4 tests
 
 **Tests**: unit
 **Gate**: quick
