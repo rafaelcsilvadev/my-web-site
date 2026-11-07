@@ -618,12 +618,12 @@ T24 → T25
 
 **Done when**:
 
-- [ ] Tests written first and seen failing: content test (3 main + 9 others verbatim, in order) and `tests/components/StackSection.test.tsx`
-- [ ] Three "fio principal" labels; nine secondary chips; `id="stack"`
-- [ ] Empty `others` renders no secondary container
-- [ ] No PT-BR literal in source
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
-- [ ] Test count: previous count + at least 7 tests
+- [x] Tests written first and seen failing: content test (3 main + 9 others verbatim, in order) and `tests/components/StackSection.test.tsx`
+- [x] Three "fio principal" labels; nine secondary chips; `id="stack"`
+- [x] Empty `others` renders no secondary container
+- [x] No PT-BR literal in source
+- [x] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
+- [x] Test count: previous count + at least 7 tests
 
 **Tests**: unit
 **Gate**: full

@@ -138,5 +138,26 @@ export const homeContent: HomeContent = {
         tags: [".NET", "Angular", "Integração com hardware"],
       },
     ],
+  },  stack: {
+    sectionId: "stack",
+    eyebrow: "03 · Stack",
+    title: "Onde sou mais forte",
+    main: [
+      { name: "TypeScript", note: "fio principal" },
+      { name: "React", note: "fio principal" },
+      { name: "Node", note: "fio principal" },
+    ],
+    otherLabel: "também já trabalhei com",
+    others: [
+      "Next.js",
+      "React Native",
+      "Flutter",
+      "Laravel",
+      "Vue.js",
+      "AdonisJS",
+      ".NET",
+      "Angular",
+      "SQL Server",
+    ],
   },
 };

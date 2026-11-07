@@ -53,4 +53,12 @@ export interface HomeContent {
   };
   projects: { sectionId: string; eyebrow: string; title: string; items: ProjectItem[] };
   experience: { sectionId: string; eyebrow: string; title: string; entries: ExperienceEntry[] };
+  stack: {
+    sectionId: string;
+    eyebrow: string;
+    title: string;
+    main: { name: string; note: string }[];
+    otherLabel: string;
+    others: string[];
+  };
 }
