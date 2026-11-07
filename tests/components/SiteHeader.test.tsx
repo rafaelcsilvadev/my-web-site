@@ -23,12 +23,32 @@ describe("SiteHeader", () => {
     expect(screen.getByRole("link", { name: siteContent.name })).toHaveAttribute("href", "#top");
   });
 
-  it("shows the five nav links with section hrefs", () => {
+  it("renders the brand in monospace with a decorative cursor", () => {
+    setup();
+    const brand = screen.getByRole("link", { name: siteContent.name });
+    expect(brand).toHaveClass("font-mono");
+    const cursor = brand.querySelector("[data-cursor]");
+    expect(cursor).toHaveAttribute("aria-hidden", "true");
+  });
+
+  it("shows four inline nav links, without Contato", () => {
     setup();
     const nav = screen.getByRole("navigation", { name: chrome.nav.ariaLabel });
     const links = within(nav).getAllByRole("link");
-    expect(links.map((a) => a.getAttribute("href"))).toEqual(HREFS);
-    expect(links.map((a) => a.textContent)).toEqual(chrome.nav.links.map((l) => l.label));
+    expect(links.map((a) => a.getAttribute("href"))).toEqual(HREFS.slice(0, 4));
+    expect(links.map((a) => a.textContent)).toEqual(
+      chrome.nav.links.slice(0, 4).map((l) => l.label),
+    );
+  });
+
+  it("shows Contato as an always-visible primary button outside the nav", () => {
+    setup();
+    const nav = screen.getByRole("navigation", { name: chrome.nav.ariaLabel });
+    const cta = screen.getByRole("link", { name: "Contato" });
+    expect(nav).not.toContainElement(cta);
+    expect(cta).toHaveAttribute("href", "#contato");
+    expect(cta).toHaveClass("bg-brand");
+    expect(cta).not.toHaveClass("hidden");
   });
 
   it("hides the inline nav below md and the menu button from md up", () => {

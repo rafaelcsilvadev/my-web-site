@@ -7,6 +7,7 @@ export const homeContent: HomeContent = {
     topId: "top",
     nav: {
       ariaLabel: "Navegação principal",
+      ctaSectionId: "contato",
       links: [
         { label: "Projetos", sectionId: "projetos" },
         { label: "Experiência", sectionId: "experiencia" },

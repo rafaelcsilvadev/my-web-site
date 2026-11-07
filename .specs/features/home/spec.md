@@ -57,9 +57,9 @@ Sections in the design, in order: Header, Hero, 01 Projetos em destaque, 02 Expe
 
 1. The system SHALL serve the CV at `public/cv-rafael-couto-silva.pdf` and the portrait at `public/rafael-portrait.png`, and SHALL render the portrait in the hero through `next/image` with explicit width and height.
 2. The system SHALL render the portrait with alt text "Retrato profissional de Rafael Couto Silva em um setup roxo" and the visible caption "Retrato criado com IA a partir de uma foto minha", both read from `src/content/`.
-3. The system SHALL render a header with the name "Rafael Couto Silva" and five links: Projetos, Experiência, Stack, Método, Contato, each pointing to its section id.
+3. The system SHALL render a header with the name "Rafael Couto Silva" (monospace, followed by a decorative cursor block), four inline links (Projetos, Experiência, Stack, Método) and a primary "Contato" button, each pointing to its section id. The "Contato" button stays visible on every viewport.
 4. The system SHALL render a footer with "© 2026 Rafael Couto Silva" and a "Voltar ao topo" link pointing to `#top`.
-5. WHEN the viewport is narrower than the `md` breakpoint THEN the system SHALL hide the inline header links and show a menu button.
+5. WHEN the viewport is narrower than the `md` breakpoint THEN the system SHALL hide the four inline header links and show a menu button next to the "Contato" button.
 6. WHEN the visitor activates the menu button THEN the system SHALL show the five links and set `aria-expanded="true"` on the button.
 7. WHEN the menu is open and the visitor clicks a link or presses Escape THEN the system SHALL close the menu and set `aria-expanded="false"`.
 8. The system SHALL contain no hardcoded PT-BR strings in `src/components/` or `src/app/`.

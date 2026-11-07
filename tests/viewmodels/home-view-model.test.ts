@@ -2,7 +2,12 @@ import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
 import type { ExperienceEntry, MethodStep } from "@/models/home-content";
-import { hasItems, toExperienceEntryView, toMethodStepView } from "@/viewmodels/home-view-model";
+import {
+  hasItems,
+  splitNavLinks,
+  toExperienceEntryView,
+  toMethodStepView,
+} from "@/viewmodels/home-view-model";
 
 const entry: ExperienceEntry = {
   company: "Duo Technology",
@@ -93,5 +98,23 @@ describe("home-view-model source", () => {
   it("imports nothing from React or Next", () => {
     const source = readFileSync(resolve(__dirname, "../../src/viewmodels/home-view-model.ts"), "utf8");
     expect(source).not.toMatch(/from\s+["'](react|next)/);
+  });
+});
+
+describe("splitNavLinks", () => {
+  const links = [
+    { label: "A", sectionId: "a" },
+    { label: "B", sectionId: "b" },
+  ];
+
+  it("separates the CTA link from the inline links", () => {
+    expect(splitNavLinks({ ctaSectionId: "b", links })).toEqual({
+      inlineLinks: [links[0]],
+      cta: links[1],
+    });
+  });
+
+  it("returns no CTA when none matches", () => {
+    expect(splitNavLinks({ ctaSectionId: "x", links })).toEqual({ inlineLinks: links, cta: undefined });
   });
 });
