@@ -82,4 +82,61 @@ export const homeContent: HomeContent = {
       },
     ],
   },
+  experience: {
+    sectionId: "experiencia",
+    eyebrow: "02 · Experiência",
+    title: "Onde construí",
+    entries: [
+      {
+        company: "Mobs2",
+        duration: "4 anos",
+        role: "Desenvolvedor Full Stack",
+        achievements: [
+          {
+            lead: "Avaria.",
+            text: "Propus a melhoria ainda como dev júnior e liderei as decisões técnicas: arquitetura, app em React Native e API em Node.js. Rodou em produção por mais de 4 anos, para mais de 1 mil clientes.",
+          },
+          { lead: "REALI.", text: "Entreguei a plataforma em React e Next.js, aprovada pelo cliente." },
+          {
+            lead: "M2, produto principal da empresa.",
+            text: "Evoluí o produto com features e melhorias de UX pedidas pelos clientes.",
+          },
+          {
+            lead: "MyMobs, MobsTrack, Mobs2 School e Boletim Diário.",
+            text: "Participei da criação dos apps, que ajudaram a Mobs2 a fechar e manter clientes.",
+          },
+        ],
+        tags: ["React Native", "Node.js", "React", "Next.js", "Flutter", "Laravel", "Vue.js", "SQL Server", "Azure DevOps"],
+        note: "Squads com UX, QA e back-end. Entregas por CI/CD e queries otimizadas.",
+        link: { label: "Ver o caso Avaria", href: "/casos/avaria" },
+      },
+      {
+        company: "Duo Technology",
+        period: "ago. de 2025 - set. de 2026",
+        role: "Desenvolvedor Full Stack",
+        achievements: [
+          { text: "Entreguei o app FOCO Aluguel de Carros em React Native, aprovado pelos usuários." },
+          {
+            text: "No Coral, principal sistema da FOCO, tirei do papel pedidos antigos do time de operação, criando as features em Node.js.",
+          },
+        ],
+        tags: ["Node.js", "React Native", "Angular", "Jest", "DDD · SOLID"],
+        note: "Claude Code no dia a dia, com revisão de todo código gerado antes do PR.",
+      },
+      {
+        company: "Globals · Missão Crítica",
+        period: "nov. de 2022 - jan. de 2023",
+        role: "Desenvolvedor Full Stack",
+        achievements: [
+          {
+            text: "Entreguei em 3 meses o sistema completo de monitoramento de estradas de uma concessionária, um projeto estratégico para ela. As câmeras passaram a ser controladas de um painel só.",
+          },
+          {
+            text: "Planejei a arquitetura, desenvolvi de ponta a ponta, integrei câmeras e aparelhos de ar-condicionado e desenhei as telas junto com o time de UX.",
+          },
+        ],
+        tags: [".NET", "Angular", "Integração com hardware"],
+      },
+    ],
+  },
 };

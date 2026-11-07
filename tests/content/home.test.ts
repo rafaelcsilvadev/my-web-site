@@ -119,3 +119,93 @@ describe("homeContent.projects", () => {
     });
   });
 });
+
+describe("homeContent.experience", () => {
+  const { experience } = homeContent;
+  const [mobs2, duo, globals] = experience.entries;
+
+  it("has the section heading and id", () => {
+    expect(experience.sectionId).toBe("experiencia");
+    expect(experience.eyebrow).toBe("02 · Experiência");
+    expect(experience.title).toBe("Onde construí");
+  });
+
+  it("lists the three entries in order with period or duration", () => {
+    expect(experience.entries.map((entry) => entry.company)).toEqual([
+      "Mobs2",
+      "Duo Technology",
+      "Globals · Missão Crítica",
+    ]);
+    expect(mobs2.duration).toBe("4 anos");
+    expect(mobs2.period).toBeUndefined();
+    expect(duo.period).toBe("ago. de 2025 - set. de 2026");
+    expect(globals.period).toBe("nov. de 2022 - jan. de 2023");
+  });
+
+  it("gives every entry the Full Stack role", () => {
+    for (const entry of experience.entries) {
+      expect(entry.role).toBe("Desenvolvedor Full Stack");
+    }
+  });
+
+  it("has the Mobs2 achievements with bold lead-ins verbatim", () => {
+    expect(mobs2.achievements).toEqual([
+      {
+        lead: "Avaria.",
+        text: "Propus a melhoria ainda como dev júnior e liderei as decisões técnicas: arquitetura, app em React Native e API em Node.js. Rodou em produção por mais de 4 anos, para mais de 1 mil clientes.",
+      },
+      { lead: "REALI.", text: "Entreguei a plataforma em React e Next.js, aprovada pelo cliente." },
+      {
+        lead: "M2, produto principal da empresa.",
+        text: "Evoluí o produto com features e melhorias de UX pedidas pelos clientes.",
+      },
+      {
+        lead: "MyMobs, MobsTrack, Mobs2 School e Boletim Diário.",
+        text: "Participei da criação dos apps, que ajudaram a Mobs2 a fechar e manter clientes.",
+      },
+    ]);
+    expect(mobs2.tags).toEqual([
+      "React Native",
+      "Node.js",
+      "React",
+      "Next.js",
+      "Flutter",
+      "Laravel",
+      "Vue.js",
+      "SQL Server",
+      "Azure DevOps",
+    ]);
+    expect(mobs2.note).toBe("Squads com UX, QA e back-end. Entregas por CI/CD e queries otimizadas.");
+    expect(mobs2.link).toEqual({ label: "Ver o caso Avaria", href: "/casos/avaria" });
+  });
+
+  it("has the Duo Technology entry verbatim", () => {
+    expect(duo.achievements).toEqual([
+      { text: "Entreguei o app FOCO Aluguel de Carros em React Native, aprovado pelos usuários." },
+      {
+        text: "No Coral, principal sistema da FOCO, tirei do papel pedidos antigos do time de operação, criando as features em Node.js.",
+      },
+    ]);
+    expect(duo.tags).toEqual(["Node.js", "React Native", "Angular", "Jest", "DDD · SOLID"]);
+    expect(duo.note).toBe("Claude Code no dia a dia, com revisão de todo código gerado antes do PR.");
+    expect(duo.link).toBeUndefined();
+  });
+
+  it("has the Globals entry verbatim", () => {
+    expect(globals.achievements).toEqual([
+      {
+        text: "Entreguei em 3 meses o sistema completo de monitoramento de estradas de uma concessionária, um projeto estratégico para ela. As câmeras passaram a ser controladas de um painel só.",
+      },
+      {
+        text: "Planejei a arquitetura, desenvolvi de ponta a ponta, integrei câmeras e aparelhos de ar-condicionado e desenhei as telas junto com o time de UX.",
+      },
+    ]);
+    expect(globals.tags).toEqual([".NET", "Angular", "Integração com hardware"]);
+    expect(globals.note).toBeUndefined();
+    expect(globals.link).toBeUndefined();
+  });
+
+  it("contains no placeholder text", () => {
+    expect(JSON.stringify(experience)).not.toContain("[PERÍODO]");
+  });
+});
