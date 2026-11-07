@@ -144,9 +144,9 @@ T24 → T25
 
 **Done when**:
 
-- [ ] File exports every type in the Design Notes and imports nothing from React/Next (ESLint boundary passes)
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
-- [ ] Test count: same as before (no tests added or removed)
+- [x] File exports every type in the Design Notes and imports nothing from React/Next (ESLint boundary passes)
+- [x] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
+- [x] Test count: same as before (no tests added or removed)
 
 **Tests**: none
 **Gate**: full
