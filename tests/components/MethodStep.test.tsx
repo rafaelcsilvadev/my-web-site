@@ -41,12 +41,12 @@ describe("MethodStep", () => {
 
   it("adds the red-test style class when highlighted", () => {
     const { container } = render(<MethodStep step={{ ...step, highlight: true }} {...labels} />);
-    expect(container.firstElementChild).toHaveClass("border-brand-text");
+    expect(container.firstElementChild).toHaveClass("bg-brand/15");
   });
 
   it("does not add the red-test style class by default", () => {
     const { container } = render(<MethodStep step={step} {...labels} />);
-    expect(container.firstElementChild).not.toHaveClass("border-brand-text");
+    expect(container.firstElementChild).not.toHaveClass("bg-brand/15");
   });
 
   it("holds no PT-BR literal in its source", () => {
