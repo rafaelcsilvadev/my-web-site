@@ -383,13 +383,13 @@ T24 → T25
 
 **Done when**:
 
-- [ ] `tests/components/SiteHeader.test.tsx` written first and seen failing
-- [ ] Nav shows the five links with hrefs `#projetos`, `#experiencia`, `#stack`, `#metodo`, `#contato`
-- [ ] Inline nav has the `hidden md:flex` classes; menu button has `md:hidden`
-- [ ] Clicking the button: `aria-expanded="true"` and the panel lists five links; clicking a panel link closes it (`aria-expanded="false"`); Escape closes it
-- [ ] Header has sticky positioning class; no PT-BR literal in source
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
-- [ ] Test count: previous count + at least 7 tests
+- [x] `tests/components/SiteHeader.test.tsx` written first and seen failing
+- [x] Nav shows the five links with hrefs `#projetos`, `#experiencia`, `#stack`, `#metodo`, `#contato`
+- [x] Inline nav has the `hidden md:flex` classes; menu button has `md:hidden`
+- [x] Clicking the button: `aria-expanded="true"` and the panel lists five links; clicking a panel link closes it (`aria-expanded="false"`); Escape closes it
+- [x] Header has sticky positioning class; no PT-BR literal in source
+- [x] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
+- [x] Test count: previous count + at least 7 tests
 
 **Tests**: unit
 **Gate**: full
