@@ -589,12 +589,12 @@ T24 → T25
 
 **Done when**:
 
-- [ ] `tests/components/ExperienceSection.test.tsx` written first and seen failing
-- [ ] Region named "Onde construí", `id="experiencia"`, `scroll-mt-24`
-- [ ] Three `h3` in order: Mobs2, Duo Technology, Globals · Missão Crítica
-- [ ] No PT-BR literal in source
-- [ ] Gate check passes: `pnpm test`
-- [ ] Test count: previous count + at least 4 tests
+- [x] `tests/components/ExperienceSection.test.tsx` written first and seen failing
+- [x] Region named "Onde construí", `id="experiencia"`, `scroll-mt-24`
+- [x] Three `h3` in order: Mobs2, Duo Technology, Globals · Missão Crítica
+- [x] No PT-BR literal in source
+- [x] Gate check passes: `pnpm test`
+- [x] Test count: previous count + at least 4 tests
 
 **Tests**: unit
 **Gate**: quick
