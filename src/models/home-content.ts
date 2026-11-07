@@ -33,6 +33,18 @@ export interface ExperienceEntry {
 
 export type ExperienceEntryView = ExperienceEntry;
 
+export interface MethodStep {
+  number: string;
+  title: string;
+  human: string;
+  ai?: string;
+  highlight?: boolean;
+}
+
+export interface MethodStepView extends Omit<MethodStep, "highlight"> {
+  highlight: boolean;
+}
+
 export interface HomeContent {
   chrome: {
     skipLinkLabel: string;
