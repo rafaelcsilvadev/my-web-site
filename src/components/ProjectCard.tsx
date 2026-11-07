@@ -46,7 +46,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
       <div className="mt-auto flex flex-wrap items-center gap-4 pt-1">
         <a
           href={caseLink.href}
-          className="inline-flex items-center gap-2 rounded-[10px] border border-brand-text/50 px-5 py-3 text-sm font-semibold text-fg after:absolute after:inset-0 after:content-[''] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-light"
+          className="inline-flex items-center gap-2 rounded-[10px] border border-brand/50 px-5 py-3 text-sm font-semibold text-fg after:absolute after:inset-0 after:content-[''] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-light"
         >
           {caseLink.label}
           <Icon name="arrow" className="size-4" />

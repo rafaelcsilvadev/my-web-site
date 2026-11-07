@@ -99,4 +99,11 @@ describe("ProjectCard", () => {
     const actions = screen.getByRole("link", { name: /Ver o caso/ }).parentElement;
     expect(actions).toHaveClass("mt-auto");
   });
+
+  it("uses a subtle brand border on the case button", () => {
+    render(<ProjectCard project={avaria} />);
+    const button = screen.getByRole("link", { name: /Ver o caso/ });
+    expect(button).toHaveClass("border-brand/50");
+    expect(button).not.toHaveClass("border-brand-text/50");
+  });
 });
