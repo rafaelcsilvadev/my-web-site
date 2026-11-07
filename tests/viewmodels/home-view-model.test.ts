@@ -1,8 +1,8 @@
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
-import type { ExperienceEntry } from "@/models/home-content";
-import { hasItems, toExperienceEntryView } from "@/viewmodels/home-view-model";
+import type { ExperienceEntry, MethodStep } from "@/models/home-content";
+import { hasItems, toExperienceEntryView, toMethodStepView } from "@/viewmodels/home-view-model";
 
 const entry: ExperienceEntry = {
   company: "Duo Technology",
@@ -37,6 +37,40 @@ describe("toExperienceEntryView", () => {
     expect(view.tags).toEqual(["Node.js", "Jest"]);
     expect(view.note).toBe("Nota.");
     expect(view.link).toEqual(entry.link);
+  });
+});
+
+const step: MethodStep = {
+  number: "04",
+  title: "Teste vermelho",
+  human: "Reviso os testes no PR.",
+  ai: "Cria os testes com TDD.",
+  highlight: true,
+};
+
+describe("toMethodStepView", () => {
+  it("keeps a filled ai text", () => {
+    expect(toMethodStepView(step).ai).toBe("Cria os testes com TDD.");
+  });
+
+  it.each([
+    ["empty", ""],
+    ["whitespace", "   "],
+    ["missing", undefined],
+  ])("turns a %s ai text into undefined", (_label, ai) => {
+    expect(toMethodStepView({ ...step, ai }).ai).toBeUndefined();
+  });
+
+  it("passes number, title, human and highlight through", () => {
+    const view = toMethodStepView(step);
+    expect(view.number).toBe("04");
+    expect(view.title).toBe("Teste vermelho");
+    expect(view.human).toBe("Reviso os testes no PR.");
+    expect(view.highlight).toBe(true);
+  });
+
+  it("defaults highlight to false", () => {
+    expect(toMethodStepView({ ...step, highlight: undefined }).highlight).toBe(false);
   });
 });
 

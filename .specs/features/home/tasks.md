@@ -647,10 +647,10 @@ T24 → T25
 
 **Done when**:
 
-- [ ] Tests added first to `tests/viewmodels/home-view-model.test.ts` and seen failing
-- [ ] `ai: "text"` kept; `ai: ""`, whitespace and missing become `undefined`; `highlight` defaults to `false`
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
-- [ ] Test count: previous count + at least 4 tests, none removed
+- [x] Tests added first to `tests/viewmodels/home-view-model.test.ts` and seen failing
+- [x] `ai: "text"` kept; `ai: ""`, whitespace and missing become `undefined`; `highlight` defaults to `false`
+- [x] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
+- [x] Test count: previous count + at least 4 tests, none removed
 
 **Tests**: unit
 **Gate**: full
