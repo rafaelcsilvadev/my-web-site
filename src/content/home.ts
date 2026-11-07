@@ -204,4 +204,41 @@ export const homeContent: HomeContent = {
     summary: "~456 PRs mergeados · ~238 arquivos de teste · CI com checagens obrigatórias",
     link: { label: "Ver o método no My Trello Version", href: "/casos/my-trello-version" },
   },
+  contact: {
+    sectionId: "contato",
+    eyebrow: "05 · Contato",
+    title: "Vamos conversar",
+    lead: "Para vaga ou projeto, escolha o canal.",
+    cv: { label: "Baixar CV", href: "/cv-rafael-couto-silva.pdf" },
+    whatsapp: { label: "Chamar no WhatsApp", href: "https://wa.me/5524999644346", external: true },
+    cards: [
+      {
+        icon: "mail",
+        label: "E-mail",
+        value: "rafacsilva016@gmail.com",
+        href: "mailto:rafacsilva016@gmail.com",
+      },
+      {
+        icon: "linkedin",
+        label: "LinkedIn",
+        value: "linkedin.com/in/rafa-couto",
+        href: "https://linkedin.com/in/rafa-couto",
+        external: true,
+      },
+      {
+        icon: "github",
+        label: "GitHub",
+        value: "github.com/rafaelcsilvadev",
+        href: "https://github.com/rafaelcsilvadev",
+        external: true,
+      },
+      {
+        icon: "whatsapp",
+        label: "WhatsApp",
+        value: "Abrir conversa",
+        href: "https://wa.me/5524999644346",
+        external: true,
+      },
+    ],
+  },
 };

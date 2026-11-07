@@ -303,3 +303,57 @@ describe("homeContent.method", () => {
     expect(method.steps.filter((s) => s.highlight).map((s) => s.title)).toEqual(["Teste vermelho"]);
   });
 });
+
+describe("homeContent.contact", () => {
+  const { contact } = homeContent;
+
+  it("has the section id, eyebrow, title and lead", () => {
+    expect(contact.sectionId).toBe("contato");
+    expect(contact.eyebrow).toBe("05 · Contato");
+    expect(contact.title).toBe("Vamos conversar");
+    expect(contact.lead).toBe("Para vaga ou projeto, escolha o canal.");
+  });
+
+  it("has the CV download link", () => {
+    expect(contact.cv).toEqual({ label: "Baixar CV", href: "/cv-rafael-couto-silva.pdf" });
+  });
+
+  it("has the external WhatsApp button link", () => {
+    expect(contact.whatsapp).toEqual({
+      label: "Chamar no WhatsApp",
+      href: "https://wa.me/5524999644346",
+      external: true,
+    });
+  });
+
+  it("has the four cards verbatim, in order", () => {
+    expect(contact.cards).toEqual([
+      { icon: "mail", label: "E-mail", value: "rafacsilva016@gmail.com", href: "mailto:rafacsilva016@gmail.com" },
+      {
+        icon: "linkedin",
+        label: "LinkedIn",
+        value: "linkedin.com/in/rafa-couto",
+        href: "https://linkedin.com/in/rafa-couto",
+        external: true,
+      },
+      {
+        icon: "github",
+        label: "GitHub",
+        value: "github.com/rafaelcsilvadev",
+        href: "https://github.com/rafaelcsilvadev",
+        external: true,
+      },
+      {
+        icon: "whatsapp",
+        label: "WhatsApp",
+        value: "Abrir conversa",
+        href: "https://wa.me/5524999644346",
+        external: true,
+      },
+    ]);
+  });
+
+  it("never contains the design review marker '[conferir'", () => {
+    expect(JSON.stringify(contact)).not.toContain("[conferir");
+  });
+});
