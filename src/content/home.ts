@@ -59,7 +59,9 @@ export const homeContent: HomeContent = {
           { label: "Clientes", value: "+1 mil" },
           { label: "Decisão de stack", value: "AdonisJS" },
         ],
+        metricsStyle: "text",
         tags: ["TypeScript", "React Native", "Node.js · AdonisJS", "SQL Server"],
+        mainTags: ["TypeScript", "React Native", "Node.js · AdonisJS"],
         caseLink: { label: "Ver o caso", href: "/casos/avaria" },
       },
       {
@@ -73,7 +75,9 @@ export const homeContent: HomeContent = {
           { label: "commits na main", value: "~1.400" },
           { label: "arquivos de teste", value: "~238" },
         ],
+        metricsStyle: "number",
         tags: ["NestJS", "React 19", "PostgreSQL", "Docker"],
+        mainTags: ["NestJS", "React 19"],
         caseLink: { label: "Ver o caso", href: "/casos/my-trello-version" },
         repoLink: {
           label: "Repositório no GitHub",

@@ -100,6 +100,8 @@ describe("homeContent.projects", () => {
     ]);
     expect(avaria.tags).toEqual(["TypeScript", "React Native", "Node.js · AdonisJS", "SQL Server"]);
     expect(avaria.caseLink).toEqual({ label: "Ver o caso", href: "/casos/avaria" });
+    expect(avaria.metricsStyle).toBe("text");
+    expect(avaria.mainTags).toEqual(["TypeScript", "React Native", "Node.js · AdonisJS"]);
     expect(avaria.repoLink).toBeUndefined();
   });
 
@@ -114,6 +116,8 @@ describe("homeContent.projects", () => {
       { label: "arquivos de teste", value: "~238" },
     ]);
     expect(trello.tags).toEqual(["NestJS", "React 19", "PostgreSQL", "Docker"]);
+    expect(trello.metricsStyle).toBe("number");
+    expect(trello.mainTags).toEqual(["NestJS", "React 19"]);
     expect(trello.caseLink).toEqual({ label: "Ver o caso", href: "/casos/my-trello-version" });
     expect(trello.repoLink).toEqual({
       label: "Repositório no GitHub",

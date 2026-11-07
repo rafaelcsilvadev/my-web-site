@@ -15,7 +15,9 @@ export interface ProjectItem {
   title: string;
   description: string;
   metrics: Metric[];
+  metricsStyle: "text" | "number";
   tags: string[];
+  mainTags: string[];
   caseLink: Link;
   repoLink?: Link;
 }
