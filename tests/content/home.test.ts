@@ -44,7 +44,10 @@ describe("homeContent.hero", () => {
 
   it("has the label, headline, badge, intro and stack line", () => {
     expect(hero.label).toBe("Desenvolvedor de software");
-    expect(hero.headline).toBe("Especialista Full Stack do requisito à produção");
+    expect(hero.headline).toEqual({
+      lead: "Especialista Full Stack",
+      accent: "do requisito à produção",
+    });
     expect(hero.badge).toEqual({
       label: "SDD",
       text: "Especialista em desenvolvimento guiado por especificações",
