@@ -14,6 +14,7 @@ const entry: ExperienceEntryModel = {
   role: "Any Role",
   achievements: [{ lead: "Lead.", text: "Body text." }, { text: "Plain text." }],
   tags: ["Tag A", "Tag B"],
+  mainTags: ["Tag A"],
   note: "Any note.",
   link: { label: "Any link", href: "/casos/any" },
 };
@@ -54,6 +55,23 @@ describe("ExperienceEntry", () => {
   it("renders every tag as a list item", () => {
     render(<ExperienceEntry entry={entry} />);
     expect(screen.getAllByRole("listitem").map((item) => item.textContent)).toEqual(["Tag A", "Tag B"]);
+  });
+
+  it("highlights only the main tags", () => {
+    render(<ExperienceEntry entry={entry} />);
+    expect(screen.getByText("Tag A")).toHaveClass("bg-brand/15");
+    expect(screen.getByText("Tag B")).not.toHaveClass("bg-brand/15");
+  });
+
+  it("renders the company detail muted inside the h3", () => {
+    render(<ExperienceEntry entry={{ ...entry, companyDetail: "· Detail" }} />);
+    expect(screen.getByRole("heading", { level: 3 })).toHaveTextContent("Any Company · Detail");
+    expect(screen.getByText("· Detail")).toHaveClass("font-normal");
+  });
+
+  it("renders the period as a bordered badge", () => {
+    const { container } = render(<ExperienceEntry entry={entry} />);
+    expect(container.querySelector("[data-period]")).toHaveClass("border");
   });
 
   it("renders no tag container when tags are empty", () => {
