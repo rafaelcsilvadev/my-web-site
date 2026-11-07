@@ -413,11 +413,11 @@ T24 → T25
 
 **Done when**:
 
-- [ ] `tests/components/SiteFooter.test.tsx` written first and seen failing
-- [ ] Renders a `contentinfo` landmark, "© 2026 Rafael Couto Silva" and a link "Voltar ao topo" with `href="#top"`
-- [ ] No PT-BR literal in source
-- [ ] Gate check passes: `pnpm test`
-- [ ] Test count: previous count + at least 3 tests
+- [x] `tests/components/SiteFooter.test.tsx` written first and seen failing
+- [x] Renders a `contentinfo` landmark, "© 2026 Rafael Couto Silva" and a link "Voltar ao topo" with `href="#top"`
+- [x] No PT-BR literal in source
+- [x] Gate check passes: `pnpm test`
+- [x] Test count: previous count + at least 3 tests
 
 **Tests**: unit
 **Gate**: quick
