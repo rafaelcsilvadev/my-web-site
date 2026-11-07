@@ -4,7 +4,7 @@ type ChipProps = {
 };
 
 const BASE =
-  "inline-flex items-center rounded-full border px-3 py-1 font-mono text-xs";
+  "inline-flex items-center rounded-md border px-3 py-1 font-mono text-xs";
 
 export function Chip({ label, main }: ChipProps) {
   const variant = main

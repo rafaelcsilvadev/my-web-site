@@ -16,4 +16,10 @@ describe("Chip", () => {
     rerender(<Chip label="Any label" main />);
     expect(screen.getByText("Any label")).toHaveClass("border-brand-text", "bg-brand/15");
   });
+
+  it("is a rounded rectangle, not a pill", () => {
+    render(<Chip label="Any label" />);
+    expect(screen.getByText("Any label")).toHaveClass("rounded-md");
+    expect(screen.getByText("Any label")).not.toHaveClass("rounded-full");
+  });
 });

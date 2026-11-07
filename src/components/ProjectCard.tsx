@@ -13,7 +13,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
   const [category, kind] = context;
 
   return (
-    <article className="relative flex flex-col gap-5 rounded-2xl border border-line bg-linear-to-b from-card-from to-card-to p-6">
+    <article className="relative flex flex-col gap-5 rounded-xl border border-line bg-linear-to-b from-card-from to-card-to p-6">
       <div className="flex items-center justify-between gap-4 font-mono text-[11px]">
         <span className="uppercase tracking-wider text-brand-text">{category}</span>
         <span className="text-fg-muted">{kind}</span>
@@ -46,7 +46,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
       <div className="mt-auto flex flex-wrap items-center gap-4 pt-1">
         <a
           href={caseLink.href}
-          className="inline-flex items-center gap-2 rounded-[10px] border border-brand/50 px-5 py-3 text-sm font-semibold text-fg after:absolute after:inset-0 after:content-[''] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-light"
+          className="inline-flex items-center gap-2 rounded-lg border border-brand/50 px-5 py-3 text-sm font-semibold text-fg after:absolute after:inset-0 after:content-[''] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-light"
         >
           {caseLink.label}
           <Icon name="arrow" className="size-4" />

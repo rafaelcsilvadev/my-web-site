@@ -106,4 +106,10 @@ describe("ProjectCard", () => {
     expect(button).toHaveClass("border-brand/50");
     expect(button).not.toHaveClass("border-brand-text/50");
   });
+
+  it("uses small corner radii like the design", () => {
+    render(<ProjectCard project={avaria} />);
+    expect(screen.getByRole("article")).toHaveClass("rounded-xl");
+    expect(screen.getByRole("link", { name: /Ver o caso/ })).toHaveClass("rounded-lg");
+  });
 });
