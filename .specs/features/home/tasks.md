@@ -298,11 +298,11 @@ T24 → T25
 
 **Done when**:
 
-- [ ] `tests/components/SectionHeading.test.tsx` written first and seen failing
-- [ ] `"01 · Destaques"` renders "01" in an `aria-hidden` span and "Destaques" visible; `h2` has the id and the title
-- [ ] An eyebrow with no ` · ` renders fully visible, with no empty `aria-hidden` span
-- [ ] Gate check passes: `pnpm test`
-- [ ] Test count: previous count + at least 3 tests
+- [x] `tests/components/SectionHeading.test.tsx` written first and seen failing
+- [x] `"01 · Destaques"` renders "01" in an `aria-hidden` span and "Destaques" visible; `h2` has the id and the title
+- [x] An eyebrow with no ` · ` renders fully visible, with no empty `aria-hidden` span
+- [x] Gate check passes: `pnpm test`
+- [x] Test count: previous count + at least 3 tests
 
 **Tests**: unit
 **Gate**: quick
