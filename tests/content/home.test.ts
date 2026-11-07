@@ -38,3 +38,38 @@ describe("homeContent.chrome", () => {
     expect(chrome.menuButton.openLabel).not.toBe(chrome.menuButton.closeLabel);
   });
 });
+
+describe("homeContent.hero", () => {
+  const { hero } = homeContent;
+
+  it("has the label, headline, badge, intro and stack line", () => {
+    expect(hero.label).toBe("Desenvolvedor de software");
+    expect(hero.headline).toBe("Especialista Full Stack do requisito à produção");
+    expect(hero.badge).toEqual({
+      label: "SDD",
+      text: "Especialista em desenvolvimento guiado por especificações",
+    });
+    expect(hero.intro).toBe(
+      "Construo software de ponta a ponta, do requisito à produção, guiado por especificações.",
+    );
+    expect(hero.stackLine).toEqual(["TypeScript", "React", "Node"]);
+  });
+
+  it("links Contato to #contato and Baixar CV to the CV PDF", () => {
+    expect(hero.actions.contact).toEqual({ label: "Contato", href: "#contato" });
+    expect(hero.actions.cv).toEqual({
+      label: "Baixar CV",
+      href: "/cv-rafael-couto-silva.pdf",
+    });
+  });
+
+  it("describes the portrait path, size, alt and caption", () => {
+    expect(hero.portrait).toEqual({
+      src: "/rafael-portrait.png",
+      width: 1254,
+      height: 1254,
+      alt: "Retrato profissional de Rafael Couto Silva em um setup roxo",
+      caption: "Retrato criado com IA a partir de uma foto minha",
+    });
+  });
+});

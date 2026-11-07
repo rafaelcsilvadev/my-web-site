@@ -18,4 +18,13 @@ export interface HomeContent {
     menuButton: { openLabel: string; closeLabel: string };
     footer: { copyright: string; backToTop: Link };
   };
+  hero: {
+    label: string;
+    headline: string;
+    badge: { label: string; text: string };
+    intro: string;
+    stackLine: string[];
+    actions: { contact: Link; cv: Link };
+    portrait: { src: string; width: number; height: number; alt: string; caption: string };
+  };
 }
