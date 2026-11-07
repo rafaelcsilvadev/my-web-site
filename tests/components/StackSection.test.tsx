@@ -31,6 +31,13 @@ describe("StackSection", () => {
     expect(screen.getAllByText("fio principal")).toHaveLength(3);
   });
 
+  it("lays the main items out as a three-column grid of cards", () => {
+    render(<StackSection stack={homeContent.stack} />);
+    const card = screen.getByText("TypeScript").closest("li");
+    expect(card?.parentElement).toHaveClass("grid", "md:grid-cols-3");
+    expect(card).toHaveClass("rounded-xl", "border", "border-line", "bg-linear-to-b", "p-6");
+  });
+
   it("renders the nine secondary chips after the 'também já trabalhei com' label", () => {
     render(<StackSection stack={homeContent.stack} />);
     expect(screen.getByText("também já trabalhei com")).toBeInTheDocument();
