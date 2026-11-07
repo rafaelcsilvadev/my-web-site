@@ -52,4 +52,5 @@ export interface HomeContent {
     portrait: { src: string; width: number; height: number; alt: string; caption: string };
   };
   projects: { sectionId: string; eyebrow: string; title: string; items: ProjectItem[] };
+  experience: { sectionId: string; eyebrow: string; title: string; entries: ExperienceEntry[] };
 }

@@ -559,13 +559,13 @@ T24 → T25
 
 **Done when**:
 
-- [ ] Tests written first and seen failing: content test (three entries, order, periods, every achievement and tag verbatim, no `[PERÍODO]`) and `tests/components/ExperienceEntry.test.tsx`
-- [ ] Lead-in renders inside `<strong>` followed by the text
-- [ ] With no period no period element renders; with a period it renders
-- [ ] Link renders only when the entry has one; empty `tags` renders no tag container
-- [ ] No PT-BR literal in source
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
-- [ ] Test count: previous count + at least 10 tests
+- [x] Tests written first and seen failing: content test (three entries, order, periods, every achievement and tag verbatim, no `[PERÍODO]`) and `tests/components/ExperienceEntry.test.tsx`
+- [x] Lead-in renders inside `<strong>` followed by the text
+- [x] With no period no period element renders; with a period it renders
+- [x] Link renders only when the entry has one; empty `tags` renders no tag container
+- [x] No PT-BR literal in source
+- [x] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
+- [x] Test count: previous count + at least 10 tests
 
 **Tests**: unit
 **Gate**: full
