@@ -20,6 +20,19 @@ export interface ProjectItem {
   repoLink?: Link;
 }
 
+export interface ExperienceEntry {
+  company: string;
+  period?: string;
+  duration?: string;
+  role: string;
+  achievements: { lead?: string; text: string }[];
+  tags: string[];
+  note?: string;
+  link?: Link;
+}
+
+export type ExperienceEntryView = ExperienceEntry;
+
 export interface HomeContent {
   chrome: {
     skipLinkLabel: string;

@@ -501,12 +501,12 @@ T24 → T25
 
 **Done when**:
 
-- [ ] `tests/components/ProjectsSection.test.tsx` written first and seen failing
-- [ ] Region found by name "Projetos em destaque"; `id="projetos"`; `scroll-mt-24`
-- [ ] Two `h3` (Avaria, My Trello Version) under one `h2`, in that order
-- [ ] No PT-BR literal in source
-- [ ] Gate check passes: `pnpm test`
-- [ ] Test count: previous count + at least 4 tests
+- [x] `tests/components/ProjectsSection.test.tsx` written first and seen failing
+- [x] Region found by name "Projetos em destaque"; `id="projetos"`; `scroll-mt-24`
+- [x] Two `h3` (Avaria, My Trello Version) under one `h2`, in that order
+- [x] No PT-BR literal in source
+- [x] Gate check passes: `pnpm test`
+- [x] Test count: previous count + at least 4 tests
 
 **Tests**: unit
 **Gate**: quick
@@ -530,12 +530,12 @@ T24 → T25
 
 **Done when**:
 
-- [ ] `tests/viewmodels/home-view-model.test.ts` written first and seen failing
-- [ ] `period: "ago. de 2025 - set. de 2026"` is kept; `""`, `"   "` and missing become `undefined`
-- [ ] Other fields pass through unchanged; `hasItems` is false for `undefined` and `[]`, true otherwise
-- [ ] File imports nothing from React/Next
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
-- [ ] Test count: previous count + at least 5 tests
+- [x] `tests/viewmodels/home-view-model.test.ts` written first and seen failing
+- [x] `period: "ago. de 2025 - set. de 2026"` is kept; `""`, `"   "` and missing become `undefined`
+- [x] Other fields pass through unchanged; `hasItems` is false for `undefined` and `[]`, true otherwise
+- [x] File imports nothing from React/Next
+- [x] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
+- [x] Test count: previous count + at least 5 tests
 
 **Tests**: unit
 **Gate**: full
