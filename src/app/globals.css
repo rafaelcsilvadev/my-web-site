@@ -39,4 +39,12 @@
       transition: none !important;
     }
   }
+
+  .home-backdrop {
+    background-image:
+      radial-gradient(ellipse at top, rgb(136 30 155 / 0.25), transparent 60%),
+      linear-gradient(var(--color-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--color-line) 1px, transparent 1px);
+    background-size: auto, 48px 48px, 48px 48px;
+  }
 }
