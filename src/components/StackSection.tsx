@@ -18,7 +18,7 @@ export function StackSection({ stack }: StackSectionProps) {
       className="mx-auto max-w-6xl scroll-mt-24 px-6 py-16 md:py-24"
     >
       <SectionHeading eyebrow={eyebrow} title={title} id={headingId} />
-      <ul className="mt-10 grid gap-4 md:grid-cols-3">
+      <ul className="mt-10 grid max-w-[820px] gap-4 md:grid-cols-3">
         {main.map((item) => (
           <li
             key={item.name}

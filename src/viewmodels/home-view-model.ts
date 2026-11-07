@@ -16,3 +16,15 @@ export function toMethodStepView(step: MethodStep): MethodStepView {
 export function hasItems<T>(list: readonly T[] | undefined): list is T[] {
   return list !== undefined && list.length > 0;
 }
+
+type NavLink = { label: string; sectionId: string };
+
+export function splitNavLinks(nav: { ctaSectionId: string; links: NavLink[] }): {
+  inlineLinks: NavLink[];
+  cta: NavLink | undefined;
+} {
+  return {
+    inlineLinks: nav.links.filter((link) => link.sectionId !== nav.ctaSectionId),
+    cta: nav.links.find((link) => link.sectionId === nav.ctaSectionId),
+  };
+}
