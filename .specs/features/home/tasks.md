@@ -703,12 +703,12 @@ T24 → T25
 
 **Done when**:
 
-- [ ] Tests written first and seen failing: content test (intro, summary, link href; text never contains `[conferir`) and `tests/components/MethodSection.test.tsx`
-- [ ] Region named "Especificação antes do código", `id="metodo"`; six `h3` in order
-- [ ] Summary and link render; rendered HTML never contains `[conferir`
-- [ ] No PT-BR literal in source
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
-- [ ] Test count: previous count + at least 6 tests
+- [x] Tests written first and seen failing: content test (intro, summary, link href; text never contains `[conferir`) and `tests/components/MethodSection.test.tsx`
+- [x] Region named "Especificação antes do código", `id="metodo"`; six `h3` in order
+- [x] Summary and link render; rendered HTML never contains `[conferir`
+- [x] No PT-BR literal in source
+- [x] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
+- [x] Test count: previous count + at least 6 tests
 
 **Tests**: unit
 **Gate**: full

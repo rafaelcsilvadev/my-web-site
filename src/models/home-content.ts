@@ -73,5 +73,15 @@ export interface HomeContent {
     otherLabel: string;
     others: string[];
   };
-  method: { humanLabel: string; aiLabel: string; steps: MethodStep[] };
+  method: {
+    sectionId: string;
+    eyebrow: string;
+    title: string;
+    intro: string;
+    humanLabel: string;
+    aiLabel: string;
+    steps: MethodStep[];
+    summary: string;
+    link: Link;
+  };
 }
