@@ -71,7 +71,11 @@ function readSources(dir: string, extensions: string[]): { file: string; source:
 
 const componentSources = readSources("src/components", [".tsx"]);
 const contentSources = readSources("src/content", [".ts"]);
-const viewComponents = componentSources.filter(({ file }) => file !== "HomeView.tsx");
+const appSources = readSources("src/app", [".tsx"]);
+const viewComponents = [
+  ...componentSources.filter(({ file }) => file !== "HomeView.tsx"),
+  ...appSources,
+];
 
 describe("Home page guards", () => {
   it("keeps PT-BR text out of JSX children in every component but HomeView", () => {
