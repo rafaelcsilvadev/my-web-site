@@ -64,7 +64,7 @@ export interface HomeContent {
   };
   hero: {
     label: string;
-    headline: string;
+    headline: { lead: string; accent: string };
     badge: { label: string; text: string };
     intro: string;
     stackLine: string[];

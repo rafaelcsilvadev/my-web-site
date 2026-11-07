@@ -23,7 +23,7 @@ export const homeContent: HomeContent = {
   },
   hero: {
     label: "Desenvolvedor de software",
-    headline: "Especialista Full Stack do requisito à produção",
+    headline: { lead: "Especialista Full Stack", accent: "do requisito à produção" },
     badge: {
       label: "SDD",
       text: "Especialista em desenvolvimento guiado por especificações",

@@ -15,6 +15,24 @@ describe("Hero", () => {
     expect(headings[0]).toHaveTextContent("Especialista Full Stack do requisito à produção");
   });
 
+  it("highlights the headline accent on its own line in the brand color", () => {
+    render(<Hero hero={hero} />);
+    const accent = screen.getByText("do requisito à produção");
+    expect(accent.tagName).toBe("SPAN");
+    expect(accent).toHaveClass("block", "text-brand-text");
+  });
+
+  it("frames the portrait as a circle", () => {
+    render(<Hero hero={hero} />);
+    const img = screen.getByRole("img", { name: hero.portrait.alt });
+    expect(img).toHaveClass("rounded-full", "object-cover");
+  });
+
+  it("puts an arrow on the Contato button", () => {
+    render(<Hero hero={hero} />);
+    expect(screen.getByRole("link", { name: "Contato" }).querySelector("svg")).not.toBeNull();
+  });
+
   it("renders the label, badge, intro and stack line", () => {
     render(<Hero hero={hero} />);
     expect(screen.getByText("Desenvolvedor de software")).toBeInTheDocument();
@@ -27,7 +45,9 @@ describe("Hero", () => {
         "Construo software de ponta a ponta, do requisito à produção, guiado por especificações.",
       ),
     ).toBeInTheDocument();
-    expect(screen.getByText("TypeScript · React · Node")).toBeInTheDocument();
+    expect(
+      screen.getByText((_, element) => element?.tagName === "P" && element.textContent === "TypeScript · React · Node"),
+    ).toBeInTheDocument();
   });
 
   it("links Contato to #contato", () => {
