@@ -7,23 +7,28 @@ type MethodStepProps = {
   aiLabel: string;
 };
 
-const BASE = "flex flex-col gap-3 rounded-2xl border bg-card-from p-6";
+const BASE = "flex flex-col gap-2.5 rounded-lg border p-4";
+const BADGE = "mt-0.5 shrink-0 rounded border px-1.5 font-mono text-[10px] leading-4";
 
 export function MethodStep({ step, humanLabel, aiLabel }: MethodStepProps) {
   const { number, title, human, ai, highlight } = toMethodStepView(step);
-  const border = highlight ? "border-brand-text" : "border-line";
+  const tone = highlight
+    ? "border-brand-text/40 bg-brand/15"
+    : "border-line bg-card-from";
 
   return (
-    <article className={`${BASE} ${border}`}>
-      <span className="font-mono text-xs text-brand-light">{number}</span>
-      <h3 className="text-xl font-bold text-fg">{title}</h3>
-      <p className="text-fg-muted">
-        <span className="mr-2 font-mono text-xs text-brand-light">{humanLabel}</span>
+    <article className={`${BASE} ${tone}`}>
+      <span className="font-mono text-[11px] text-brand-text">{number}</span>
+      <h3 className="text-[15px] font-semibold text-fg">{title}</h3>
+      <p className="flex items-start gap-2 text-[13px] leading-snug text-fg-muted">
+        <span className={`${BADGE} border-line bg-white/5 text-fg-muted`}>{humanLabel}</span>
         {human}
       </p>
       {ai ? (
-        <p className="text-fg-muted">
-          <span className="mr-2 font-mono text-xs text-brand-light">{aiLabel}</span>
+        <p className="flex items-start gap-2 text-[13px] leading-snug text-fg-muted">
+          <span className={`${BADGE} border-brand-text/40 bg-brand/20 text-brand-light`}>
+            {aiLabel}
+          </span>
           {ai}
         </p>
       ) : null}
