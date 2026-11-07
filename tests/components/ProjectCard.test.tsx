@@ -68,4 +68,48 @@ describe("ProjectCard", () => {
     expect(container.querySelector("ul")).toBeNull();
     expect(screen.queryByText("TypeScript")).not.toBeInTheDocument();
   });
+
+  it("shows text metrics with the label above a white value", () => {
+    render(<ProjectCard project={avaria} />);
+    const value = screen.getByText("+4 anos");
+    const label = screen.getByText("Em produção");
+    expect(value).toHaveClass("text-fg");
+    expect(value).not.toHaveClass("font-mono");
+    expect(label).toHaveClass("font-mono");
+    expect(label.parentElement?.firstElementChild).toBe(label);
+  });
+
+  it("shows number metrics with a large mono brand value above the label", () => {
+    render(<ProjectCard project={trello} />);
+    const value = screen.getByText("~456");
+    const label = screen.getByText("PRs mergeados");
+    expect(value).toHaveClass("font-mono", "text-brand-light");
+    expect(label).not.toHaveClass("font-mono");
+    expect(value.parentElement).toHaveClass("flex-col-reverse");
+  });
+
+  it("highlights only the main tags", () => {
+    render(<ProjectCard project={avaria} />);
+    expect(screen.getByText("TypeScript")).toHaveClass("border-brand-text");
+    expect(screen.getByText("SQL Server")).not.toHaveClass("border-brand-text");
+  });
+
+  it("pins the actions to the card bottom", () => {
+    render(<ProjectCard project={avaria} />);
+    const actions = screen.getByRole("link", { name: /Ver o caso/ }).parentElement;
+    expect(actions).toHaveClass("mt-auto");
+  });
+
+  it("uses a subtle brand border on the case button", () => {
+    render(<ProjectCard project={avaria} />);
+    const button = screen.getByRole("link", { name: /Ver o caso/ });
+    expect(button).toHaveClass("border-brand/50");
+    expect(button).not.toHaveClass("border-brand-text/50");
+  });
+
+  it("uses small corner radii like the design", () => {
+    render(<ProjectCard project={avaria} />);
+    expect(screen.getByRole("article")).toHaveClass("rounded-xl");
+    expect(screen.getByRole("link", { name: /Ver o caso/ })).toHaveClass("rounded-lg");
+  });
 });
