@@ -42,7 +42,8 @@ export const homeContent: HomeContent = {
       alt: "Retrato profissional de Rafael Couto Silva em um setup roxo",
       caption: "Retrato criado com IA a partir de uma foto minha",
     },
-  },  projects: {
+  },
+  projects: {
     sectionId: "projetos",
     eyebrow: "01 · Destaques",
     title: "Projetos em destaque",
@@ -138,7 +139,8 @@ export const homeContent: HomeContent = {
         tags: [".NET", "Angular", "Integração com hardware"],
       },
     ],
-  },  stack: {
+  },
+  stack: {
     sectionId: "stack",
     eyebrow: "03 · Stack",
     title: "Onde sou mais forte",
