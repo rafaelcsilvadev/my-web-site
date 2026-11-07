@@ -34,7 +34,7 @@ describe("StackSection", () => {
   it("lays the main items out as a three-column grid of cards", () => {
     render(<StackSection stack={homeContent.stack} />);
     const card = screen.getByText("TypeScript").closest("li");
-    expect(card?.parentElement).toHaveClass("grid", "md:grid-cols-3");
+    expect(card?.parentElement).toHaveClass("grid", "md:grid-cols-3", "max-w-[820px]");
     expect(card).toHaveClass("rounded-xl", "border", "border-line", "bg-linear-to-b", "p-6");
   });
 
