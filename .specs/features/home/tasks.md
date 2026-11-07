@@ -732,12 +732,12 @@ T24 → T25
 
 **Done when**:
 
-- [ ] `tests/components/ContactCard.test.tsx` written first and seen failing
-- [ ] Renders label, value and a link with the given `href`
-- [ ] `external` adds `target="_blank"` and `rel="noopener noreferrer"`; without it neither attribute is present (mailto)
-- [ ] No PT-BR literal in source
-- [ ] Gate check passes: `pnpm test`
-- [ ] Test count: previous count + at least 4 tests
+- [x] `tests/components/ContactCard.test.tsx` written first and seen failing
+- [x] Renders label, value and a link with the given `href`
+- [x] `external` adds `target="_blank"` and `rel="noopener noreferrer"`; without it neither attribute is present (mailto)
+- [x] No PT-BR literal in source
+- [x] Gate check passes: `pnpm test`
+- [x] Test count: previous count + at least 4 tests
 
 **Tests**: unit
 **Gate**: quick
