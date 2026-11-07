@@ -791,14 +791,14 @@ T24 → T25
 
 **Done when**:
 
-- [ ] Tests written first and seen failing: `tests/components/HomeView.test.tsx` and updated `tests/app/page.test.tsx`
-- [ ] First focusable element is the skip link; one `main` with `id="conteudo"`; one `h1`
-- [ ] Sections appear in order: Hero, Projetos, Experiência, Stack, Método, Contato; `#top` exists
-- [ ] Heading outline: one `h1`, five `h2`, `h3` for cards, entries and steps
-- [ ] `src/components/HomePlaceholder.tsx` and `tests/components/HomePlaceholder.test.tsx` deleted; no references remain
-- [ ] `tests/app/site-metadata.test.ts` and the other Foundation tests pass unchanged
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test && pnpm build`
-- [ ] `pnpm start` then `curl -s localhost:3000` returns HTML containing "Especialista Full Stack" and "Vamos conversar" and no `[PERÍODO]`, `[conferir` or `SEU-DOMINIO`
+- [x] Tests written first and seen failing: `tests/components/HomeView.test.tsx` and updated `tests/app/page.test.tsx`
+- [x] First focusable element is the skip link; one `main` with `id="conteudo"`; one `h1`
+- [x] Sections appear in order: Hero, Projetos, Experiência, Stack, Método, Contato; `#top` exists
+- [x] Heading outline: one `h1`, five `h2`, `h3` for cards, entries and steps
+- [x] `src/components/HomePlaceholder.tsx` and `tests/components/HomePlaceholder.test.tsx` deleted; no references remain
+- [x] `tests/app/site-metadata.test.ts` and the other Foundation tests pass unchanged
+- [x] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test && pnpm build`
+- [x] `pnpm start` then `curl -s localhost:3000` returns HTML containing "Especialista Full Stack" and "Vamos conversar" and no `[PERÍODO]`, `[conferir` or `SEU-DOMINIO`
 
 **Tests**: unit
 **Gate**: build
