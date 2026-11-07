@@ -213,11 +213,11 @@ T24 → T25
 
 **Done when**:
 
-- [ ] `tests/components/Icon.test.tsx` written first and seen failing
-- [ ] Each name renders one `svg` with `aria-hidden="true"`
-- [ ] Merges an optional `className`
-- [ ] Gate check passes: `pnpm test`
-- [ ] Test count: previous count + at least 3 tests
+- [x] `tests/components/Icon.test.tsx` written first and seen failing
+- [x] Each name renders one `svg` with `aria-hidden="true"`
+- [x] Merges an optional `className`
+- [x] Gate check passes: `pnpm test`
+- [x] Test count: previous count + at least 3 tests
 
 **Tests**: unit
 **Gate**: quick
