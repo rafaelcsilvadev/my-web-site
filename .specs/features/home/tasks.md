@@ -441,13 +441,13 @@ T24 → T25
 
 **Done when**:
 
-- [ ] Tests written first and seen failing: `tests/content/home.test.ts` (hero strings, hrefs, portrait path/size/alt/caption) and `tests/components/Hero.test.tsx`
-- [ ] Exactly one `h1` with the headline; label, badge, intro and stack line render
-- [ ] "Contato" has `href="#contato"`; "Baixar CV" has `href="/cv-rafael-couto-silva.pdf"` and `download`
-- [ ] Portrait `img` has the alt text, width/height attributes and a `figcaption` with the caption
-- [ ] No PT-BR literal in source
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
-- [ ] Test count: previous count + at least 8 tests
+- [x] Tests written first and seen failing: `tests/content/home.test.ts` (hero strings, hrefs, portrait path/size/alt/caption) and `tests/components/Hero.test.tsx`
+- [x] Exactly one `h1` with the headline; label, badge, intro and stack line render
+- [x] "Contato" has `href="#contato"`; "Baixar CV" has `href="/cv-rafael-couto-silva.pdf"` and `download`
+- [x] Portrait `img` has the alt text, width/height attributes and a `figcaption` with the caption
+- [x] No PT-BR literal in source
+- [x] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
+- [x] Test count: previous count + at least 8 tests
 
 **Tests**: unit
 **Gate**: full

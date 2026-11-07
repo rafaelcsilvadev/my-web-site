@@ -21,4 +21,26 @@ export const homeContent: HomeContent = {
       backToTop: { label: "Voltar ao topo", href: "#top" },
     },
   },
+  hero: {
+    label: "Desenvolvedor de software",
+    headline: "Especialista Full Stack do requisito à produção",
+    badge: {
+      label: "SDD",
+      text: "Especialista em desenvolvimento guiado por especificações",
+    },
+    intro:
+      "Construo software de ponta a ponta, do requisito à produção, guiado por especificações.",
+    stackLine: ["TypeScript", "React", "Node"],
+    actions: {
+      contact: { label: "Contato", href: "#contato" },
+      cv: { label: "Baixar CV", href: "/cv-rafael-couto-silva.pdf" },
+    },
+    portrait: {
+      src: "/rafael-portrait.png",
+      width: 1254,
+      height: 1254,
+      alt: "Retrato profissional de Rafael Couto Silva em um setup roxo",
+      caption: "Retrato criado com IA a partir de uma foto minha",
+    },
+  },
 };
