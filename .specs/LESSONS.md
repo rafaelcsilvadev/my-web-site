@@ -26,6 +26,12 @@ Seen once or not yet corroborated. Tracked, not trusted.
 - evidence: tests/components/HomeView.test.tsx:65-85 (tests)
 - last seen: 2026-11-07T02:24:16Z
 
+### L-003 - Define which decorative elements 'number badges' covers in accessibility ACs, so each is asserted aria-hidden or explicitly exempt
+- signal: `spec_precision_gap` · recurrence: 1 feature(s) · scope: `components` · harmful: 0
+- features: cases
+- evidence: validation.md P2 AC3 (src/components/CaseSteps.tsx:19) (components)
+- last seen: 2026-11-08T15:03:03Z
+
 ## Quarantined (failed when applied - ignore)
 
 A confirmed lesson that recurred alongside failure. Kept for the maintainer to review.

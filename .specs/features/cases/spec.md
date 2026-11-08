@@ -127,9 +127,9 @@ My Trello Version page blocks, in order: Header, back link, case hero (eyebrow, 
 
 1. The system SHALL render exactly one `h1` per page (the case title) and the numbered section headings as `h2`.
 2. The system SHALL render each numbered section as a `section` labelled by its heading through `aria-labelledby`.
-3. The system SHALL render the facts bar, metric cards and stack groups as description lists or lists with accessible names, and SHALL mark decorative icons and numbers badges `aria-hidden="true"`.
-4. WHEN a visitor presses Tab THEN the system SHALL show a visible focus outline on every link and button, and the "Pular para o conteúdo" skip link SHALL be the first focusable element and SHALL move focus to the main content.
-5. WHILE the viewport is 390 px wide, the system SHALL render every block in one column without horizontal scroll.
+3. The system SHALL render the facts bar, metric cards and stack groups as description lists or lists with accessible names, and SHALL mark decorative icons and number badges (the section number badge and the step numbers in the process list) `aria-hidden="true"`; the ordered list and the heading text already carry the order.
+4. WHEN a visitor presses Tab THEN the system SHALL show a visible focus outline on every link and button, and the "Pular para o conteúdo" skip link SHALL be the first focusable element and SHALL target the main content (`href="#main"`, `id="main"`), leaving the focus move to the browser's native anchor behavior. The focus outline is a global `:focus-visible` rule, not per component.
+5. WHILE the viewport is 390 px wide, the system SHALL stack the two-column sections into one column and SHALL NOT scroll horizontally; the process steps grid MAY use two compact columns. Column counts are asserted by layout classes; horizontal scroll needs a browser check.
 6. WHEN the visitor prefers reduced motion THEN the system SHALL not animate; the Foundation `prefers-reduced-motion` rule applies.
 
 **Independent Test**: Vitest asserts heading levels, `aria-labelledby`, skip link order and `aria-hidden`; layout classes are checked per component.
@@ -166,18 +166,18 @@ My Trello Version page blocks, in order: Header, back link, case hero (eyebrow, 
 
 | Requirement ID | Story | Phase | Status |
 | -------------- | ----- | ----- | ------ |
-| CASE-01 | P1: Shared case template and Avaria page (AC 1-2 hero and facts) | Design | Pending |
-| CASE-02 | P1: Shared case template and Avaria page (AC 3-6 sections and stack) | Design | Pending |
-| CASE-03 | P1: Shared case template and Avaria page (AC 7 next case) | Design | Pending |
-| CASE-04 | P1: Shared case template and Avaria page (AC 8-9 content-only strings, empty lists) | Design | Pending |
-| CASE-05 | P1: My Trello Version page (AC 1-2 hero) | Design | Pending |
-| CASE-06 | P1: My Trello Version page (AC 3-5 Objetivo, Processo, Evidências) | Design | Pending |
-| CASE-07 | P1: My Trello Version page (AC 6, 10 screenshot asset) | Design | Pending |
-| CASE-08 | P1: My Trello Version page (AC 7-9 stack, note, closing card, no marker) | Design | Pending |
-| CASE-09 | P1: Routing and navigation (AC 1-2 static params, 404) | Design | Pending |
-| CASE-10 | P1: Routing and navigation (AC 3-7 header, footer, links) | Design | Pending |
-| CASE-11 | P2: Accessibility and responsiveness | Design | Pending |
-| CASE-12 | P3: Per-page metadata | Design | Pending |
+| CASE-01 | P1: Shared case template and Avaria page (AC 1-2 hero and facts) | Design | Verified |
+| CASE-02 | P1: Shared case template and Avaria page (AC 3-6 sections and stack) | Design | Verified |
+| CASE-03 | P1: Shared case template and Avaria page (AC 7 next case) | Design | Verified |
+| CASE-04 | P1: Shared case template and Avaria page (AC 8-9 content-only strings, empty lists) | Design | Verified |
+| CASE-05 | P1: My Trello Version page (AC 1-2 hero) | Design | Verified |
+| CASE-06 | P1: My Trello Version page (AC 3-5 Objetivo, Processo, Evidências) | Design | Verified |
+| CASE-07 | P1: My Trello Version page (AC 6, 10 screenshot asset) | Design | Verified |
+| CASE-08 | P1: My Trello Version page (AC 7-9 stack, note, closing card, no marker) | Design | Verified |
+| CASE-09 | P1: Routing and navigation (AC 1-2 static params, 404) | Design | Verified |
+| CASE-10 | P1: Routing and navigation (AC 3-7 header, footer, links) | Design | Verified |
+| CASE-11 | P2: Accessibility and responsiveness | Design | Verified |
+| CASE-12 | P3: Per-page metadata | Design | Verified |
 
 **Coverage:** 12 total, 0 mapped to tasks, 12 unmapped ⚠️
 

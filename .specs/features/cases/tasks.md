@@ -10,7 +10,7 @@ Implement these tasks with the `tlc-spec-driven` skill: **activate it by name an
 
 **Spec**: `.specs/features/cases/spec.md`
 **Design**: none (skipped; decisions are inline in "Design Notes" below)
-**Status**: Draft
+**Status**: Approved
 
 ---
 
@@ -363,10 +363,10 @@ T24 → T25
 
 **Done when**:
 
-- [ ] Tests added first to `tests/components/SiteHeader.test.tsx` and seen failing (explicit hrefs ignored)
-- [ ] Tests cover a nav with `Início` (`/`), `/#projetos`, `/#contato` CTA and `brandHref` `/`, in the desktop nav, the mobile menu and the brand link; existing Home tests unchanged and green
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
-- [ ] Test count: previous count + at least 3 tests, none removed
+- [x] Tests added first to `tests/components/SiteHeader.test.tsx` and seen failing (explicit hrefs ignored)
+- [x] Tests cover a nav with `Início` (`/`), `/#projetos`, `/#contato` CTA and `brandHref` `/`, in the desktop nav, the mobile menu and the brand link; existing Home tests unchanged and green
+- [x] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
+- [x] Test count: previous count + at least 3 tests, none removed
 
 **Tests**: unit
 **Gate**: full
@@ -390,10 +390,10 @@ T24 → T25
 
 **Done when**:
 
-- [ ] `tests/content/case-chrome.test.ts` written first and seen failing (module missing)
-- [ ] Test asserts hrefs `/`, `/#projetos`, `/#experiencia`, `/#stack`, `/#metodo`, CTA `/#contato`, `brandHref` `/`, footer "© 2026 Rafael Couto Silva" and "Voltar ao topo" to `#top`
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
-- [ ] Test count: previous count + at least 3 tests
+- [x] `tests/content/case-chrome.test.ts` written first and seen failing (module missing)
+- [x] Test asserts hrefs `/`, `/#projetos`, `/#experiencia`, `/#stack`, `/#metodo`, CTA `/#contato`, `brandHref` `/`, footer "© 2026 Rafael Couto Silva" and "Voltar ao topo" to `#top`
+- [x] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
+- [x] Test count: previous count + at least 3 tests
 
 **Tests**: unit
 **Gate**: full
@@ -417,10 +417,10 @@ T24 → T25
 
 **Done when**:
 
-- [ ] `tests/components/BackLink.test.tsx` written first and seen failing (file missing)
-- [ ] Test asserts the link name, `href` `/` and an `aria-hidden` icon
-- [ ] Gate check passes: `pnpm test`
-- [ ] Test count: previous count + at least 2 tests
+- [x] `tests/components/BackLink.test.tsx` written first and seen failing (file missing)
+- [x] Test asserts the link name, `href` `/` and an `aria-hidden` icon
+- [x] Gate check passes: `pnpm test`
+- [x] Test count: previous count + at least 2 tests
 
 **Tests**: unit
 **Gate**: quick
@@ -444,11 +444,11 @@ T24 → T25
 
 **Done when**:
 
-- [ ] `tests/components/CaseHero.test.tsx` written first and seen failing (file missing)
-- [ ] Test asserts the eyebrow, one `h1` with the title, the intro, buttons with `href`, `rel="noopener noreferrer"` and `target="_blank"` on the external one
-- [ ] Test asserts no actions container renders when `actions` is empty
-- [ ] Gate check passes: `pnpm test`
-- [ ] Test count: previous count + at least 4 tests
+- [x] `tests/components/CaseHero.test.tsx` written first and seen failing (file missing)
+- [x] Test asserts the eyebrow, one `h1` with the title, the intro, buttons with `href`, `rel="noopener noreferrer"` and `target="_blank"` on the external one
+- [x] Test asserts no actions container renders when `actions` is empty
+- [x] Gate check passes: `pnpm test`
+- [x] Test count: previous count + at least 4 tests
 
 **Tests**: unit
 **Gate**: quick
@@ -472,10 +472,10 @@ T24 → T25
 
 **Done when**:
 
-- [ ] `tests/components/CaseFacts.test.tsx` written first and seen failing (file missing)
-- [ ] Test asserts each label/value pair through `dt`/`dd` and that nothing renders when the list is empty
-- [ ] Gate check passes: `pnpm test`
-- [ ] Test count: previous count + at least 2 tests
+- [x] `tests/components/CaseFacts.test.tsx` written first and seen failing (file missing)
+- [x] Test asserts each label/value pair through `dt`/`dd` and that nothing renders when the list is empty
+- [x] Gate check passes: `pnpm test`
+- [x] Test count: previous count + at least 2 tests
 
 **Tests**: unit
 **Gate**: quick
@@ -499,10 +499,10 @@ T24 → T25
 
 **Done when**:
 
-- [ ] `tests/components/CaseSection.test.tsx` written first and seen failing (file missing)
-- [ ] Test asserts a `section` labelled by its `h2` through `aria-labelledby`, the number badge with `aria-hidden="true"`, the optional intro, children rendered, and a layout class difference between `split` and `stacked`
-- [ ] Gate check passes: `pnpm test`
-- [ ] Test count: previous count + at least 4 tests
+- [x] `tests/components/CaseSection.test.tsx` written first and seen failing (file missing)
+- [x] Test asserts a `section` labelled by its `h2` through `aria-labelledby`, the number badge with `aria-hidden="true"`, the optional intro, children rendered, and a layout class difference between `split` and `stacked`
+- [x] Gate check passes: `pnpm test`
+- [x] Test count: previous count + at least 4 tests
 
 **Tests**: unit
 **Gate**: quick
@@ -526,10 +526,10 @@ T24 → T25
 
 **Done when**:
 
-- [ ] `tests/components/CaseCallout.test.tsx` written first and seen failing (file missing)
-- [ ] Test asserts the label, each reason as a list item, and that nothing renders when the reasons list is empty
-- [ ] Gate check passes: `pnpm test`
-- [ ] Test count: previous count + at least 3 tests
+- [x] `tests/components/CaseCallout.test.tsx` written first and seen failing (file missing)
+- [x] Test asserts the label, each reason as a list item, and that nothing renders when the reasons list is empty
+- [x] Gate check passes: `pnpm test`
+- [x] Test count: previous count + at least 3 tests
 
 **Tests**: unit
 **Gate**: quick
@@ -553,10 +553,10 @@ T24 → T25
 
 **Done when**:
 
-- [ ] `tests/components/CaseMetrics.test.tsx` written first and seen failing (file missing)
-- [ ] Test asserts every value/label pair and that nothing renders when the list is empty
-- [ ] Gate check passes: `pnpm test`
-- [ ] Test count: previous count + at least 2 tests
+- [x] `tests/components/CaseMetrics.test.tsx` written first and seen failing (file missing)
+- [x] Test asserts every value/label pair and that nothing renders when the list is empty
+- [x] Gate check passes: `pnpm test`
+- [x] Test count: previous count + at least 2 tests
 
 **Tests**: unit
 **Gate**: quick
@@ -580,10 +580,10 @@ T24 → T25
 
 **Done when**:
 
-- [ ] `tests/components/CaseCardList.test.tsx` written first and seen failing (file missing)
-- [ ] Test asserts each label and text and that nothing renders when the list is empty
-- [ ] Gate check passes: `pnpm test`
-- [ ] Test count: previous count + at least 2 tests
+- [x] `tests/components/CaseCardList.test.tsx` written first and seen failing (file missing)
+- [x] Test asserts each label and text and that nothing renders when the list is empty
+- [x] Gate check passes: `pnpm test`
+- [x] Test count: previous count + at least 2 tests
 
 **Tests**: unit
 **Gate**: quick
@@ -607,10 +607,10 @@ T24 → T25
 
 **Done when**:
 
-- [ ] `tests/components/CaseSteps.test.tsx` written first and seen failing (file missing)
-- [ ] Test asserts an ordered list with six items in order, number text, title and caption, the highlight class only on the step marked `highlight`, and no container when empty
-- [ ] Gate check passes: `pnpm test`
-- [ ] Test count: previous count + at least 3 tests
+- [x] `tests/components/CaseSteps.test.tsx` written first and seen failing (file missing)
+- [x] Test asserts an ordered list with six items in order, number text, title and caption, the highlight class only on the step marked `highlight`, and no container when empty
+- [x] Gate check passes: `pnpm test`
+- [x] Test count: previous count + at least 3 tests
 
 **Tests**: unit
 **Gate**: quick
@@ -634,10 +634,10 @@ T24 → T25
 
 **Done when**:
 
-- [ ] `tests/components/CaseHighlights.test.tsx` written first and seen failing (file missing)
-- [ ] Test asserts each title and text and that nothing renders when the list is empty
-- [ ] Gate check passes: `pnpm test`
-- [ ] Test count: previous count + at least 2 tests
+- [x] `tests/components/CaseHighlights.test.tsx` written first and seen failing (file missing)
+- [x] Test asserts each title and text and that nothing renders when the list is empty
+- [x] Gate check passes: `pnpm test`
+- [x] Test count: previous count + at least 2 tests
 
 **Tests**: unit
 **Gate**: quick
@@ -661,10 +661,10 @@ T24 → T25
 
 **Done when**:
 
-- [ ] `tests/components/CaseFigure.test.tsx` written first and seen failing (file missing)
-- [ ] Test asserts the `img` alt, `width` 1797, `height` 915, a `figure` with the caption in a `figcaption`
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
-- [ ] Test count: previous count + at least 3 tests
+- [x] `tests/components/CaseFigure.test.tsx` written first and seen failing (file missing)
+- [x] Test asserts the `img` alt, `width` 1797, `height` 915, a `figure` with the caption in a `figcaption`
+- [x] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
+- [x] Test count: previous count + at least 3 tests
 
 **Tests**: unit
 **Gate**: full
@@ -688,10 +688,10 @@ T24 → T25
 
 **Done when**:
 
-- [ ] `tests/components/CaseStack.test.tsx` written first and seen failing (file missing)
-- [ ] Test asserts the label, a group label per labeled group, every chip, main chips marked, the note when present, and no empty group container
-- [ ] Gate check passes: `pnpm test`
-- [ ] Test count: previous count + at least 4 tests
+- [x] `tests/components/CaseStack.test.tsx` written first and seen failing (file missing)
+- [x] Test asserts the label, a group label per labeled group, every chip, main chips marked, the note when present, and no empty group container
+- [x] Gate check passes: `pnpm test`
+- [x] Test count: previous count + at least 4 tests
 
 **Tests**: unit
 **Gate**: quick
@@ -715,10 +715,10 @@ T24 → T25
 
 **Done when**:
 
-- [ ] `tests/components/CaseClosing.test.tsx` written first and seen failing (file missing)
-- [ ] Test asserts eyebrow, title, text, each action `href`, `download` on the CV action, `target="_blank"` and `rel` on the external one, and no actions container when empty
-- [ ] Gate check passes: `pnpm test`
-- [ ] Test count: previous count + at least 4 tests
+- [x] `tests/components/CaseClosing.test.tsx` written first and seen failing (file missing)
+- [x] Test asserts eyebrow, title, text, each action `href`, `download` on the CV action, `target="_blank"` and `rel` on the external one, and no actions container when empty
+- [x] Gate check passes: `pnpm test`
+- [x] Test count: previous count + at least 4 tests
 
 **Tests**: unit
 **Gate**: quick
@@ -742,11 +742,11 @@ T24 → T25
 
 **Done when**:
 
-- [ ] `tests/components/CaseView.test.tsx` written first and seen failing (file missing)
-- [ ] Test renders both real cases and asserts: one `h1`, the numbered `h2` sections in order (three per case), every block kind renders, `[conferir` absent, skip link is the first focusable element and targets `main`, the page root has id `top`, header hrefs come from the case chrome
-- [ ] Test asserts a source scan: no PT-BR literal in `src/components/Case*.tsx` and `src/components/BackLink.tsx` (same technique as `tests/components/HomeView.test.tsx`)
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
-- [ ] Test count: previous count + at least 6 tests
+- [x] `tests/components/CaseView.test.tsx` written first and seen failing (file missing)
+- [x] Test renders both real cases and asserts: one `h1`, the numbered `h2` sections in order (three per case), every block kind renders, `[conferir` absent, skip link is the first focusable element and targets `main`, the page root has id `top`, header hrefs come from the case chrome
+- [x] Test asserts a source scan: no PT-BR literal in `src/components/Case*.tsx` and `src/components/BackLink.tsx` (same technique as `tests/components/HomeView.test.tsx`)
+- [x] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
+- [x] Test count: previous count + at least 6 tests
 
 **Tests**: unit
 **Gate**: full
@@ -770,10 +770,10 @@ T24 → T25
 
 **Done when**:
 
-- [ ] `tests/app/casos/case-metadata.test.ts` written first and seen failing (module missing)
-- [ ] Test asserts, for each real case, the title, the description, the Open Graph `url` `<site>/casos/<slug>` and the `/og-image.png` image
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
-- [ ] Test count: previous count + at least 4 tests
+- [x] `tests/app/casos/case-metadata.test.ts` written first and seen failing (module missing)
+- [x] Test asserts, for each real case, the title, the description, the Open Graph `url` `<site>/casos/<slug>` and the `/og-image.png` image
+- [x] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
+- [x] Test count: previous count + at least 4 tests
 
 **Tests**: unit
 **Gate**: full
@@ -797,11 +797,11 @@ T24 → T25
 
 **Done when**:
 
-- [ ] `tests/app/casos/page.test.tsx` written first and seen failing (module missing)
-- [ ] Test asserts `generateStaticParams` returns both slugs, the page for `avaria` and for `my-trello-version` renders their `h1`, an unknown slug calls `notFound`, and `generateMetadata` returns the metadata for each slug
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test && pnpm build`
-- [ ] `pnpm build` lists `/casos/avaria` and `/casos/my-trello-version` as statically generated
-- [ ] Test count: previous count + at least 5 tests
+- [x] `tests/app/casos/[slug]/page.test.tsx` written first and seen failing (module missing; path mirrors `src/app/casos/[slug]/page.tsx` per `tests/structure.test.ts`)
+- [x] Test asserts `generateStaticParams` returns both slugs, the page for `avaria` and for `my-trello-version` renders their `h1`, an unknown slug calls `notFound`, and `generateMetadata` returns the metadata for each slug
+- [x] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test && pnpm build`
+- [x] `pnpm build` lists `/casos/avaria` and `/casos/my-trello-version` as statically generated
+- [x] Test count: previous count + at least 5 tests
 
 **Tests**: unit
 **Gate**: build

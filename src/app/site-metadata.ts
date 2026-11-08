@@ -1,9 +1,9 @@
 import type { Metadata, Viewport } from "next";
 import type { SiteContent } from "@/models/site-content";
 
-const OG_IMAGE_PATH = "/og-image.png";
-const OG_IMAGE_WIDTH = 1200;
-const OG_IMAGE_HEIGHT = 630;
+export const OG_IMAGE_PATH = "/og-image.png";
+export const OG_IMAGE_WIDTH = 1200;
+export const OG_IMAGE_HEIGHT = 630;
 
 export function buildSiteMetadata(
   content: SiteContent,
@@ -15,6 +15,8 @@ export function buildSiteMetadata(
     metadataBase: new URL(siteUrl),
     title: content.title,
     description: content.description,
+    alternates: { canonical: `${siteUrl}/` },
+    robots: { index: true, follow: true },
     icons: {
       icon: [
         { url: "/favicon.svg", type: "image/svg+xml" },
