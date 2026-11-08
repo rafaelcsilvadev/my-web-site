@@ -661,10 +661,10 @@ T24 → T25
 
 **Done when**:
 
-- [ ] `tests/components/CaseFigure.test.tsx` written first and seen failing (file missing)
-- [ ] Test asserts the `img` alt, `width` 1797, `height` 915, a `figure` with the caption in a `figcaption`
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
-- [ ] Test count: previous count + at least 3 tests
+- [x] `tests/components/CaseFigure.test.tsx` written first and seen failing (file missing)
+- [x] Test asserts the `img` alt, `width` 1797, `height` 915, a `figure` with the caption in a `figcaption`
+- [x] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
+- [x] Test count: previous count + at least 3 tests
 
 **Tests**: unit
 **Gate**: full
