@@ -45,7 +45,7 @@ describe("buildSiteMetadata", () => {
   it("sets metadataBase, title and description from content", () => {
     const meta = build();
     expect(meta.metadataBase.href).toBe("https://example.com/");
-    expect(meta.title).toBe("Rafael Couto Silva · Especialista Full Stack");
+    expect(meta.title).toBe("Rafael Couto Silva · Desenvolvedor Full Stack");
     expect(meta.description).toBe(
       "Do requisito à produção, guiado por especificações.",
     );
@@ -55,7 +55,7 @@ describe("buildSiteMetadata", () => {
     const og = build().openGraph;
     expect(og.type).toBe("website");
     expect(og.locale).toBe("pt_BR");
-    expect(og.title).toBe("Rafael Couto Silva · Especialista Full Stack");
+    expect(og.title).toBe("Rafael Couto Silva · Desenvolvedor Full Stack");
     expect(og.description).toBe(
       "Do requisito à produção, guiado por especificações.",
     );
@@ -71,7 +71,7 @@ describe("buildSiteMetadata", () => {
         url: "https://example.com/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Rafael Couto Silva, Especialista Full Stack, do requisito à produção",
+        alt: "Rafael Couto Silva, Desenvolvedor Full Stack, do requisito à produção",
       },
     ]);
   });
@@ -79,7 +79,7 @@ describe("buildSiteMetadata", () => {
   it("emits Twitter summary_large_image with same title, description and image", () => {
     expect(build().twitter).toEqual({
       card: "summary_large_image",
-      title: "Rafael Couto Silva · Especialista Full Stack",
+      title: "Rafael Couto Silva · Desenvolvedor Full Stack",
       description: "Do requisito à produção, guiado por especificações.",
       images: ["https://example.com/og-image.png"],
     });

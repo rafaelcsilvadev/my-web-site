@@ -9,7 +9,7 @@ describe("Home page (FND-09, HOME-11)", () => {
     render(<Page />);
     const headings = screen.getAllByRole("heading", { level: 1 });
     expect(headings).toHaveLength(1);
-    expect(headings[0]).toHaveTextContent("Especialista Full Stack");
+    expect(headings[0]).toHaveTextContent("Desenvolvedor Full Stack");
   });
 
   it("renders the composed home view with main#conteudo", () => {

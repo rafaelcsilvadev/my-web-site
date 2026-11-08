@@ -235,7 +235,7 @@ T17 → T18
 
 ### T6: Add site content and its type
 
-**What**: `SiteContent` interface in `src/models/site-content.ts` and the data in `src/content/site.ts`: name, title "Rafael Couto Silva · Especialista Full Stack", description "Do requisito à produção, guiado por especificações.", OG image alt from `ui/head-snippet.html`, and PT-BR `notFound` copy (title, message, back label).
+**What**: `SiteContent` interface in `src/models/site-content.ts` and the data in `src/content/site.ts`: name, title "Rafael Couto Silva · Desenvolvedor Full Stack", description "Do requisito à produção, guiado por especificações.", OG image alt from `ui/head-snippet.html`, and PT-BR `notFound` copy (title, message, back label).
 **Where**: `src/content/site.ts`
 **Depends on**: T3
 **Reuses**: `ui/head-snippet.html` strings; Design "Site content"

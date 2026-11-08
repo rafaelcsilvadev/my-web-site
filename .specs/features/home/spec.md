@@ -76,7 +76,7 @@ Sections in the design, in order: Header, Hero, 01 Projetos em destaque, 02 Expe
 
 **Acceptance Criteria**:
 
-1. The system SHALL render in the hero the label "Desenvolvedor de software", the h1 "Especialista Full Stack do requisito à produção", the SDD badge text, the intro sentence and the stack line "TypeScript · React · Node".
+1. The system SHALL render in the hero the label "Desenvolvedor de software", the h1 "Desenvolvedor Full Stack do requisito à produção", the SDD badge text, the intro sentence and the stack line "TypeScript · React · Node".
 2. The system SHALL render exactly one h1 on the page.
 3. The system SHALL render two hero actions: "Contato" linking to `#contato` and "Baixar CV" linking to `/cv-rafael-couto-silva.pdf`.
 4. The system SHALL render the "01 · Destaques / Projetos em destaque" section with id `projetos` and two cards: Avaria and My Trello Version.

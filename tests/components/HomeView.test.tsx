@@ -57,7 +57,7 @@ describe("HomeView", () => {
 
   it("renders the hero headline and the contact heading", () => {
     render(<HomeView content={homeContent} brand="Rafael Couto Silva" />);
-    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent("Especialista Full Stack");
+    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent("Desenvolvedor Full Stack");
     expect(screen.getByRole("heading", { level: 2, name: "Vamos conversar" })).toBeInTheDocument();
   });
 });

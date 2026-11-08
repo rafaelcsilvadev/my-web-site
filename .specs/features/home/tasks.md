@@ -428,7 +428,7 @@ T24 → T25
 
 ### T12: Create the `Hero` component and hero content
 
-**What**: Add the hero slice to model and `homeContent`: label "Desenvolvedor de software", headline "Especialista Full Stack do requisito à produção", badge "SDD" + text "Especialista em desenvolvimento guiado por especificações", intro "Construo software de ponta a ponta, do requisito à produção, guiado por especificações.", stack line `TypeScript · React · Node`, actions (Contato → `#contato`, Baixar CV → `/cv-rafael-couto-silva.pdf`), portrait (`/rafael-portrait.png`, 1254x1254, alt "Retrato profissional de Rafael Couto Silva em um setup roxo", caption "Retrato criado com IA a partir de uma foto minha"). `Hero` renders the only `h1`, two `ButtonLink`s and the portrait via `next/image` with `priority`, `width`, `height`, `sizes`, plus a `figcaption`.
+**What**: Add the hero slice to model and `homeContent`: label "Desenvolvedor de software", headline "Desenvolvedor Full Stack do requisito à produção", badge "SDD" + text "Especialista em desenvolvimento guiado por especificações", intro "Construo software de ponta a ponta, do requisito à produção, guiado por especificações.", stack line `TypeScript · React · Node`, actions (Contato → `#contato`, Baixar CV → `/cv-rafael-couto-silva.pdf`), portrait (`/rafael-portrait.png`, 1254x1254, alt "Retrato profissional de Rafael Couto Silva em um setup roxo", caption "Retrato criado com IA a partir de uma foto minha"). `Hero` renders the only `h1`, two `ButtonLink`s and the portrait via `next/image` with `priority`, `width`, `height`, `sizes`, plus a `figcaption`.
 **Where**: `src/components/Hero.tsx`
 **Depends on**: T1, T5
 **Reuses**: `ButtonLink`, `next/image`
@@ -798,7 +798,7 @@ T24 → T25
 - [x] `src/components/HomePlaceholder.tsx` and `tests/components/HomePlaceholder.test.tsx` deleted; no references remain
 - [x] `tests/app/site-metadata.test.ts` and the other Foundation tests pass unchanged
 - [x] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test && pnpm build`
-- [x] `pnpm start` then `curl -s localhost:3000` returns HTML containing "Especialista Full Stack" and "Vamos conversar" and no `[PERÍODO]`, `[conferir` or `SEU-DOMINIO`
+- [x] `pnpm start` then `curl -s localhost:3000` returns HTML containing "Desenvolvedor Full Stack" and "Vamos conversar" and no `[PERÍODO]`, `[conferir` or `SEU-DOMINIO`
 
 **Tests**: unit
 **Gate**: build
