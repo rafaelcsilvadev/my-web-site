@@ -526,10 +526,10 @@ T24 → T25
 
 **Done when**:
 
-- [ ] `tests/components/CaseCallout.test.tsx` written first and seen failing (file missing)
-- [ ] Test asserts the label, each reason as a list item, and that nothing renders when the reasons list is empty
-- [ ] Gate check passes: `pnpm test`
-- [ ] Test count: previous count + at least 3 tests
+- [x] `tests/components/CaseCallout.test.tsx` written first and seen failing (file missing)
+- [x] Test asserts the label, each reason as a list item, and that nothing renders when the reasons list is empty
+- [x] Gate check passes: `pnpm test`
+- [x] Test count: previous count + at least 3 tests
 
 **Tests**: unit
 **Gate**: quick
