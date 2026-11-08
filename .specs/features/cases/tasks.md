@@ -742,11 +742,11 @@ T24 → T25
 
 **Done when**:
 
-- [ ] `tests/components/CaseView.test.tsx` written first and seen failing (file missing)
-- [ ] Test renders both real cases and asserts: one `h1`, the numbered `h2` sections in order (three per case), every block kind renders, `[conferir` absent, skip link is the first focusable element and targets `main`, the page root has id `top`, header hrefs come from the case chrome
-- [ ] Test asserts a source scan: no PT-BR literal in `src/components/Case*.tsx` and `src/components/BackLink.tsx` (same technique as `tests/components/HomeView.test.tsx`)
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
-- [ ] Test count: previous count + at least 6 tests
+- [x] `tests/components/CaseView.test.tsx` written first and seen failing (file missing)
+- [x] Test renders both real cases and asserts: one `h1`, the numbered `h2` sections in order (three per case), every block kind renders, `[conferir` absent, skip link is the first focusable element and targets `main`, the page root has id `top`, header hrefs come from the case chrome
+- [x] Test asserts a source scan: no PT-BR literal in `src/components/Case*.tsx` and `src/components/BackLink.tsx` (same technique as `tests/components/HomeView.test.tsx`)
+- [x] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
+- [x] Test count: previous count + at least 6 tests
 
 **Tests**: unit
 **Gate**: full
