@@ -390,10 +390,10 @@ T24 → T25
 
 **Done when**:
 
-- [ ] `tests/content/case-chrome.test.ts` written first and seen failing (module missing)
-- [ ] Test asserts hrefs `/`, `/#projetos`, `/#experiencia`, `/#stack`, `/#metodo`, CTA `/#contato`, `brandHref` `/`, footer "© 2026 Rafael Couto Silva" and "Voltar ao topo" to `#top`
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
-- [ ] Test count: previous count + at least 3 tests
+- [x] `tests/content/case-chrome.test.ts` written first and seen failing (module missing)
+- [x] Test asserts hrefs `/`, `/#projetos`, `/#experiencia`, `/#stack`, `/#metodo`, CTA `/#contato`, `brandHref` `/`, footer "© 2026 Rafael Couto Silva" and "Voltar ao topo" to `#top`
+- [x] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
+- [x] Test count: previous count + at least 3 tests
 
 **Tests**: unit
 **Gate**: full
