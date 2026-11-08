@@ -10,7 +10,7 @@ Implement these tasks with the `tlc-spec-driven` skill: **activate it by name an
 
 **Spec**: `.specs/features/cases/spec.md`
 **Design**: none (skipped; decisions are inline in "Design Notes" below)
-**Status**: Draft
+**Status**: Approved
 
 ---
 
