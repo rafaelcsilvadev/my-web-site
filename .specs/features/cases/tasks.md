@@ -254,11 +254,11 @@ T24 → T25
 
 **Done when**:
 
-- [ ] `tests/content/cases.test.ts` written first and seen failing (module missing)
-- [ ] Test asserts `caseSlugs` equals `["avaria", "my-trello-version"]`, slugs are unique, and every `/casos/<slug>` link used inside the cases points to a registered slug
-- [ ] Test asserts titles "Avaria · Rafael Couto Silva" and "My Trello Version · Rafael Couto Silva" and a non-empty description for each
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
-- [ ] Test count: previous count + at least 3 tests
+- [x] `tests/content/cases.test.ts` written first and seen failing (module missing)
+- [x] Test asserts `caseSlugs` equals `["avaria", "my-trello-version"]`, slugs are unique, and every `/casos/<slug>` link used inside the cases points to a registered slug
+- [x] Test asserts titles "Avaria · Rafael Couto Silva" and "My Trello Version · Rafael Couto Silva" and a non-empty description for each
+- [x] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
+- [x] Test count: previous count + at least 3 tests
 
 **Tests**: unit
 **Gate**: full
