@@ -282,10 +282,10 @@ T24 → T25
 
 **Done when**:
 
-- [ ] `tests/viewmodels/case-view-model.test.ts` written first and seen failing (module missing)
-- [ ] Test covers a known slug, an unknown slug, an empty string and a different-case slug (`AVARIA`) returning `undefined`
-- [ ] Gate check passes: `pnpm test`
-- [ ] Test count: previous count + at least 3 tests
+- [x] `tests/viewmodels/case-view-model.test.ts` written first and seen failing (module missing)
+- [x] Test covers a known slug, an unknown slug, an empty string and a different-case slug (`AVARIA`) returning `undefined`
+- [x] Gate check passes: `pnpm test`
+- [x] Test count: previous count + at least 3 tests
 
 **Tests**: unit
 **Gate**: quick
