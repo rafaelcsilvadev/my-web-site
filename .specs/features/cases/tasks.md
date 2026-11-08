@@ -417,10 +417,10 @@ T24 → T25
 
 **Done when**:
 
-- [ ] `tests/components/BackLink.test.tsx` written first and seen failing (file missing)
-- [ ] Test asserts the link name, `href` `/` and an `aria-hidden` icon
-- [ ] Gate check passes: `pnpm test`
-- [ ] Test count: previous count + at least 2 tests
+- [x] `tests/components/BackLink.test.tsx` written first and seen failing (file missing)
+- [x] Test asserts the link name, `href` `/` and an `aria-hidden` icon
+- [x] Gate check passes: `pnpm test`
+- [x] Test count: previous count + at least 2 tests
 
 **Tests**: unit
 **Gate**: quick
