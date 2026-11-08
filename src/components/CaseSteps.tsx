@@ -18,7 +18,7 @@ export function CaseSteps({ items }: CaseStepsProps) {
 
         return (
           <li key={number} className={`${BASE} ${tone}`}>
-            <span className="font-mono text-[11px] text-brand-text">{number}</span>
+            <span aria-hidden="true" className="font-mono text-[11px] text-brand-text">{number}</span>
             <span className="text-[15px] font-semibold text-fg">{title}</span>
             <span className="text-[13px] leading-snug text-fg-muted">{caption}</span>
           </li>

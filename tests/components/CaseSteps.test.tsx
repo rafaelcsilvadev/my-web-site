@@ -42,6 +42,14 @@ describe("CaseSteps", () => {
     });
   });
 
+  it("hides the decorative step numbers from assistive technology", () => {
+    render(<CaseSteps items={items} />);
+
+    items.forEach(({ number }) => {
+      expect(screen.getByText(number)).toHaveAttribute("aria-hidden", "true");
+    });
+  });
+
   it("renders nothing when the step list is empty", () => {
     const { container } = render(<CaseSteps items={[]} />);
 
