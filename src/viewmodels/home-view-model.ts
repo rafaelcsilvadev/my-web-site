@@ -28,3 +28,11 @@ export function splitNavLinks(nav: { ctaSectionId: string; links: NavLink[] }): 
     cta: nav.links.find((link) => link.sectionId === nav.ctaSectionId),
   };
 }
+
+export function navHref(link: NavLink): string {
+  return link.href ?? `#${link.sectionId}`;
+}
+
+export function brandHref(chrome: { topId: string; brandHref?: string }): string {
+  return chrome.brandHref ?? `#${chrome.topId}`;
+}

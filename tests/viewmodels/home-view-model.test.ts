@@ -3,7 +3,9 @@ import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
 import type { ExperienceEntry, MethodStep } from "@/models/home-content";
 import {
+  brandHref,
   hasItems,
+  navHref,
   splitNavLinks,
   toExperienceEntryView,
   toMethodStepView,
@@ -116,5 +118,25 @@ describe("splitNavLinks", () => {
 
   it("returns no CTA when none matches", () => {
     expect(splitNavLinks({ ctaSectionId: "x", links })).toEqual({ inlineLinks: links, cta: undefined });
+  });
+});
+
+describe("navHref", () => {
+  it("uses the explicit href when present", () => {
+    expect(navHref({ label: "Home", href: "/", sectionId: "x" })).toBe("/");
+  });
+
+  it("falls back to the section anchor", () => {
+    expect(navHref({ label: "A", sectionId: "a" })).toBe("#a");
+  });
+});
+
+describe("brandHref", () => {
+  it("uses the explicit brand href when present", () => {
+    expect(brandHref({ topId: "top", brandHref: "/" })).toBe("/");
+  });
+
+  it("falls back to the top anchor", () => {
+    expect(brandHref({ topId: "top" })).toBe("#top");
   });
 });
