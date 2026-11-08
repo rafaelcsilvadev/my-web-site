@@ -3,7 +3,7 @@
   "promote_threshold": 2,
   "window_days": 45,
   "quarantine_threshold": 2,
-  "next_id": 3,
+  "next_id": 4,
   "lessons": [
     {
       "id": "L-001",
@@ -40,6 +40,24 @@
       ],
       "created": "2026-11-07T02:24:16Z",
       "last_seen": "2026-11-07T02:24:16Z"
+    },
+    {
+      "id": "L-003",
+      "key": "spec_precision_gap::define which decorative elements number badges covers in accessibility acs so each is asserted aria hidden or explicitly exempt",
+      "text": "Define which decorative elements 'number badges' covers in accessibility ACs, so each is asserted aria-hidden or explicitly exempt",
+      "signal": "spec_precision_gap",
+      "scope": "components",
+      "status": "candidate",
+      "features": [
+        "cases"
+      ],
+      "recurrence": 1,
+      "harmful": 0,
+      "evidence": [
+        "validation.md P2 AC3 (src/components/CaseSteps.tsx:19) (components)"
+      ],
+      "created": "2026-11-08T15:03:03Z",
+      "last_seen": "2026-11-08T15:03:03Z"
     }
   ]
 }
