@@ -499,10 +499,10 @@ T24 → T25
 
 **Done when**:
 
-- [ ] `tests/components/CaseSection.test.tsx` written first and seen failing (file missing)
-- [ ] Test asserts a `section` labelled by its `h2` through `aria-labelledby`, the number badge with `aria-hidden="true"`, the optional intro, children rendered, and a layout class difference between `split` and `stacked`
-- [ ] Gate check passes: `pnpm test`
-- [ ] Test count: previous count + at least 4 tests
+- [x] `tests/components/CaseSection.test.tsx` written first and seen failing (file missing)
+- [x] Test asserts a `section` labelled by its `h2` through `aria-labelledby`, the number badge with `aria-hidden="true"`, the optional intro, children rendered, and a layout class difference between `split` and `stacked`
+- [x] Gate check passes: `pnpm test`
+- [x] Test count: previous count + at least 4 tests
 
 **Tests**: unit
 **Gate**: quick
