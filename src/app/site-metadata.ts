@@ -15,6 +15,8 @@ export function buildSiteMetadata(
     metadataBase: new URL(siteUrl),
     title: content.title,
     description: content.description,
+    alternates: { canonical: `${siteUrl}/` },
+    robots: { index: true, follow: true },
     icons: {
       icon: [
         { url: "/favicon.svg", type: "image/svg+xml" },

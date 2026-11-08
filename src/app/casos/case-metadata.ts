@@ -9,6 +9,7 @@ export function buildCaseMetadata(entry: CaseContent, siteUrl: string): Metadata
   return {
     title,
     description,
+    alternates: { canonical: `${siteUrl}/casos/${entry.slug}` },
     openGraph: {
       type: "website",
       locale: "pt_BR",
