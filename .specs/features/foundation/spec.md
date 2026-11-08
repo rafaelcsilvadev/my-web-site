@@ -4,7 +4,7 @@
 
 The repository has no application yet. Pages (Home, Caso Avaria, Caso My Trello Version) cannot be built until a runnable Next.js app exists with the toolchain, the dark visual system from `ui/Site vitrine pessoal.html`, the shared metadata and the content layer. Foundation delivers that base so every later page spec only adds views, view models and content.
 
-Source of truth for visuals: `ui/Site vitrine pessoal.html` (boards "Sistema visual", "Home", "Caso Avaria", "Caso My Trello Version", desktop and mobile). Link: `ui/claude-design-link.md`.
+Source of truth for visuals: `ui/Site vitrine pessoal.html` (boards "Sistema visual", "Home", "Caso Avaria", "Caso My Trello Version", desktop and mobile). PNG exports: `ui/Site vitrine pessoal-png/`.
 
 ## Goals
 
