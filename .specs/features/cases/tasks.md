@@ -715,10 +715,10 @@ T24 → T25
 
 **Done when**:
 
-- [ ] `tests/components/CaseClosing.test.tsx` written first and seen failing (file missing)
-- [ ] Test asserts eyebrow, title, text, each action `href`, `download` on the CV action, `target="_blank"` and `rel` on the external one, and no actions container when empty
-- [ ] Gate check passes: `pnpm test`
-- [ ] Test count: previous count + at least 4 tests
+- [x] `tests/components/CaseClosing.test.tsx` written first and seen failing (file missing)
+- [x] Test asserts eyebrow, title, text, each action `href`, `download` on the CV action, `target="_blank"` and `rel` on the external one, and no actions container when empty
+- [x] Gate check passes: `pnpm test`
+- [x] Test count: previous count + at least 4 tests
 
 **Tests**: unit
 **Gate**: quick
