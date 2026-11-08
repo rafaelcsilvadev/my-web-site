@@ -688,10 +688,10 @@ T24 → T25
 
 **Done when**:
 
-- [ ] `tests/components/CaseStack.test.tsx` written first and seen failing (file missing)
-- [ ] Test asserts the label, a group label per labeled group, every chip, main chips marked, the note when present, and no empty group container
-- [ ] Gate check passes: `pnpm test`
-- [ ] Test count: previous count + at least 4 tests
+- [x] `tests/components/CaseStack.test.tsx` written first and seen failing (file missing)
+- [x] Test asserts the label, a group label per labeled group, every chip, main chips marked, the note when present, and no empty group container
+- [x] Gate check passes: `pnpm test`
+- [x] Test count: previous count + at least 4 tests
 
 **Tests**: unit
 **Gate**: quick
