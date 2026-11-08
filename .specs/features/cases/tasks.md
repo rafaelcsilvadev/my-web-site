@@ -363,10 +363,10 @@ T24 → T25
 
 **Done when**:
 
-- [ ] Tests added first to `tests/components/SiteHeader.test.tsx` and seen failing (explicit hrefs ignored)
-- [ ] Tests cover a nav with `Início` (`/`), `/#projetos`, `/#contato` CTA and `brandHref` `/`, in the desktop nav, the mobile menu and the brand link; existing Home tests unchanged and green
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
-- [ ] Test count: previous count + at least 3 tests, none removed
+- [x] Tests added first to `tests/components/SiteHeader.test.tsx` and seen failing (explicit hrefs ignored)
+- [x] Tests cover a nav with `Início` (`/`), `/#projetos`, `/#contato` CTA and `brandHref` `/`, in the desktop nav, the mobile menu and the brand link; existing Home tests unchanged and green
+- [x] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
+- [x] Test count: previous count + at least 3 tests, none removed
 
 **Tests**: unit
 **Gate**: full

@@ -100,4 +100,50 @@ describe("SiteHeader", () => {
     fireEvent.keyDown(document, { key: "Escape" });
     expect(button).toHaveAttribute("aria-expanded", "false");
   });
+
+  describe("with explicit link targets", () => {
+    const caseChrome: typeof chrome = {
+      ...chrome,
+      brandHref: "/",
+      nav: {
+        ...chrome.nav,
+        links: [
+          { label: "Início", href: "/" },
+          { label: "Projetos", href: "/#projetos" },
+          { label: "Contato", sectionId: "contato", href: "/#contato" },
+        ],
+      },
+    };
+
+    function setupCase() {
+      return render(<SiteHeader brand={siteContent.name} chrome={caseChrome} />);
+    }
+
+    it("uses brandHref for the brand link", () => {
+      setupCase();
+      expect(screen.getByRole("link", { name: siteContent.name })).toHaveAttribute("href", "/");
+    });
+
+    it("uses explicit hrefs in the desktop nav and the CTA", () => {
+      setupCase();
+      const nav = screen.getByRole("navigation", { name: chrome.nav.ariaLabel });
+      expect(within(nav).getAllByRole("link").map((a) => a.getAttribute("href"))).toEqual([
+        "/",
+        "/#projetos",
+      ]);
+      expect(screen.getByRole("link", { name: "Contato" })).toHaveAttribute("href", "/#contato");
+    });
+
+    it("uses explicit hrefs in the mobile menu", () => {
+      setupCase();
+      const button = menuButton();
+      fireEvent.click(button);
+      const panel = document.getElementById(button.getAttribute("aria-controls")!)!;
+      expect(within(panel).getAllByRole("link").map((a) => a.getAttribute("href"))).toEqual([
+        "/",
+        "/#projetos",
+        "/#contato",
+      ]);
+    });
+  });
 });

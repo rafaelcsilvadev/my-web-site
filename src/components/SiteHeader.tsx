@@ -2,7 +2,7 @@
 
 import { Icon } from "@/components/Icon";
 import type { HomeContent } from "@/models/home-content";
-import { splitNavLinks } from "@/viewmodels/home-view-model";
+import { brandHref, navHref, splitNavLinks } from "@/viewmodels/home-view-model";
 import { useMobileMenu } from "@/viewmodels/use-mobile-menu";
 
 type SiteHeaderProps = {
@@ -16,14 +16,14 @@ const LINK =
 
 export function SiteHeader({ brand, chrome }: SiteHeaderProps) {
   const { isOpen, toggle, close } = useMobileMenu();
-  const { nav, menuButton, topId } = chrome;
+  const { nav, menuButton } = chrome;
   const { inlineLinks, cta } = splitNavLinks(nav);
 
   return (
     <header className="sticky top-0 z-40 border-b border-line bg-bg/90 backdrop-blur">
       <div className="mx-auto grid max-w-6xl grid-cols-[1fr_auto] items-center px-6 py-4 md:grid-cols-[1fr_auto_1fr]">
         <a
-          href={`#${topId}`}
+          href={brandHref(chrome)}
           className="flex items-center gap-2 font-mono text-sm font-semibold text-fg"
         >
           {brand}
@@ -39,8 +39,8 @@ export function SiteHeader({ brand, chrome }: SiteHeaderProps) {
         >
           {inlineLinks.map((link) => (
             <a
-              key={link.sectionId}
-              href={`#${link.sectionId}`}
+              key={link.label}
+              href={navHref(link)}
               className={LINK}
             >
               {link.label}
@@ -50,7 +50,7 @@ export function SiteHeader({ brand, chrome }: SiteHeaderProps) {
         <div className="flex items-center gap-3 justify-self-end">
           {cta ? (
             <a
-              href={`#${cta.sectionId}`}
+              href={navHref(cta)}
               className="inline-flex min-h-10 items-center rounded-[10px] bg-brand px-4 text-sm font-bold text-white shadow-[inset_0_0_0_1px_rgb(227_181_240/0.28),0_8px_32px_-10px_rgb(136_30_155/0.8)] transition-colors hover:bg-brand-hover active:bg-brand-pressed focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-light"
             >
               {cta.label}
@@ -72,8 +72,8 @@ export function SiteHeader({ brand, chrome }: SiteHeaderProps) {
         <div id={PANEL_ID} className="border-t border-line px-6 py-4 md:hidden">
           <ul className="flex flex-col gap-4">
             {nav.links.map((link) => (
-              <li key={link.sectionId}>
-                <a href={`#${link.sectionId}`} className={LINK} onClick={close}>
+              <li key={link.label}>
+                <a href={navHref(link)} className={LINK} onClick={close}>
                   {link.label}
                 </a>
               </li>
