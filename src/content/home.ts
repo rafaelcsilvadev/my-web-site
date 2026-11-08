@@ -245,6 +245,20 @@ export const homeContent: HomeContent = {
         external: true,
       },
       {
+        icon: "youtube",
+        label: "YouTube",
+        value: "youtube.com/@rafa_couto_dev",
+        href: "https://www.youtube.com/@rafa_couto_dev",
+        external: true,
+      },
+      {
+        icon: "instagram",
+        label: "Instagram",
+        value: "instagram.com/rafa_couto_dev",
+        href: "https://www.instagram.com/rafa_couto_dev",
+        external: true,
+      },
+      {
         icon: "whatsapp",
         label: "WhatsApp",
         value: "Abrir conversa",

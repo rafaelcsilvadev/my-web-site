@@ -3,6 +3,8 @@ export type IconName =
   | "mail"
   | "linkedin"
   | "github"
+  | "youtube"
+  | "instagram"
   | "whatsapp"
   | "menu"
   | "close"
@@ -38,6 +40,19 @@ const SHAPES: Record<IconName, React.ReactNode> = {
   ),
   github: (
     <path d="M9 19c-4 1.5-4-2-6-2.5m12 4.5v-3.5a3 3 0 0 0-.8-2.3c2.800-.3 5.800-1.400 5.800-6.200a4.800 4.800 0 0 0-1.300-3.300 4.500 4.500 0 0 0-.1-3.300s-1.100-.3-3.500 1.300a12 12 0 0 0-6.200 0C6.500 2.800 5.400 3.100 5.400 3.100a4.500 4.500 0 0 0-.1 3.300A4.800 4.800 0 0 0 4 9.700c0 4.800 3 5.900 5.800 6.200a3 3 0 0 0-.8 2.300V21" />
+  ),
+  youtube: (
+    <>
+      <rect x="2.500" y="5" width="19" height="14" rx="4" />
+      <path d="m10 9 5 3-5 3V9Z" />
+    </>
+  ),
+  instagram: (
+    <>
+      <rect x="3" y="3" width="18" height="18" rx="5" />
+      <circle cx="12" cy="12" r="4" />
+      <path d="M17.500 6.500v.01" />
+    </>
   ),
   whatsapp: (
     <>

@@ -9,6 +9,8 @@ const NAMES: IconName[] = [
   "mail",
   "linkedin",
   "github",
+  "youtube",
+  "instagram",
   "whatsapp",
   "menu",
   "close",

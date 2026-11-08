@@ -25,6 +25,8 @@ describe("Home page (FND-09, HOME-11)", () => {
     expect(data.sameAs).toEqual([
       "https://linkedin.com/in/rafa-couto",
       "https://github.com/rafaelcsilvadev",
+      "https://www.youtube.com/@rafa_couto_dev",
+      "https://www.instagram.com/rafa_couto_dev",
     ]);
   });
 });

@@ -334,7 +334,7 @@ describe("homeContent.contact", () => {
     });
   });
 
-  it("has the four cards verbatim, in order", () => {
+  it("has the six cards verbatim, in order", () => {
     expect(contact.cards).toEqual([
       { icon: "mail", label: "E-mail", value: "rafacsilva016@gmail.com", href: "mailto:rafacsilva016@gmail.com" },
       {
@@ -349,6 +349,20 @@ describe("homeContent.contact", () => {
         label: "GitHub",
         value: "github.com/rafaelcsilvadev",
         href: "https://github.com/rafaelcsilvadev",
+        external: true,
+      },
+      {
+        icon: "youtube",
+        label: "YouTube",
+        value: "youtube.com/@rafa_couto_dev",
+        href: "https://www.youtube.com/@rafa_couto_dev",
+        external: true,
+      },
+      {
+        icon: "instagram",
+        label: "Instagram",
+        value: "instagram.com/rafa_couto_dev",
+        href: "https://www.instagram.com/rafa_couto_dev",
         external: true,
       },
       {
