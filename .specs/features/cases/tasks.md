@@ -226,11 +226,11 @@ T24 → T25
 
 **Done when**:
 
-- [ ] `tests/content/my-trello-version-case.test.ts` written first and seen failing (module missing)
-- [ ] Test asserts verbatim: eyebrow, title, intro, hero actions (GitHub external link, Contato), section 01 Objetivo blocks (A dor, lead-in, Construir, Mostrar), section 02 Processo intro and six steps in order with step 04 highlighted, section 03 Evidências (four metrics, four highlights, figure with src `/my-trello-version-board.png`, 1797x915, alt and caption), four stack groups with main chips, the status note, and the "Código aberto" closing card with three actions
-- [ ] Test asserts the GitHub links are external with the repo URL and that `[conferir` appears nowhere
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
-- [ ] Test count: previous count + at least 7 tests
+- [x] `tests/content/my-trello-version-case.test.ts` written first and seen failing (module missing)
+- [x] Test asserts verbatim: eyebrow, title, intro, hero actions (GitHub external link, Contato), section 01 Objetivo blocks (A dor, lead-in, Construir, Mostrar), section 02 Processo intro and six steps in order with step 04 highlighted, section 03 Evidências (four metrics, four highlights, figure with src `/my-trello-version-board.png`, 1797x915, alt and caption), four stack groups with main chips, the status note, and the "Código aberto" closing card with three actions
+- [x] Test asserts the GitHub links are external with the repo URL and that `[conferir` appears nowhere
+- [x] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
+- [x] Test count: previous count + at least 7 tests
 
 **Tests**: unit
 **Gate**: full
