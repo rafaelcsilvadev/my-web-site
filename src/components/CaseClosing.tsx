@@ -7,7 +7,7 @@ export function CaseClosing({ eyebrow, title, text, actions }: CaseClosingProps)
   return (
     <section
       aria-labelledby="case-closing-title"
-      className="flex flex-col items-start gap-5 rounded-2xl border border-brand-text/30 bg-brand/10 p-[clamp(24px,5vw,48px)]"
+      className="flex flex-col items-start gap-5 rounded-2xl border border-line bg-[radial-gradient(ellipse_at_top_right,rgb(136_30_155/0.28),transparent_60%),linear-gradient(to_bottom,var(--color-card-from),var(--color-card-to))] p-[clamp(24px,5vw,48px)]"
     >
       <p className="font-mono text-xs uppercase tracking-widest text-brand-text">{eyebrow}</p>
       <h2
@@ -18,7 +18,7 @@ export function CaseClosing({ eyebrow, title, text, actions }: CaseClosingProps)
       </h2>
       <p className="m-0 max-w-[560px] text-[17px] text-fg-muted">{text}</p>
       {actions.length > 0 ? (
-        <div className="flex flex-wrap gap-3.5">
+        <div className="mt-2 flex flex-wrap items-center gap-3">
           {actions.map((action) => (
             <ButtonLink
               key={action.link.href}
