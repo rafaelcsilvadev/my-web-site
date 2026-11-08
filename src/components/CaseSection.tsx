@@ -25,12 +25,17 @@ export function CaseSection({ id, number, title, layout, intro, children }: Case
     >
       <div className={LAYOUT_CLASS[layout]}>
         <div>
-          <span aria-hidden="true" className="font-mono text-xs uppercase tracking-widest text-brand-text">
-            {number}
-          </span>
-          <h2 id={headingId} className="mt-3 text-3xl font-bold text-fg md:text-4xl">
-            {title}
-          </h2>
+          <div className="flex items-center gap-4">
+            <span
+              aria-hidden="true"
+              className="flex size-11 shrink-0 items-center justify-center rounded-lg border border-brand-text/30 bg-brand/15 font-mono text-xs text-brand-text"
+            >
+              {number}
+            </span>
+            <h2 id={headingId} className="text-3xl font-bold text-fg md:text-4xl">
+              {title}
+            </h2>
+          </div>
           {intro !== undefined && <p className="mt-4 text-lg text-fg-muted">{intro}</p>}
         </div>
         <div>{children}</div>
