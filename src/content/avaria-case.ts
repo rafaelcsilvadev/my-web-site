@@ -82,7 +82,7 @@ export const avariaCase: CaseContent = {
     groups: [
       {
         chips: ["TypeScript", "React Native", "Node.js (AdonisJS)", "SQL Server"],
-        mainChips: [],
+        mainChips: ["TypeScript", "React Native", "Node.js (AdonisJS)", "SQL Server"],
       },
     ],
   },

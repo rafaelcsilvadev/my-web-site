@@ -11,34 +11,43 @@ export function CaseStack({ stack }: CaseStackProps) {
 
   return (
     <div className="flex flex-col gap-6">
-      <p className="font-mono text-xs uppercase tracking-widest text-brand-text">{label}</p>
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        {filledGroups.map((group, index) => {
-          const labelId = group.label ? `case-stack-group-${index}` : undefined;
+      <p className="font-mono text-xs uppercase tracking-widest text-brand-text">
+        {label}
+      </p>
+      <div className="flex flex-col gap-6">
+        <div className="flex flex-wrap gap-x-10 gap-y-6">
+          {filledGroups.map((group, index) => {
+            const labelId = group.label
+              ? `case-stack-group-${index}`
+              : undefined;
 
-          return (
-            <div key={group.label ?? index} className="flex flex-col gap-3">
-              {group.label && (
-                <p id={labelId} className="font-mono text-xs text-fg-muted">
-                  {group.label}
-                </p>
-              )}
-              <ul
-                aria-labelledby={labelId}
-                aria-label={labelId ? undefined : label}
-                className="m-0 flex list-none flex-wrap gap-2 p-0"
-              >
-                {group.chips.map((chip) => (
-                  <li key={chip}>
-                    <Chip label={chip} main={group.mainChips.includes(chip)} />
-                  </li>
-                ))}
-              </ul>
-            </div>
-          );
-        })}
+            return (
+              <div key={group.label ?? index} className="flex flex-col gap-3">
+                {group.label && (
+                  <p id={labelId} className="font-mono text-xs text-fg-muted">
+                    {group.label}
+                  </p>
+                )}
+                <ul
+                  aria-labelledby={labelId}
+                  aria-label={labelId ? undefined : label}
+                  className="m-0 flex list-none flex-wrap gap-2 p-0"
+                >
+                  {group.chips.map((chip) => (
+                    <li key={chip}>
+                      <Chip
+                        label={chip}
+                        main={group.mainChips.includes(chip)}
+                      />
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            );
+          })}
+        </div>
+        {note && <p className="text-sm text-fg-muted">{note}</p>}
       </div>
-      {note && <p className="text-sm text-fg-muted">{note}</p>}
     </div>
   );
 }
