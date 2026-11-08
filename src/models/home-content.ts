@@ -62,7 +62,12 @@ export interface HomeContent {
     skipLinkLabel: string;
     mainId: string;
     topId: string;
-    nav: { ariaLabel: string; ctaSectionId: string; links: { label: string; sectionId: string }[] };
+    brandHref?: string;
+    nav: {
+      ariaLabel: string;
+      ctaSectionId: string;
+      links: { label: string; sectionId?: string; href?: string }[];
+    };
     menuButton: { openLabel: string; closeLabel: string };
     footer: { copyright: string; backToTop: Link };
   };

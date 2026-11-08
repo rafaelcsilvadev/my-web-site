@@ -17,7 +17,7 @@ export function hasItems<T>(list: readonly T[] | undefined): list is T[] {
   return list !== undefined && list.length > 0;
 }
 
-type NavLink = { label: string; sectionId: string };
+type NavLink = { label: string; sectionId?: string; href?: string };
 
 export function splitNavLinks(nav: { ctaSectionId: string; links: NavLink[] }): {
   inlineLinks: NavLink[];
