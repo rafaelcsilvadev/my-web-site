@@ -607,10 +607,10 @@ T24 → T25
 
 **Done when**:
 
-- [ ] `tests/components/CaseSteps.test.tsx` written first and seen failing (file missing)
-- [ ] Test asserts an ordered list with six items in order, number text, title and caption, the highlight class only on the step marked `highlight`, and no container when empty
-- [ ] Gate check passes: `pnpm test`
-- [ ] Test count: previous count + at least 3 tests
+- [x] `tests/components/CaseSteps.test.tsx` written first and seen failing (file missing)
+- [x] Test asserts an ordered list with six items in order, number text, title and caption, the highlight class only on the step marked `highlight`, and no container when empty
+- [x] Gate check passes: `pnpm test`
+- [x] Test count: previous count + at least 3 tests
 
 **Tests**: unit
 **Gate**: quick
