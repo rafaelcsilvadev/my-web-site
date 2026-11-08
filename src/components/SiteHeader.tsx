@@ -30,7 +30,7 @@ export function SiteHeader({ brand, chrome }: SiteHeaderProps) {
           <span
             data-cursor
             aria-hidden="true"
-            className="h-4 w-2 bg-brand-text"
+            className="h-4 w-2 animate-cursor-blink bg-brand-text"
           />
         </a>
         <nav
