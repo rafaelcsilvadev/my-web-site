@@ -17,7 +17,7 @@ export function CaseFigure({ src, width, height, alt, caption }: CaseFigureProps
         width={width}
         height={height}
         sizes="(min-width: 1024px) 960px, 100vw"
-        className="h-auto w-full rounded-xl border border-line"
+        className="h-auto w-full rounded-xl border border-brand-text/40 shadow-[0_0_80px_-8px] shadow-brand/60"
       />
       <figcaption className="text-sm leading-relaxed text-fg-muted">{caption}</figcaption>
     </figure>
