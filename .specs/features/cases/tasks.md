@@ -309,10 +309,10 @@ T24 → T25
 
 **Done when**:
 
-- [ ] Types updated; Home content compiles unchanged
-- [ ] `splitNavLinks` still type-checks (it filters on `sectionId`)
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
-- [ ] Test count: same as before (no tests added or removed)
+- [x] Types updated; Home content compiles unchanged
+- [x] `splitNavLinks` still type-checks (it filters on `sectionId`)
+- [x] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
+- [x] Test count: same as before (no tests added or removed)
 
 **Tests**: none
 **Gate**: full
