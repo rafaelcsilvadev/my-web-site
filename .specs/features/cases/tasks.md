@@ -336,10 +336,10 @@ T24 → T25
 
 **Done when**:
 
-- [ ] Tests added first to `tests/viewmodels/home-view-model.test.ts` and seen failing (functions missing)
-- [ ] Tests cover: link with `href`, link with only `sectionId`, chrome with `brandHref`, chrome without it
-- [ ] Gate check passes: `pnpm test`
-- [ ] Test count: previous count + at least 4 tests, none removed
+- [x] Tests added first to `tests/viewmodels/home-view-model.test.ts` and seen failing (functions missing)
+- [x] Tests cover: link with `href`, link with only `sectionId`, chrome with `brandHref`, chrome without it
+- [x] Gate check passes: `pnpm test`
+- [x] Test count: previous count + at least 4 tests, none removed
 
 **Tests**: unit
 **Gate**: quick
