@@ -797,11 +797,11 @@ T24 → T25
 
 **Done when**:
 
-- [ ] `tests/app/casos/page.test.tsx` written first and seen failing (module missing)
-- [ ] Test asserts `generateStaticParams` returns both slugs, the page for `avaria` and for `my-trello-version` renders their `h1`, an unknown slug calls `notFound`, and `generateMetadata` returns the metadata for each slug
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test && pnpm build`
-- [ ] `pnpm build` lists `/casos/avaria` and `/casos/my-trello-version` as statically generated
-- [ ] Test count: previous count + at least 5 tests
+- [x] `tests/app/casos/[slug]/page.test.tsx` written first and seen failing (module missing; path mirrors `src/app/casos/[slug]/page.tsx` per `tests/structure.test.ts`)
+- [x] Test asserts `generateStaticParams` returns both slugs, the page for `avaria` and for `my-trello-version` renders their `h1`, an unknown slug calls `notFound`, and `generateMetadata` returns the metadata for each slug
+- [x] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test && pnpm build`
+- [x] `pnpm build` lists `/casos/avaria` and `/casos/my-trello-version` as statically generated
+- [x] Test count: previous count + at least 5 tests
 
 **Tests**: unit
 **Gate**: build
