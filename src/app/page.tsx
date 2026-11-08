@@ -4,7 +4,7 @@ import { siteContent } from "@/content/site";
 import { buildPersonJsonLd } from "@/services/person-json-ld";
 import { normalizeSiteUrl } from "@/services/site-url";
 
-const PROFILE_ICONS = ["linkedin", "github"];
+const PROFILE_ICONS = ["linkedin", "github", "youtube", "instagram"];
 
 export default function Page() {
   const jsonLd = buildPersonJsonLd({

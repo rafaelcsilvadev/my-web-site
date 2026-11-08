@@ -96,7 +96,7 @@ None: the repository holds only `ui/` inputs and `.claude/` config. Reused input
   ```ts
   export interface SiteContent {
     name: string            // "Rafael Couto Silva"
-    title: string           // "Rafael Couto Silva · Especialista Full Stack"
+    title: string           // "Rafael Couto Silva · Desenvolvedor Full Stack"
     description: string     // "Do requisito à produção, guiado por especificações."
     ogImageAlt: string      // alt text from head-snippet.html
     notFound: { title: string; message: string; backLabel: string }

@@ -12,7 +12,7 @@ describe("Hero", () => {
     render(<Hero hero={hero} />);
     const headings = screen.getAllByRole("heading", { level: 1 });
     expect(headings).toHaveLength(1);
-    expect(headings[0]).toHaveTextContent("Especialista Full Stack do requisito à produção");
+    expect(headings[0]).toHaveTextContent("Desenvolvedor Full Stack do requisito à produção");
   });
 
   it("highlights the headline accent on its own line in the brand color", () => {

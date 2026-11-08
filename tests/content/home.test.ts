@@ -45,7 +45,7 @@ describe("homeContent.hero", () => {
   it("has the label, headline, badge, intro and stack line", () => {
     expect(hero.label).toBe("Desenvolvedor de software");
     expect(hero.headline).toEqual({
-      lead: "Especialista Full Stack",
+      lead: "Desenvolvedor Full Stack",
       accent: "do requisito à produção",
     });
     expect(hero.badge).toEqual({
@@ -194,7 +194,7 @@ describe("homeContent.experience", () => {
         text: "No Coral, principal sistema da FOCO, tirei do papel pedidos antigos do time de operação, criando as features em Node.js.",
       },
     ]);
-    expect(duo.tags).toEqual(["Node.js", "React Native", "Angular", "Jest", "DDD · SOLID"]);
+    expect(duo.tags).toEqual(["Node.js · NestJS", "React Native", "Angular", "Jest", "DDD · SOLID"]);
     expect(duo.note).toBe("Claude Code no dia a dia, com revisão de todo código gerado antes do PR.");
     expect(duo.link).toBeUndefined();
   });
@@ -334,7 +334,7 @@ describe("homeContent.contact", () => {
     });
   });
 
-  it("has the four cards verbatim, in order", () => {
+  it("has the six cards verbatim, in order", () => {
     expect(contact.cards).toEqual([
       { icon: "mail", label: "E-mail", value: "rafacsilva016@gmail.com", href: "mailto:rafacsilva016@gmail.com" },
       {
@@ -349,6 +349,20 @@ describe("homeContent.contact", () => {
         label: "GitHub",
         value: "github.com/rafaelcsilvadev",
         href: "https://github.com/rafaelcsilvadev",
+        external: true,
+      },
+      {
+        icon: "youtube",
+        label: "YouTube",
+        value: "youtube.com/@rafa_couto_dev",
+        href: "https://www.youtube.com/@rafa_couto_dev",
+        external: true,
+      },
+      {
+        icon: "instagram",
+        label: "Instagram",
+        value: "instagram.com/rafa_couto_dev",
+        href: "https://www.instagram.com/rafa_couto_dev",
         external: true,
       },
       {

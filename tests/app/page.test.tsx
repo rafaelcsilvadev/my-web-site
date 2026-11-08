@@ -9,7 +9,7 @@ describe("Home page (FND-09, HOME-11)", () => {
     render(<Page />);
     const headings = screen.getAllByRole("heading", { level: 1 });
     expect(headings).toHaveLength(1);
-    expect(headings[0]).toHaveTextContent("Especialista Full Stack");
+    expect(headings[0]).toHaveTextContent("Desenvolvedor Full Stack");
   });
 
   it("renders the composed home view with main#conteudo", () => {
@@ -25,6 +25,8 @@ describe("Home page (FND-09, HOME-11)", () => {
     expect(data.sameAs).toEqual([
       "https://linkedin.com/in/rafa-couto",
       "https://github.com/rafaelcsilvadev",
+      "https://www.youtube.com/@rafa_couto_dev",
+      "https://www.instagram.com/rafa_couto_dev",
     ]);
   });
 });

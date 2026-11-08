@@ -8,7 +8,7 @@ describe("siteContent", () => {
   });
 
   it("has the site title", () => {
-    expect(siteContent.title).toBe("Rafael Couto Silva · Especialista Full Stack");
+    expect(siteContent.title).toBe("Rafael Couto Silva · Desenvolvedor Full Stack");
   });
 
   it("has the site description", () => {
@@ -17,7 +17,7 @@ describe("siteContent", () => {
 
   it("has the Open Graph image alt text", () => {
     expect(siteContent.ogImageAlt).toBe(
-      "Rafael Couto Silva, Especialista Full Stack, do requisito à produção",
+      "Rafael Couto Silva, Desenvolvedor Full Stack, do requisito à produção",
     );
   });
 

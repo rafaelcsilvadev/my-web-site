@@ -103,7 +103,7 @@ Every ambiguity is either resolved with the user or recorded here - nothing is l
 
 1. The system SHALL set `<html lang="pt-BR">`.  <!-- ubiquitous -->
 2. The system SHALL emit `color-scheme` `dark` and `theme-color` `#0B0B10`.  <!-- ubiquitous -->
-3. The system SHALL emit `og:type` `website`, `og:locale` `pt_BR`, `og:title` "Rafael Couto Silva · Especialista Full Stack", `og:description` "Do requisito à produção, guiado por especificações.", `og:image` with width 1200 and height 630 and the alt text from `ui/head-snippet.html`.  <!-- ubiquitous -->
+3. The system SHALL emit `og:type` `website`, `og:locale` `pt_BR`, `og:title` "Rafael Couto Silva · Desenvolvedor Full Stack", `og:description` "Do requisito à produção, guiado por especificações.", `og:image` with width 1200 and height 630 and the alt text from `ui/head-snippet.html`.  <!-- ubiquitous -->
 4. The system SHALL emit `twitter:card` `summary_large_image` with the same title, description and image.  <!-- ubiquitous -->
 5. The system SHALL build every absolute URL (`og:url`, `og:image`, `twitter:image`) from `NEXT_PUBLIC_SITE_URL`.  <!-- ubiquitous -->
 6. IF `NEXT_PUBLIC_SITE_URL` is unset THEN the system SHALL fall back to `http://localhost:3000` and SHALL NOT output the string `SEU-DOMINIO`.  <!-- unwanted-behavior -->

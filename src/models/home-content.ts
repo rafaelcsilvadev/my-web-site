@@ -50,7 +50,7 @@ export interface MethodStepView extends Omit<MethodStep, "highlight"> {
 }
 
 export interface ContactCardItem {
-  icon: "mail" | "linkedin" | "github" | "whatsapp";
+  icon: "mail" | "linkedin" | "github" | "youtube" | "instagram" | "whatsapp";
   label: string;
   value: string;
   href: string;

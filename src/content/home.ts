@@ -24,7 +24,7 @@ export const homeContent: HomeContent = {
   },
   hero: {
     label: "Desenvolvedor de software",
-    headline: { lead: "Especialista Full Stack", accent: "do requisito à produção" },
+    headline: { lead: "Desenvolvedor Full Stack", accent: "do requisito à produção" },
     badge: {
       label: "SDD",
       text: "Especialista em desenvolvimento guiado por especificações",
@@ -128,8 +128,8 @@ export const homeContent: HomeContent = {
             text: "No Coral, principal sistema da FOCO, tirei do papel pedidos antigos do time de operação, criando as features em Node.js.",
           },
         ],
-        tags: ["Node.js", "React Native", "Angular", "Jest", "DDD · SOLID"],
-        mainTags: ["Node.js", "React Native"],
+        tags: ["Node.js · NestJS", "React Native", "Angular", "Jest", "DDD · SOLID"],
+        mainTags: ["Node.js · NestJS", "React Native"],
         note: "Claude Code no dia a dia, com revisão de todo código gerado antes do PR.",
       },
       {
@@ -242,6 +242,20 @@ export const homeContent: HomeContent = {
         label: "GitHub",
         value: "github.com/rafaelcsilvadev",
         href: "https://github.com/rafaelcsilvadev",
+        external: true,
+      },
+      {
+        icon: "youtube",
+        label: "YouTube",
+        value: "youtube.com/@rafa_couto_dev",
+        href: "https://www.youtube.com/@rafa_couto_dev",
+        external: true,
+      },
+      {
+        icon: "instagram",
+        label: "Instagram",
+        value: "instagram.com/rafa_couto_dev",
+        href: "https://www.instagram.com/rafa_couto_dev",
         external: true,
       },
       {
