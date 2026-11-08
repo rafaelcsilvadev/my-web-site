@@ -444,11 +444,11 @@ T24 → T25
 
 **Done when**:
 
-- [ ] `tests/components/CaseHero.test.tsx` written first and seen failing (file missing)
-- [ ] Test asserts the eyebrow, one `h1` with the title, the intro, buttons with `href`, `rel="noopener noreferrer"` and `target="_blank"` on the external one
-- [ ] Test asserts no actions container renders when `actions` is empty
-- [ ] Gate check passes: `pnpm test`
-- [ ] Test count: previous count + at least 4 tests
+- [x] `tests/components/CaseHero.test.tsx` written first and seen failing (file missing)
+- [x] Test asserts the eyebrow, one `h1` with the title, the intro, buttons with `href`, `rel="noopener noreferrer"` and `target="_blank"` on the external one
+- [x] Test asserts no actions container renders when `actions` is empty
+- [x] Gate check passes: `pnpm test`
+- [x] Test count: previous count + at least 4 tests
 
 **Tests**: unit
 **Gate**: quick
