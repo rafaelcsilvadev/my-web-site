@@ -634,10 +634,10 @@ T24 → T25
 
 **Done when**:
 
-- [ ] `tests/components/CaseHighlights.test.tsx` written first and seen failing (file missing)
-- [ ] Test asserts each title and text and that nothing renders when the list is empty
-- [ ] Gate check passes: `pnpm test`
-- [ ] Test count: previous count + at least 2 tests
+- [x] `tests/components/CaseHighlights.test.tsx` written first and seen failing (file missing)
+- [x] Test asserts each title and text and that nothing renders when the list is empty
+- [x] Gate check passes: `pnpm test`
+- [x] Test count: previous count + at least 2 tests
 
 **Tests**: unit
 **Gate**: quick
