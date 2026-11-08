@@ -63,7 +63,7 @@ export function CaseView({ content, chrome, brand }: CaseViewProps) {
       <SkipLink label={chrome.skipLinkLabel} targetId={chrome.mainId} />
       <SiteHeader brand={brand} chrome={chrome} />
       <main id={chrome.mainId}>
-        <div className="mx-auto max-w-6xl px-6 pt-8">
+        <div className="mx-auto w-full max-w-[1160px] px-[clamp(16px,5vw,48px)] pt-8">
           <BackLink link={content.backLink} />
         </div>
         <CaseHero

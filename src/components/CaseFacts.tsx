@@ -8,13 +8,15 @@ export function CaseFacts({ facts }: CaseFactsProps) {
   if (facts.length === 0) return null;
 
   return (
-    <dl className="mx-auto grid w-full max-w-[1160px] grid-cols-1 gap-px overflow-hidden rounded-xl border border-line bg-line sm:grid-cols-3">
-      {facts.map(({ label, value }) => (
-        <div key={label} className="flex flex-col gap-1.5 bg-linear-to-b from-card-from to-card-to p-6">
-          <dt className="font-mono text-[11px] uppercase tracking-wider text-fg-muted">{label}</dt>
-          <dd className="m-0 text-base font-bold text-fg">{value}</dd>
-        </div>
-      ))}
-    </dl>
+    <div className="mx-auto w-full max-w-[1160px] px-[clamp(16px,5vw,48px)]">
+      <dl className="m-0 grid grid-cols-1 gap-5 rounded-xl border border-line bg-white/[0.02] px-6 py-5 sm:grid-cols-3 sm:gap-8">
+        {facts.map(({ label, value }) => (
+          <div key={label} className="flex flex-col gap-1.5">
+            <dt className="font-mono text-xs text-fg-muted">{label}</dt>
+            <dd className="m-0 text-base font-bold text-fg">{value}</dd>
+          </div>
+        ))}
+      </dl>
+    </div>
   );
 }

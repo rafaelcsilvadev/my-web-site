@@ -12,7 +12,7 @@ export function CaseHero({ eyebrow, title, intro, actions }: CaseHeroProps) {
   return (
     <section
       aria-labelledby="case-title"
-      className="mx-auto flex w-full max-w-[1160px] flex-col items-start gap-[26px] px-[clamp(16px,5vw,48px)] py-[clamp(40px,6vw,88px)]"
+      className="mx-auto flex w-full max-w-[1160px] flex-col items-start gap-[26px] px-[clamp(16px,5vw,48px)] pt-[clamp(32px,4vw,48px)] pb-[clamp(32px,4vw,40px)]"
     >
       <p className="font-mono text-[13px] font-medium uppercase tracking-[0.08em] text-brand-text">
         {eyebrow}
