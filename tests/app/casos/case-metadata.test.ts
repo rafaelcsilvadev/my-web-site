@@ -5,6 +5,7 @@ import { cases } from "@/content/cases";
 const SITE_URL = "https://example.com";
 
 interface Shape {
+  alternates: { canonical: string };
   title: string;
   description: string;
   openGraph: {
@@ -25,6 +26,10 @@ function build(index: number, url = SITE_URL): Shape {
 describe.each(cases.map((entry, index) => [entry.slug, index] as const))(
   "buildCaseMetadata %s",
   (slug, index) => {
+    it("sets a self-referencing canonical", () => {
+      expect(build(index).alternates.canonical).toBe(`${SITE_URL}/casos/${slug}`);
+    });
+
     it("uses the case metadata title and description", () => {
       const meta = build(index);
       expect(meta.title).toBe(cases[index].metadata.title);

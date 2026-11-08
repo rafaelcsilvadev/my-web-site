@@ -16,6 +16,8 @@ interface IconEntry {
 
 interface Shape {
   metadataBase: URL;
+  alternates: { canonical: string };
+  robots: { index: boolean; follow: boolean };
   title: string;
   description: string;
   icons: { icon: IconEntry[]; apple: IconEntry[] };
@@ -132,5 +134,13 @@ describe("siteViewport", () => {
 
   it("sets dark color scheme", () => {
     expect(siteViewport.colorScheme).toBe("dark");
+  });
+});
+
+describe("buildSiteMetadata SEO", () => {
+  it("sets a self-referencing canonical and indexable robots", () => {
+    const meta = build();
+    expect(meta.alternates.canonical).toBe("https://example.com/");
+    expect(meta.robots).toMatchObject({ index: true, follow: true });
   });
 });

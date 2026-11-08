@@ -16,4 +16,15 @@ describe("Home page (FND-09, HOME-11)", () => {
     render(<Page />);
     expect(screen.getByRole("main")).toHaveAttribute("id", "conteudo");
   });
+
+  it("embeds Person JSON-LD with profile links", () => {
+    const { container } = render(<Page />);
+    const script = container.querySelector('script[type="application/ld+json"]');
+    const data = JSON.parse(script?.textContent ?? "{}");
+    expect(data["@type"]).toBe("Person");
+    expect(data.sameAs).toEqual([
+      "https://linkedin.com/in/rafa-couto",
+      "https://github.com/rafaelcsilvadev",
+    ]);
+  });
 });
