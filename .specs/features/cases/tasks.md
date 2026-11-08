@@ -770,10 +770,10 @@ T24 → T25
 
 **Done when**:
 
-- [ ] `tests/app/casos/case-metadata.test.ts` written first and seen failing (module missing)
-- [ ] Test asserts, for each real case, the title, the description, the Open Graph `url` `<site>/casos/<slug>` and the `/og-image.png` image
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
-- [ ] Test count: previous count + at least 4 tests
+- [x] `tests/app/casos/case-metadata.test.ts` written first and seen failing (module missing)
+- [x] Test asserts, for each real case, the title, the description, the Open Graph `url` `<site>/casos/<slug>` and the `/og-image.png` image
+- [x] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
+- [x] Test count: previous count + at least 4 tests
 
 **Tests**: unit
 **Gate**: full

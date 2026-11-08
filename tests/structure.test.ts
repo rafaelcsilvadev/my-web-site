@@ -1,5 +1,5 @@
 import { existsSync, readdirSync, statSync } from "node:fs";
-import { basename, extname, join, relative, sep } from "node:path";
+import { basename, dirname, extname, join, relative, sep } from "node:path";
 import { describe, expect, it } from "vitest";
 
 const root = process.cwd();
@@ -39,7 +39,7 @@ describe("Folder structure (FND-02)", () => {
     const orphans = testFiles
       .filter((file) => !UNMIRRORED_TESTS.includes(file))
       .filter((file) => {
-        const dir = file.split("/")[0];
+        const dir = dirname(file);
         const stem = basename(file).replace(/\.test\.tsx?$/, "");
         const candidates = existsSync(join(srcDir, dir))
           ? readdirSync(join(srcDir, dir)).filter((name) => basename(name, extname(name)) === stem)
