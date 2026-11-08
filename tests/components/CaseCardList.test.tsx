@@ -23,6 +23,15 @@ describe("CaseCardList", () => {
     });
   });
 
+  it("stacks cards in a single full-width column at every breakpoint", () => {
+    render(<CaseCardList items={items} />);
+
+    const list = screen.getByRole("list");
+
+    expect(list).toHaveClass("grid-cols-1");
+    expect(list.className).not.toMatch(/(?:md|lg|xl):grid-cols-/);
+  });
+
   it("renders nothing when the card list is empty", () => {
     const { container } = render(<CaseCardList items={[]} />);
 

@@ -6,7 +6,7 @@ export function CaseCardList({ items }: CaseCardListProps) {
   if (items.length === 0) return null;
 
   return (
-    <ul className="m-0 grid list-none grid-cols-1 gap-4 p-0 md:grid-cols-3">
+    <ul className="m-0 grid list-none grid-cols-1 gap-4 p-0">
       {items.map(({ label, text }) => (
         <li
           key={label}
