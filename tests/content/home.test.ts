@@ -50,11 +50,9 @@ describe("homeContent.hero", () => {
     });
     expect(hero.badge).toEqual({
       label: "SDD",
-      text: "Especialista em desenvolvimento guiado por especificações",
+      text: "Com IA, revisão humana em cada PR",
     });
-    expect(hero.intro).toBe(
-      "Construo software de ponta a ponta, do requisito à produção, guiado por especificações.",
-    );
+    expect(hero.intro).toBe("Especificação, teste e revisão. Qualidade desde o primeiro commit.");
     expect(hero.stackLine).toEqual(["TypeScript", "React", "Node"]);
   });
 
@@ -91,12 +89,12 @@ describe("homeContent.projects", () => {
   it("has the Avaria card strings verbatim", () => {
     expect(avaria.context).toEqual(["Trabalho · Mobs2", "App + API"]);
     expect(avaria.description).toBe(
-      "Melhoria de uma versão difícil de manter, proposta por mim ainda como dev júnior e aprovada. Passei a responder pelas decisões técnicas. Rodou em produção por mais de 4 anos, para mais de 1 mil clientes.",
+      "Refiz um app difícil de manter. Propus a solução, decidi a arquitetura e entreguei app e API. Ficou +3 anos no ar, com +1 mil clientes.",
     );
     expect(avaria.metrics).toEqual([
-      { label: "Em produção", value: "+4 anos" },
+      { label: "Em produção", value: "+3 anos" },
       { label: "Clientes", value: "+1 mil" },
-      { label: "Decisão de stack", value: "AdonisJS" },
+      { label: "Responsável técnico", value: "App e API" },
     ]);
     expect(avaria.tags).toEqual(["TypeScript", "React Native", "Node.js · AdonisJS", "SQL Server"]);
     expect(avaria.caseLink).toEqual({ label: "Ver o caso", href: "/casos/avaria" });
@@ -108,7 +106,7 @@ describe("homeContent.projects", () => {
   it("has the My Trello Version card strings verbatim", () => {
     expect(trello.context).toEqual(["Projeto pessoal · solo", "Código aberto"]);
     expect(trello.description).toBe(
-      "Nasceu de uma dor real: eu queria um app de tarefas mais simples, gratuito e customizado. Feito sozinho, do requisito ao código, com especificação antes do código, TDD e revisão humana de cada Pull Request.",
+      "Construí o app de tarefas que eu queria usar. Do requisito ao código, sozinho, com testes e CI. Cada PR está aberto no GitHub.",
     );
     expect(trello.metrics).toEqual([
       { label: "PRs mergeados", value: "~456" },
@@ -160,23 +158,21 @@ describe("homeContent.experience", () => {
     expect(mobs2.achievements).toEqual([
       {
         lead: "Avaria.",
-        text: "Propus a melhoria ainda como dev júnior e liderei as decisões técnicas: arquitetura, app em React Native e API em Node.js. Rodou em produção por mais de 4 anos, para mais de 1 mil clientes.",
+        text: "Responsável técnico na construção: propus a reconstrução, defini a arquitetura e entreguei app (React Native) e API (Node.js). +3 anos em produção, +1 mil clientes.",
       },
-      { lead: "REALI.", text: "Entreguei a plataforma em React e Next.js, aprovada pelo cliente." },
       {
         lead: "M2, produto principal da empresa.",
-        text: "Evoluí o produto com features e melhorias de UX pedidas pelos clientes.",
+        text: "Mantive e evoluí o produto principal da empresa, com features e UX guiadas pelo pedido dos clientes.",
       },
       {
         lead: "MyMobs, MobsTrack, Mobs2 School e Boletim Diário.",
-        text: "Participei da criação dos apps, que ajudaram a Mobs2 a fechar e manter clientes.",
+        text: "Construí, mantive e evoluí os 4 apps, do software ao acompanhamento de QA e UI/UX. Ajudaram a empresa a fechar e manter clientes.",
       },
     ]);
     expect(mobs2.tags).toEqual([
       "React Native",
       "Node.js",
       "React",
-      "Next.js",
       "Flutter",
       "Laravel",
       "Vue.js",
@@ -189,9 +185,9 @@ describe("homeContent.experience", () => {
 
   it("has the Duo Technology entry verbatim", () => {
     expect(duo.achievements).toEqual([
-      { text: "Entreguei o app FOCO Aluguel de Carros em React Native, aprovado pelos usuários." },
+      { text: "Entreguei o app FOCO Aluguel de Carros em React Native e o publiquei para os usuários." },
       {
-        text: "No Coral, principal sistema da FOCO, tirei do papel pedidos antigos do time de operação, criando as features em Node.js.",
+        text: "No Coral, principal sistema da FOCO, criei em Node.js as features que o time de operação precisava.",
       },
     ]);
     expect(duo.tags).toEqual(["Node.js · NestJS", "React Native", "Angular", "Jest", "DDD · SOLID"]);
@@ -202,10 +198,7 @@ describe("homeContent.experience", () => {
   it("has the Globals entry verbatim", () => {
     expect(globals.achievements).toEqual([
       {
-        text: "Entreguei em 3 meses o sistema completo de monitoramento de estradas de uma concessionária, um projeto estratégico para ela. As câmeras passaram a ser controladas de um painel só.",
-      },
-      {
-        text: "Planejei a arquitetura, desenvolvi de ponta a ponta, integrei câmeras e aparelhos de ar-condicionado e desenhei as telas junto com o time de UX.",
+        text: "Em 3 meses, evoluí o sistema de monitoramento de estradas de uma concessionária com novas features. Integrei as câmeras, que passaram a ser controladas de um painel só, e implementei as telas seguindo o desenho do time de UX.",
       },
     ]);
     expect(globals.tags).toEqual([".NET", "Angular", "Integração com hardware"]);
@@ -229,20 +222,19 @@ describe("homeContent.stack", () => {
 
   it("lists TypeScript, React and Node as the main thread, in order", () => {
     expect(stack.main).toEqual([
-      { name: "TypeScript", note: "fio principal" },
-      { name: "React", note: "fio principal" },
-      { name: "Node", note: "fio principal" },
+      { name: "TypeScript", note: "back, web e mobile" },
+      { name: "React", note: "web e React Native" },
+      { name: "Node", note: "API em produção por +3 anos e outras em manutenção" },
     ]);
   });
 
-  it("lists the nine other technologies verbatim, in order, under its label", () => {
+  it("lists the eight other technologies verbatim, in order, under its label", () => {
     expect(stack.otherLabel).toBe("também já trabalhei com");
     expect(stack.others).toEqual([
       "React Native",
       "AdonisJS",
       ".NET",
       "Angular",
-      "Next.js",
       "Flutter",
       "Laravel",
       "Vue.js",
@@ -265,13 +257,13 @@ describe("homeContent.method", () => {
     expect(method.eyebrow).toBe("04 · Método (SDD)");
     expect(method.title).toBe("Especificação antes do código");
     expect(method.intro).toBe(
-      "Desenvolvimento guiado por especificações, com a IA, e eu reviso cada PR antes do merge. É o ciclo que uso no My Trello Version.",
+      "Eu decido, a IA executa, e cada PR passa por mim antes do merge. Esse é o ciclo do My Trello Version.",
     );
   });
 
   it("has the summary line and the case link", () => {
     expect(method.summary).toBe(
-      "~456 PRs mergeados · ~238 arquivos de teste · CI com checagens obrigatórias",
+      "CI com checagens obrigatórias",
     );
     expect(method.link).toEqual({
       label: "Ver o método no My Trello Version",
@@ -302,14 +294,14 @@ describe("homeContent.method", () => {
   it("has every Eu and IA line verbatim", () => {
     expect(method.steps.map((s) => [s.human, s.ai])).toEqual([
       [
-        "Entendo o projeto e decido o que cada feature precisa.",
-        "Me ajuda a entender o projeto e cria a spec de cada feature.",
+        "Decido o que cada feature precisa.",
+        "Cria a spec de cada feature.",
       ],
       ["Decido a arquitetura e os contratos.", undefined],
       ["Aprovo o recorte: uma tarefa por branch e por PR.", undefined],
       ["Reviso os testes no PR.", "Cria os testes com TDD: o teste vermelho vem antes do código."],
       ["Exijo commits pequenos.", "Implementa até o teste passar."],
-      ["Reviso cada Pull Request antes do merge.", "Me envia o link do PR."],
+      ["Reviso cada Pull Request antes do merge.", "Abre o PR com o resumo das mudanças."],
     ]);
   });
 
@@ -325,7 +317,7 @@ describe("homeContent.contact", () => {
     expect(contact.sectionId).toBe("contato");
     expect(contact.eyebrow).toBe("05 · Contato");
     expect(contact.title).toBe("Vamos conversar");
-    expect(contact.lead).toBe("Para vaga ou projeto, escolha o canal.");
+    expect(contact.lead).toBe("Disponível para novas oportunidades.");
   });
 
   it("has the CV download link", () => {
@@ -340,7 +332,7 @@ describe("homeContent.contact", () => {
     });
   });
 
-  it("has the six cards verbatim, in order", () => {
+  it("has the five cards verbatim, in order", () => {
     expect(contact.cards).toEqual([
       { icon: "mail", label: "E-mail", value: "rafacsilva016@gmail.com", href: "mailto:rafacsilva016@gmail.com" },
       {
@@ -369,13 +361,6 @@ describe("homeContent.contact", () => {
         label: "Instagram",
         value: "instagram.com/rafa_couto_dev",
         href: "https://www.instagram.com/rafa_couto_dev",
-        external: true,
-      },
-      {
-        icon: "whatsapp",
-        label: "WhatsApp",
-        value: "Abrir conversa",
-        href: "https://wa.me/5524999644346",
         external: true,
       },
     ]);

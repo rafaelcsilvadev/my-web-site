@@ -21,7 +21,7 @@ describe("ContactSection", () => {
     render(<ContactSection contact={homeContent.contact} />);
     expect(screen.getByText("Contato")).toBeInTheDocument();
     expect(screen.getAllByRole("heading", { level: 2 })).toHaveLength(1);
-    expect(screen.getByText("Para vaga ou projeto, escolha o canal.")).toBeInTheDocument();
+    expect(screen.getByText("Disponível para novas oportunidades.")).toBeInTheDocument();
   });
 
   it("renders 'Baixar CV' with the PDF href and download attribute", () => {
@@ -39,12 +39,10 @@ describe("ContactSection", () => {
     expect(button).toHaveAttribute("rel", "noopener noreferrer");
   });
 
-  it("renders the WhatsApp card pointing to the same URL, external", () => {
+  it("renders WhatsApp only as the button, not as a card", () => {
     render(<ContactSection contact={homeContent.contact} />);
-    const card = screen.getByRole("link", { name: /Abrir conversa/ });
-    expect(card).toHaveAttribute("href", WHATSAPP);
-    expect(card).toHaveAttribute("target", "_blank");
-    expect(card).toHaveAttribute("rel", "noopener noreferrer");
+    expect(screen.getAllByRole("link", { name: /WhatsApp/ })).toHaveLength(1);
+    expect(screen.queryByRole("link", { name: /Abrir conversa/ })).not.toBeInTheDocument();
   });
 
   it("renders the e-mail card as mailto with no target", () => {

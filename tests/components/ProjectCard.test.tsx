@@ -60,7 +60,7 @@ describe("ProjectCard", () => {
   it("renders no metrics container when metrics is empty", () => {
     const { container } = render(<ProjectCard project={{ ...avaria, metrics: [] }} />);
     expect(container.querySelector("dl")).toBeNull();
-    expect(screen.queryByText("+4 anos")).not.toBeInTheDocument();
+    expect(screen.queryByText("+3 anos")).not.toBeInTheDocument();
   });
 
   it("renders no tags container when tags is empty", () => {
@@ -71,7 +71,7 @@ describe("ProjectCard", () => {
 
   it("shows text metrics with the label above a white value", () => {
     render(<ProjectCard project={avaria} />);
-    const value = screen.getByText("+4 anos");
+    const value = screen.getByText("+3 anos");
     const label = screen.getByText("Em produção");
     expect(value).toHaveClass("text-fg");
     expect(value).not.toHaveClass("font-mono");

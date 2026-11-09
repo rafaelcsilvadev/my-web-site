@@ -27,10 +27,9 @@ export const homeContent: HomeContent = {
     headline: { lead: "Desenvolvedor Full Stack", accent: "do requisito à produção" },
     badge: {
       label: "SDD",
-      text: "Especialista em desenvolvimento guiado por especificações",
+      text: "Com IA, revisão humana em cada PR",
     },
-    intro:
-      "Construo software de ponta a ponta, do requisito à produção, guiado por especificações.",
+    intro: "Especificação, teste e revisão. Qualidade desde o primeiro commit.",
     stackLine: ["TypeScript", "React", "Node"],
     actions: {
       contact: { label: "Contato", href: "#contato" },
@@ -54,11 +53,11 @@ export const homeContent: HomeContent = {
         context: ["Trabalho · Mobs2", "App + API"],
         title: "Avaria",
         description:
-          "Melhoria de uma versão difícil de manter, proposta por mim ainda como dev júnior e aprovada. Passei a responder pelas decisões técnicas. Rodou em produção por mais de 4 anos, para mais de 1 mil clientes.",
+          "Refiz um app difícil de manter. Propus a solução, decidi a arquitetura e entreguei app e API. Ficou +3 anos no ar, com +1 mil clientes.",
         metrics: [
-          { label: "Em produção", value: "+4 anos" },
+          { label: "Em produção", value: "+3 anos" },
           { label: "Clientes", value: "+1 mil" },
-          { label: "Decisão de stack", value: "AdonisJS" },
+          { label: "Responsável técnico", value: "App e API" },
         ],
         metricsStyle: "text",
         tags: ["TypeScript", "React Native", "Node.js · AdonisJS", "SQL Server"],
@@ -70,7 +69,7 @@ export const homeContent: HomeContent = {
         context: ["Projeto pessoal · solo", "Código aberto"],
         title: "My Trello Version",
         description:
-          "Nasceu de uma dor real: eu queria um app de tarefas mais simples, gratuito e customizado. Feito sozinho, do requisito ao código, com especificação antes do código, TDD e revisão humana de cada Pull Request.",
+          "Construí o app de tarefas que eu queria usar. Do requisito ao código, sozinho, com testes e CI. Cada PR está aberto no GitHub.",
         metrics: [
           { label: "PRs mergeados", value: "~456" },
           { label: "commits na main", value: "~1.400" },
@@ -101,19 +100,18 @@ export const homeContent: HomeContent = {
         achievements: [
           {
             lead: "Avaria.",
-            text: "Propus a melhoria ainda como dev júnior e liderei as decisões técnicas: arquitetura, app em React Native e API em Node.js. Rodou em produção por mais de 4 anos, para mais de 1 mil clientes.",
+            text: "Responsável técnico na construção: propus a reconstrução, defini a arquitetura e entreguei app (React Native) e API (Node.js). +3 anos em produção, +1 mil clientes.",
           },
-          { lead: "REALI.", text: "Entreguei a plataforma em React e Next.js, aprovada pelo cliente." },
           {
             lead: "M2, produto principal da empresa.",
-            text: "Evoluí o produto com features e melhorias de UX pedidas pelos clientes.",
+            text: "Mantive e evoluí o produto principal da empresa, com features e UX guiadas pelo pedido dos clientes.",
           },
           {
             lead: "MyMobs, MobsTrack, Mobs2 School e Boletim Diário.",
-            text: "Participei da criação dos apps, que ajudaram a Mobs2 a fechar e manter clientes.",
+            text: "Construí, mantive e evoluí os 4 apps, do software ao acompanhamento de QA e UI/UX. Ajudaram a empresa a fechar e manter clientes.",
           },
         ],
-        tags: ["React Native", "Node.js", "React", "Next.js", "Flutter", "Laravel", "Vue.js", "SQL Server", "Azure DevOps"],
+        tags: ["React Native", "Node.js", "React", "Flutter", "Laravel", "Vue.js", "SQL Server", "Azure DevOps"],
         mainTags: ["React Native", "Node.js", "React"],
         note: "Squads com UX, QA e back-end. Entregas por CI/CD e queries otimizadas.",
         link: { label: "Ver o caso Avaria", href: "/casos/avaria" },
@@ -123,9 +121,9 @@ export const homeContent: HomeContent = {
         period: "ago. de 2025 - set. de 2026",
         role: "Desenvolvedor Full Stack",
         achievements: [
-          { text: "Entreguei o app FOCO Aluguel de Carros em React Native, aprovado pelos usuários." },
+          { text: "Entreguei o app FOCO Aluguel de Carros em React Native e o publiquei para os usuários." },
           {
-            text: "No Coral, principal sistema da FOCO, tirei do papel pedidos antigos do time de operação, criando as features em Node.js.",
+            text: "No Coral, principal sistema da FOCO, criei em Node.js as features que o time de operação precisava.",
           },
         ],
         tags: ["Node.js · NestJS", "React Native", "Angular", "Jest", "DDD · SOLID"],
@@ -139,10 +137,7 @@ export const homeContent: HomeContent = {
         role: "Desenvolvedor Full Stack",
         achievements: [
           {
-            text: "Entreguei em 3 meses o sistema completo de monitoramento de estradas de uma concessionária, um projeto estratégico para ela. As câmeras passaram a ser controladas de um painel só.",
-          },
-          {
-            text: "Planejei a arquitetura, desenvolvi de ponta a ponta, integrei câmeras e aparelhos de ar-condicionado e desenhei as telas junto com o time de UX.",
+            text: "Em 3 meses, evoluí o sistema de monitoramento de estradas de uma concessionária com novas features. Integrei as câmeras, que passaram a ser controladas de um painel só, e implementei as telas seguindo o desenho do time de UX.",
           },
         ],
         tags: [".NET", "Angular", "Integração com hardware"],
@@ -155,9 +150,9 @@ export const homeContent: HomeContent = {
     eyebrow: "03 · Stack",
     title: "Onde sou mais forte",
     main: [
-      { name: "TypeScript", note: "fio principal" },
-      { name: "React", note: "fio principal" },
-      { name: "Node", note: "fio principal" },
+      { name: "TypeScript", note: "back, web e mobile" },
+      { name: "React", note: "web e React Native" },
+      { name: "Node", note: "API em produção por +3 anos e outras em manutenção" },
     ],
     otherLabel: "também já trabalhei com",
     others: [
@@ -165,7 +160,6 @@ export const homeContent: HomeContent = {
       "AdonisJS",
       ".NET",
       "Angular",
-      "Next.js",
       "Flutter",
       "Laravel",
       "Vue.js",
@@ -178,15 +172,15 @@ export const homeContent: HomeContent = {
     eyebrow: "04 · Método (SDD)",
     title: "Especificação antes do código",
     intro:
-      "Desenvolvimento guiado por especificações, com a IA, e eu reviso cada PR antes do merge. É o ciclo que uso no My Trello Version.",
+      "Eu decido, a IA executa, e cada PR passa por mim antes do merge. Esse é o ciclo do My Trello Version.",
     humanLabel: "Eu",
     aiLabel: "IA",
     steps: [
       {
         number: "01",
         title: "Spec",
-        human: "Entendo o projeto e decido o que cada feature precisa.",
-        ai: "Me ajuda a entender o projeto e cria a spec de cada feature.",
+        human: "Decido o que cada feature precisa.",
+        ai: "Cria a spec de cada feature.",
       },
       { number: "02", title: "Design", human: "Decido a arquitetura e os contratos." },
       {
@@ -211,17 +205,17 @@ export const homeContent: HomeContent = {
         number: "06",
         title: "PR com revisão humana",
         human: "Reviso cada Pull Request antes do merge.",
-        ai: "Me envia o link do PR.",
+        ai: "Abre o PR com o resumo das mudanças.",
       },
     ],
-    summary: "~456 PRs mergeados · ~238 arquivos de teste · CI com checagens obrigatórias",
+    summary: "CI com checagens obrigatórias",
     link: { label: "Ver o método no My Trello Version", href: "/casos/my-trello-version" },
   },
   contact: {
     sectionId: "contato",
     eyebrow: "05 · Contato",
     title: "Vamos conversar",
-    lead: "Para vaga ou projeto, escolha o canal.",
+    lead: "Disponível para novas oportunidades.",
     cv: { label: "Baixar CV", href: "/cv-rafael-couto-silva.pdf" },
     whatsapp: { label: "Chamar no WhatsApp", href: "https://wa.me/5524999644346", external: true },
     cards: [
@@ -257,13 +251,6 @@ export const homeContent: HomeContent = {
         label: "Instagram",
         value: "instagram.com/rafa_couto_dev",
         href: "https://www.instagram.com/rafa_couto_dev",
-        external: true,
-      },
-      {
-        icon: "whatsapp",
-        label: "WhatsApp",
-        value: "Abrir conversa",
-        href: "https://wa.me/5524999644346",
         external: true,
       },
     ],
