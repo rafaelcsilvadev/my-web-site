@@ -4,7 +4,7 @@ type CaseStepsProps = {
   items: CaseStep[];
 };
 
-const BASE = "flex flex-col gap-2.5 rounded-lg border p-4";
+const BASE = "card-glow flex flex-col gap-2.5 rounded-lg border p-4";
 
 export function CaseSteps({ items }: CaseStepsProps) {
   if (items.length === 0) return null;

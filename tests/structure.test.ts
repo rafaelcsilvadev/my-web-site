@@ -9,7 +9,7 @@ const testsDir = join(root, "tests");
 const SRC_DIRECTORIES = ["app", "components", "content", "models", "services", "viewmodels"];
 const INFRA_DIRECTORIES = ["helpers", "lint"];
 // Cross-cutting tests that cover non-code sources (CSS tokens, public/ assets).
-const UNMIRRORED_TESTS = ["app/tokens.test.ts", "app/public-assets.test.ts"];
+const UNMIRRORED_TESTS = ["app/tokens.test.ts", "app/public-assets.test.ts", "app/card-hover.test.ts"];
 
 function listFiles(dir: string): string[] {
   return readdirSync(dir).flatMap((name) => {

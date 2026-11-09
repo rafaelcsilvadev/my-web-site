@@ -31,6 +31,18 @@
   }
 }
 
+@utility card-glow {
+  transition:
+    border-color 200ms ease,
+    box-shadow 200ms ease;
+
+  &:hover,
+  &:focus-within {
+    border-color: var(--color-brand-text);
+    box-shadow: 0 10px 40px -8px rgb(136 30 155 / 0.55);
+  }
+}
+
 @layer base {
   body {
     background: var(--color-bg);

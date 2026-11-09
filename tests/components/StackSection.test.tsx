@@ -44,20 +44,34 @@ describe("StackSection", () => {
     const list = screen.getByRole("list", { name: "também já trabalhei com" });
     const items = screen.getAllByRole("listitem").filter((li) => list.contains(li));
     expect(items.map((li) => li.textContent)).toEqual([
-      "Next.js",
       "React Native",
-      "Flutter",
-      "Laravel",
-      "Vue.js",
       "AdonisJS",
       ".NET",
       "Angular",
+      "Next.js",
+      "Flutter",
+      "Laravel",
+      "Vue.js",
       "SQL Server",
     ]);
   });
 
+  it("highlights only the mainOthers chips among the secondary ones", () => {
+    render(<StackSection stack={homeContent.stack} />);
+    const list = screen.getByRole("list", { name: "também já trabalhei com" });
+    for (const name of homeContent.stack.others) {
+      const chip = screen.getByText(name, { selector: "span" });
+      expect(list.contains(chip)).toBe(true);
+      if (homeContent.stack.mainOthers.includes(name)) {
+        expect(chip).toHaveClass("text-brand-light");
+      } else {
+        expect(chip).not.toHaveClass("text-brand-light");
+      }
+    }
+  });
+
   it("renders no secondary container when others is empty", () => {
-    render(<StackSection stack={{ ...homeContent.stack, others: [] }} />);
+    render(<StackSection stack={{ ...homeContent.stack, others: [], mainOthers: [] }} />);
     expect(screen.queryByText("também já trabalhei com")).not.toBeInTheDocument();
     expect(screen.queryByRole("list", { name: "também já trabalhei com" })).not.toBeInTheDocument();
   });
