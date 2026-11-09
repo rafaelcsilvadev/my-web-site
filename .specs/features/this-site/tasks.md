@@ -158,7 +158,7 @@ T10 → T11
 
 ---
 
-### T4: Add `evidence` block to the case model and `CaseView`
+### T4: Add `evidence` block to the case model and `CaseView` ✅
 
 **What**: `EvidenceItem` and the `{ kind: "evidence" }` block in `case-content.ts`; `CaseView` renders it with `CaseEvidenceRow`, whose local prop type now imports `EvidenceItem`.
 **Where**: `src/components/CaseView.tsx`
@@ -173,11 +173,11 @@ T10 → T11
 
 **Done when**:
 
-- [ ] A case with an `evidence` block renders its three cards inside the section
-- [ ] Existing `CaseView` tests stay unchanged and green
-- [ ] `pnpm typecheck` passes (the switch handles every `kind`)
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
-- [ ] Test count: existing + 1 new test pass
+- [x] A case with an `evidence` block renders its three cards inside the section
+- [x] Existing `CaseView` tests stay unchanged and green
+- [x] `pnpm typecheck` passes (the switch handles every `kind`)
+- [x] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
+- [x] Test count: existing + 1 new test pass
 
 **Tests**: unit
 **Gate**: full

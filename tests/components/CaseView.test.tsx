@@ -52,7 +52,7 @@ describe.each(cases.map((entry) => [entry.slug, entry] as const))("CaseView %s",
           for (const { title } of block.items) expect(within(root).getByText(title)).toBeInTheDocument();
         } else if (block.kind === "highlights") {
           for (const { title } of block.items) expect(within(root).getByText(title)).toBeInTheDocument();
-        } else {
+        } else if (block.kind === "figure") {
           expect(within(root).getByRole("img", { name: block.alt })).toBeInTheDocument();
           expect(within(root).getByText(block.caption)).toBeInTheDocument();
         }
@@ -123,5 +123,39 @@ describe("Case view guards", () => {
       );
     });
     expect(offenders).toEqual([]);
+  });
+});
+
+describe("Case view evidence block", () => {
+  it("renders the three evidence cards inside the section that holds the block", () => {
+    const base = cases[0];
+    const content: CaseContent = {
+      ...base,
+      sections: base.sections.map((section, index) =>
+        index === 0
+          ? {
+              ...section,
+              blocks: [
+                ...section.blocks,
+                {
+                  kind: "evidence",
+                  items: [
+                    { kind: "metric", value: "193", label: "commits" },
+                    { kind: "highlight", title: "Testes antes do código", text: "Cada tarefa começa pelo teste." },
+                    { kind: "highlight", title: "Gate único", text: "Um comando valida tudo." },
+                  ],
+                },
+              ],
+            }
+          : section,
+      ),
+    };
+    renderCase(content);
+    const root = screen.getByRole("main").querySelector<HTMLElement>(`#${content.sections[0].id}`) as HTMLElement;
+    const cards = within(root).getAllByRole("listitem");
+    const texts = cards.map((card) => card.textContent);
+    expect(texts).toContain("193commits");
+    expect(texts).toContain("Testes antes do códigoCada tarefa começa pelo teste.");
+    expect(texts).toContain("Gate únicoUm comando valida tudo.");
   });
 });

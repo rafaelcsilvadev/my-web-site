@@ -2,6 +2,7 @@ import { BackLink } from "@/components/BackLink";
 import { CaseCallout } from "@/components/CaseCallout";
 import { CaseCardList } from "@/components/CaseCardList";
 import { CaseClosing } from "@/components/CaseClosing";
+import { CaseEvidenceRow } from "@/components/CaseEvidenceRow";
 import { CaseFacts } from "@/components/CaseFacts";
 import { CaseFigure } from "@/components/CaseFigure";
 import { CaseHero } from "@/components/CaseHero";
@@ -44,6 +45,8 @@ function CaseBlockView({ block }: { block: CaseBlock }) {
       return <CaseSteps items={block.items} />;
     case "highlights":
       return <CaseHighlights items={block.items} />;
+    case "evidence":
+      return <CaseEvidenceRow items={block.items} />;
     case "figure":
       return (
         <CaseFigure

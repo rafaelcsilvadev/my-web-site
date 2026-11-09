@@ -1,7 +1,4 @@
-// Local until T4 moves it to @/models/case-content.
-type EvidenceItem =
-  | { kind: "metric"; value: string; label: string }
-  | { kind: "highlight"; title: string; text: string };
+import type { EvidenceItem } from "@/models/case-content";
 
 type CaseEvidenceRowProps = {
   items: readonly EvidenceItem[];
