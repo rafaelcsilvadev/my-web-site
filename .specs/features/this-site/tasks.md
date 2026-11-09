@@ -326,7 +326,7 @@ T10 → T11
 
 ---
 
-### T10: Add wide layout and rows metrics to `ProjectCard`
+### T10: Add wide layout and rows metrics to `ProjectCard` ✅
 
 **What**: `ProjectItem.layout?: "wide"` and `metricsStyle: "rows"` in the model; `ProjectCard` spans two columns from `md`, splits text and rows, and renders label/value rows when asked.
 **Where**: `src/components/ProjectCard.tsx`
@@ -341,12 +341,12 @@ T10 → T11
 
 **Done when**:
 
-- [ ] A `wide` card has the `md:col-span-2` class; a card without `layout` keeps its current classes
-- [ ] With `rows`, each metric renders its label and its value as `dt` / `dd` in label-then-value order
-- [ ] Existing `ProjectCard` tests stay unchanged and green (Avaria and Trello render as before)
-- [ ] No PT-BR literal in the component
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
-- [ ] Test count: existing + 3 new tests pass
+- [x] A `wide` card has the `md:col-span-2` class; a card without `layout` keeps its current classes
+- [x] With `rows`, each metric renders its label and its value as `dt` / `dd` in label-then-value order
+- [x] Existing `ProjectCard` tests stay unchanged and green (Avaria and Trello render as before)
+- [x] No PT-BR literal in the component
+- [x] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
+- [x] Test count: existing + 3 new tests pass
 
 **Tests**: unit
 **Gate**: full
