@@ -15,16 +15,17 @@ describe("avariaCase hero", () => {
     expect(avariaCase.eyebrow).toBe("Caso · Mobs2");
     expect(avariaCase.title).toBe("Avaria");
     expect(avariaCase.intro).toBe(
-      "Uma versão difícil de manter virou um sistema que rodou em produção por mais de 4 anos, para mais de 1 mil clientes. A melhoria foi proposta por mim, ainda como dev júnior.",
+      "Um app difícil de manter virou um sistema com +3 anos em produção e +1 mil clientes. Eu propus a reconstrução e fui o responsável técnico por app e API.",
     );
     expect(avariaCase.heroActions).toEqual([]);
   });
 
-  it("has the three facts in order", () => {
+  it("has the four facts in order", () => {
     expect(avariaCase.facts).toEqual([
       { label: "Empresa", value: "Mobs2" },
-      { label: "Papel", value: "Proponente e responsável técnico" },
-      { label: "Estado", value: "Em produção há +4 anos" },
+      { label: "Papel", value: "Responsável técnico na construção · app e API" },
+      { label: "Contexto", value: "Empresa pequena, 2 devs nos apps" },
+      { label: "Em produção", value: "+3 anos" },
     ]);
   });
 });
@@ -43,33 +44,33 @@ describe("avariaCase sections", () => {
 
   it("has the Problema paragraphs", () => {
     expect(block(0, "paragraphs").items).toEqual([
-      "Já existia uma versão do aplicativo, e ela precisava de manutenção: não funcionava corretamente.",
-      "Além de falhar, era difícil de manter. Cada correção pesava mais do que deveria.",
+      "Já existia uma versão do aplicativo, mas ela não estava boa e era difícil de manter. Cada correção pesava mais do que deveria. Por isso reconstruí.",
     ]);
   });
 
-  it("has the Decisão paragraph and the AdonisJS callout with two reasons", () => {
+  it("has the Decisão paragraph and the AdonisJS callout with three reasons", () => {
     expect(block(1, "paragraphs").items).toEqual([
-      "A melhoria foi proposta por mim, ainda como dev júnior, e aprovada. A partir dela passei a responder pelas decisões técnicas.",
+      "Propus a reconstrução quando ainda era dev júnior, e ela foi aprovada. Passei a decidir a arquitetura, o app em React Native e a API em Node.js.",
     ]);
     expect(block(1, "callout")).toEqual({
       kind: "callout",
       label: "Por que AdonisJS",
       items: [
-        "Parecido com o Laravel, que era a stack principal da empresa.",
-        "Mantém TypeScript no back-end e no mobile, e o time já conhecia JS.",
+        "Parecido com o Laravel, a stack principal da empresa: os outros devs se adaptariam mais fácil.",
+        "Mantém TypeScript no back-end e no mobile.",
+        "Descartei o Laravel porque eu e o colega do mobile dominávamos mais o Node.js. Descartei o NestJS porque o AdonisJS é mais próximo do Laravel.",
       ],
     });
   });
 
   it("has the Resultado paragraph and three metrics", () => {
     expect(block(2, "paragraphs").items).toEqual([
-      "Rodou em produção por mais de 4 anos, atendendo mais de 1 mil clientes.",
+      "O app entrou em produção e ficou no ar por mais de 3 anos, atendendo mais de 1 mil clientes. Depois da entrega, a manutenção passou para outra squad.",
     ]);
     expect(block(2, "metrics").items).toEqual([
-      { value: "+4 anos", label: "em produção" },
+      { value: "+3 anos", label: "em produção" },
       { value: "+1 mil", label: "clientes" },
-      { value: "TS", label: "no back e no mobile" },
+      { value: "App e API", label: "construídos por mim" },
     ]);
   });
 });
