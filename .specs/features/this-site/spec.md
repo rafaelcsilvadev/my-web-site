@@ -1,4 +1,4 @@
-# Este Site Case Specification
+# This Site Case Specification
 
 ## Problem Statement
 
@@ -33,7 +33,7 @@ Este site page blocks, in order: Header, back link, case hero (eyebrow, title, i
 | Review markers on the boards (`[conferir: as duas primeiras decisões chegaram cortadas no briefing]`, `[conferir os números antes de publicar, eles crescem]`, `[conferir: o briefing cortou parte da stack]`) | Not rendered. Decisões shows the three decisions in the board; Stack shows the four chips in the board | Same decision as the Trello and Home markers: they are design review notes. The content is limited to what the board approved. | n |
 | Commit count | Card shows `193` / `commits`, the value on the board; it is the current `git log --oneline` count of the repository | Verified against git. The value is static content and grows; the author updates it when publishing. | n |
 | GitHub link | `https://github.com/rafaelcsilvadev/my-web-site`, new tab, `rel="noopener noreferrer"` | Read from `git remote -v`. | y |
-| Home screenshot asset | `public/este-site-home.png`, served via `next/image` with explicit width and height equal to the PNG's own dimensions. Source: the author's capture of the Home hero at `~/Pictures/Screenshots/Screenshot from 2026-11-09 19-07-32.png`, copied into `public/` (never imported from `ui/` or `~`) | The author supplied the capture; `ui/` is read-only input and the app serves from `public/`. | y |
+| Home screenshot asset | `public/this-site-home.png`, served via `next/image` with explicit width and height equal to the PNG's own dimensions. Source: the author's capture of the Home hero at `~/Pictures/Screenshots/Screenshot from 2026-11-09 19-07-32.png`, copied into `public/` (never imported from `ui/` or `~`) | The author supplied the capture; `ui/` is read-only input and the app serves from `public/`. | y |
 | Screenshot alt text | "Tela da Home deste site, com o título Desenvolvedor Full Stack do requisito à produção e o retrato de Rafael" | Describes the content for screen readers. | n |
 | Evidence cards layout | The three cards (metric `193 commits`, "Testes antes do código", "Gate único") sit in one row of three on desktop and stack in one column on mobile, as the boards show | Existing blocks use a 4-column metric grid and a 2-column highlight grid; this page needs one row, so the template gains a combined evidence row (decided in Design). | n |
 | Home card layout | The "Este site" card spans both grid columns on desktop (text and chips on the left, three label/value rows on the right) and stacks in one column on mobile. The rows are "Commits" `193`, "Testes" "Antes do código", "Checagens" "Gate único" | Matches `Home · desktop.png`. The existing metric styles ("text", "number") do not fit; Design adds a third style. | n |
@@ -63,7 +63,7 @@ Este site page blocks, in order: Header, back link, case hero (eyebrow, title, i
 4. The system SHALL render "02 Decisões" with a callout titled "O que decidi" holding three items in this order: "Next.js App Router, com Server Components por padrão e Client Components só onde precisa.", "Arquitetura MVVM: Model, ViewModel e View. As regras de importação são checadas pelo ESLint." and "Todo texto em um só lugar, em `src/content/`. Nenhum texto fixo nos componentes.", with `src/content/` rendered as inline code.
 5. The system SHALL render "03 Evidências" with three cards in this order: metric `193` / "commits", "Testes antes do código" / "O teste vermelho vem primeiro, em cada feature." and "Gate único" / "Lint, typecheck, testes e build.".
 6. The system SHALL render the Home screenshot through `next/image` with explicit width and height equal to the PNG's own dimensions, the alt text from the Assumptions table and the caption "A Home deste site.".
-7. The system SHALL serve the screenshot from `public/este-site-home.png` as a PNG.
+7. The system SHALL serve the screenshot from `public/this-site-home.png` as a PNG.
 8. The system SHALL render a Stack block labeled "Stack" with the chips TypeScript, Next.js, Tailwind CSS and pnpm, marking TypeScript and Next.js as main chips and rendering no group label.
 9. The system SHALL render a closing card with the eyebrow "Fim dos casos", the title "De volta ao início", the text "Projetos, experiência, stack e método em uma página." and three actions in this order: "Voltar ao início" to `/` (secondary, arrow icon), "Contato" to `/#contato` (primary) and "Baixar CV" to `/cv-rafael-couto-silva.pdf` (secondary, download icon, `download` attribute).
 10. The system SHALL NOT render the text `[conferir` anywhere on the page.
