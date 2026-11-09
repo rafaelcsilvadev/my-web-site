@@ -214,7 +214,7 @@ T10 → T11
 
 ---
 
-### T6: Serve the Home screenshot
+### T6: Serve the Home screenshot ✅
 
 **What**: Copy `~/Pictures/Screenshots/Screenshot from 2026-11-09 19-07-32.png` to `public/this-site-home.png` and add it to the public-assets test.
 **Where**: `public/this-site-home.png`
@@ -229,9 +229,9 @@ T10 → T11
 
 **Done when**:
 
-- [ ] Test asserts the file exists, has the PNG signature and size 1679x1127, and fails before the copy
-- [ ] Gate check passes: `pnpm test`
-- [ ] Test count: 3 new assertions pass
+- [x] Test asserts the file exists, has the PNG signature and size 1679x1127, and fails before the copy
+- [x] Gate check passes: `pnpm test`
+- [x] Test count: 3 new assertions pass
 
 **Tests**: unit
 **Gate**: quick
