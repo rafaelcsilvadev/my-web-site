@@ -52,6 +52,11 @@ describe.each(cases.map((entry) => [entry.slug, entry] as const))("CaseView %s",
           for (const { title } of block.items) expect(within(root).getByText(title)).toBeInTheDocument();
         } else if (block.kind === "highlights") {
           for (const { title } of block.items) expect(within(root).getByText(title)).toBeInTheDocument();
+        } else if (block.kind === "evidence") {
+          for (const item of block.items) {
+            const text = item.kind === "metric" ? item.label : item.title;
+            expect(within(root).getByText(text)).toBeInTheDocument();
+          }
         } else if (block.kind === "figure") {
           expect(within(root).getByRole("img", { name: block.alt })).toBeInTheDocument();
           expect(within(root).getByText(block.caption)).toBeInTheDocument();
