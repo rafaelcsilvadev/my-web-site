@@ -13,4 +13,10 @@ describe("sitemap", () => {
       ...caseSlugs.map((slug) => `https://example.com/casos/${slug}`),
     ]);
   });
+
+  it("lists /casos/este-site with priority 0.8", () => {
+    vi.stubEnv("NEXT_PUBLIC_SITE_URL", "https://example.com");
+    const entry = sitemap().find((item) => item.url === "https://example.com/casos/este-site");
+    expect(entry?.priority).toBe(0.8);
+  });
 });

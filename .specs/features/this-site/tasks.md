@@ -268,7 +268,7 @@ T10 → T11
 
 ---
 
-### T8: Register the Este site case
+### T8: Register the Este site case ✅
 
 **What**: Append the entry to `cases` so the route, the sitemap and the metadata include `este-site`.
 **Where**: `src/content/cases.ts`
@@ -283,13 +283,13 @@ T10 → T11
 
 **Done when**:
 
-- [ ] `tests/content/cases.test.ts` expects `["avaria", "my-trello-version", "este-site"]` and the title "Este site · Rafael Couto Silva" plus the description from the spec; red before the change
-- [ ] Sitemap test lists `/casos/este-site` with priority 0.8
-- [ ] The parametric metadata test covers the new slug: title, description, Open Graph `url` under `NEXT_PUBLIC_SITE_URL`, image `/og-image.png`
-- [ ] A page test renders `/casos/este-site` through `CaseView` and finds the h1 "Este site"; one `h1` only; sections `h2` with `aria-labelledby`
-- [ ] Unknown slug still reaches `notFound()`
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
-- [ ] Test count: existing + ≥ 5 new tests pass
+- [x] `tests/content/cases.test.ts` expects `["avaria", "my-trello-version", "este-site"]` and the title "Este site · Rafael Couto Silva" plus the description from the spec; red before the change
+- [x] Sitemap test lists `/casos/este-site` with priority 0.8
+- [x] The parametric metadata test covers the new slug: title, description, Open Graph `url` under `NEXT_PUBLIC_SITE_URL`, image `/og-image.png`
+- [x] A page test renders `/casos/este-site` through `CaseView` and finds the h1 "Este site"; one `h1` only; sections `h2` with `aria-labelledby`
+- [x] Unknown slug still reaches `notFound()`
+- [x] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
+- [x] Test count: existing + ≥ 5 new tests pass
 
 **Tests**: unit
 **Gate**: full

@@ -21,6 +21,7 @@ describe("Case route generateStaticParams (CASE-09)", () => {
     expect(generateStaticParams()).toEqual([
       { slug: "avaria" },
       { slug: "my-trello-version" },
+      { slug: "este-site" },
     ]);
   });
 });
@@ -44,6 +45,19 @@ describe.each(cases.map((entry) => [entry.slug, entry.title] as const))(
     });
   },
 );
+
+describe("Case page este-site sections (SITE-08)", () => {
+  it("labels the hero by the h1 and every other section by an h2", async () => {
+    const { container } = render(await CasePage(params("este-site")));
+    const sections = container.querySelectorAll("section[aria-labelledby]");
+    expect(sections.length).toBeGreaterThan(0);
+    for (const section of sections) {
+      const id = section.getAttribute("aria-labelledby")!;
+      const heading = container.querySelector(`#${id}`);
+      expect(heading?.tagName).toBe(id === "case-title" ? "H1" : "H2");
+    }
+  });
+});
 
 describe("Case page unknown slug (CASE-10)", () => {
   it("calls notFound for the page", async () => {

@@ -4,7 +4,7 @@ import { caseSlugs, cases } from "@/content/cases";
 
 describe("case registry", () => {
   it("lists the slugs in order", () => {
-    expect(caseSlugs).toEqual(["avaria", "my-trello-version"]);
+    expect(caseSlugs).toEqual(["avaria", "my-trello-version", "este-site"]);
   });
 
   it("has unique slugs", () => {
@@ -26,6 +26,10 @@ describe("case registry", () => {
 
     expect(bySlug["avaria"].title).toBe("Avaria · Rafael Couto Silva");
     expect(bySlug["my-trello-version"].title).toBe("My Trello Version · Rafael Couto Silva");
+    expect(bySlug["este-site"].title).toBe("Este site · Rafael Couto Silva");
+    expect(bySlug["este-site"].description).toBe(
+      "Caso Este site: o portfólio feito com spec, teste vermelho primeiro e commits pequenos, com a IA executando e revisão humana de cada mudança.",
+    );
     for (const entry of cases) {
       expect(entry.metadata.description.trim()).not.toBe("");
     }
