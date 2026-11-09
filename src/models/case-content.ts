@@ -59,6 +59,7 @@ export interface CaseClosing {
   title: string;
   text: string;
   actions: CaseAction[];
+  next?: { eyebrow: string; title: string; action: CaseAction };
 }
 
 export interface CaseContent {

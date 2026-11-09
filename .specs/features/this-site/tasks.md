@@ -186,7 +186,7 @@ T10 → T11
 
 ---
 
-### T5: Add optional `next` row to `CaseClosing`
+### T5: Add optional `next` row to `CaseClosing` ✅
 
 **What**: `CaseClosing.next?` in the model; the card renders a divider and a "Próximo caso" row (eyebrow, title, one `ButtonLink`) after the actions when `next` is present.
 **Where**: `src/components/CaseClosing.tsx`
@@ -201,11 +201,11 @@ T10 → T11
 
 **Done when**:
 
-- [ ] With `next`, the card shows its eyebrow, title and a link with the action's label and `href`
-- [ ] Without `next`, the card renders no divider and no extra row; existing `CaseClosing` tests stay unchanged and green
-- [ ] No PT-BR literal in the component
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
-- [ ] Test count: existing + 2 new tests pass
+- [x] With `next`, the card shows its eyebrow, title and a link with the action's label and `href`
+- [x] Without `next`, the card renders no divider and no extra row; existing `CaseClosing` tests stay unchanged and green
+- [x] No PT-BR literal in the component
+- [x] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
+- [x] Test count: existing + 2 new tests pass
 
 **Tests**: unit
 **Gate**: full
