@@ -10,7 +10,7 @@ export function CaseCardList({ items }: CaseCardListProps) {
       {items.map(({ label, text }) => (
         <li
           key={label}
-          className="flex flex-col gap-2 rounded-xl border border-line bg-linear-to-b from-card-from to-card-to p-5"
+          className="card-glow flex flex-col gap-2 rounded-xl border border-line bg-linear-to-b from-card-from to-card-to p-5"
         >
           <span className="font-mono text-xs uppercase tracking-wider text-brand-text">{label}</span>
           <span className="text-sm leading-relaxed text-fg-muted">{text}</span>

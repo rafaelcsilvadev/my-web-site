@@ -22,7 +22,7 @@ export function StackSection({ stack }: StackSectionProps) {
         {main.map((item) => (
           <li
             key={item.name}
-            className="flex flex-col items-start gap-3 rounded-xl border border-line bg-linear-to-b from-card-from to-card-to p-6"
+            className="card-glow flex flex-col items-start gap-3 rounded-xl border border-line bg-linear-to-b from-card-from to-card-to p-6"
           >
             <span className="font-mono text-2xl font-bold text-brand-light">{item.name}</span>
             <span className="text-sm text-fg-muted">{item.note}</span>

@@ -7,7 +7,7 @@ type MethodStepProps = {
   aiLabel: string;
 };
 
-const BASE = "flex flex-col gap-2.5 rounded-lg border p-4";
+const BASE = "card-glow flex flex-col gap-2.5 rounded-lg border p-4";
 const BADGE = "mt-0.5 shrink-0 rounded border px-1.5 font-mono text-[10px] leading-4";
 
 export function MethodStep({ step, humanLabel, aiLabel }: MethodStepProps) {

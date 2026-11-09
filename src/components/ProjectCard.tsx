@@ -13,7 +13,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
   const [category, kind] = context;
 
   return (
-    <article className="relative flex flex-col gap-5 rounded-xl border border-line bg-linear-to-b from-card-from to-card-to p-6">
+    <article className="card-glow relative flex flex-col gap-5 rounded-xl border border-line bg-linear-to-b from-card-from to-card-to p-6">
       <div className="flex items-center justify-between gap-4 font-mono text-[11px]">
         <span className="uppercase tracking-wider text-brand-text">{category}</span>
         <span className="text-fg-muted">{kind}</span>

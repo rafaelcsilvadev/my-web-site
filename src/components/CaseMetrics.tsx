@@ -12,7 +12,7 @@ export function CaseMetrics({ items }: CaseMetricsProps) {
       {items.map(({ value, label }) => (
         <li
           key={label}
-          className="flex flex-col gap-1 rounded-xl border border-line bg-linear-to-b from-card-from to-card-to p-5"
+          className="card-glow flex flex-col gap-1 rounded-xl border border-line bg-linear-to-b from-card-from to-card-to p-5"
         >
           <span className="font-mono text-2xl font-bold text-brand-light">{value}</span>
           <span className="text-xs text-fg-muted">{label}</span>
