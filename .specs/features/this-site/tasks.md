@@ -129,7 +129,7 @@ T10 → T11
 
 ---
 
-### T3: Add `CaseEvidenceRow` component
+### T3: Add `CaseEvidenceRow` component ✅
 
 **What**: One list of cards, each a metric (`value` + `label`) or a highlight (`title` + `text`), three columns from `md`, one column on mobile.
 **Where**: `src/components/CaseEvidenceRow.tsx`
@@ -144,12 +144,12 @@ T10 → T11
 
 **Done when**:
 
-- [ ] Renders `193` / "commits", "Testes antes do código" / its text and "Gate único" / its text, in that order, as list items
-- [ ] The list has `grid-cols-1` and `md:grid-cols-3` classes
-- [ ] Empty `items` renders no container
-- [ ] The component declares its own `EvidenceItem` prop type from `@/models/case-content` only after T4; until then it imports nothing from models (type kept local and moved in T4)
-- [ ] Gate check passes: `pnpm test`
-- [ ] Test count: 4 new tests pass
+- [x] Renders `193` / "commits", "Testes antes do código" / its text and "Gate único" / its text, in that order, as list items
+- [x] The list has `grid-cols-1` and `md:grid-cols-3` classes
+- [x] Empty `items` renders no container
+- [x] The component declares its own `EvidenceItem` prop type from `@/models/case-content` only after T4; until then it imports nothing from models (type kept local and moved in T4)
+- [x] Gate check passes: `pnpm test`
+- [x] Test count: 4 new tests pass
 
 **Tests**: unit
 **Gate**: quick
