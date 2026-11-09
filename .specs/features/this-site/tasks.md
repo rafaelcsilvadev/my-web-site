@@ -355,7 +355,7 @@ T10 → T11
 
 ---
 
-### T11: Add the Este site card to the Home
+### T11: Add the Este site card to the Home ✅
 
 **What**: Append the third project item to `homeContent.projects.items`.
 **Where**: `src/content/home.ts`
@@ -370,12 +370,12 @@ T10 → T11
 
 **Done when**:
 
-- [ ] `tests/content/home.test.ts` expects three items in order Avaria, My Trello Version, Este site, and asserts verbatim the context, title, text, four chips (two main), three rows (`Commits` / `193`, `Testes` / "Antes do código", `Checagens` / "Gate único"), `caseLink` to `/casos/este-site` and `repoLink` to `https://github.com/rafaelcsilvadev/my-web-site` with `external: true`; red before the change
-- [ ] The Avaria and Trello items are unchanged
-- [ ] `ProjectsSection` and `HomeView` tests render three cards, the last one spanning both columns
-- [ ] `[conferir` appears nowhere in the Home content
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test && pnpm build`
-- [ ] Test count: existing + ≥ 4 new tests pass
+- [x] `tests/content/home.test.ts` expects three items in order Avaria, My Trello Version, Este site, and asserts verbatim the context, title, text, four chips (two main), three rows (`Commits` / `193`, `Testes` / "Antes do código", `Checagens` / "Gate único"), `caseLink` to `/casos/este-site` and `repoLink` to `https://github.com/rafaelcsilvadev/my-web-site` with `external: true`; red before the change
+- [x] The Avaria and Trello items are unchanged
+- [x] `ProjectsSection` and `HomeView` tests render three cards, the last one spanning both columns
+- [x] `[conferir` appears nowhere in the Home content
+- [x] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test && pnpm build`
+- [x] Test count: existing + ≥ 4 new tests pass
 
 **Tests**: unit
 **Gate**: build

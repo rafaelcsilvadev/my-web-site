@@ -77,13 +77,13 @@ describe("homeContent.hero", () => {
 
 describe("homeContent.projects", () => {
   const { projects } = homeContent;
-  const [avaria, trello] = projects.items;
+  const [avaria, trello, site] = projects.items;
 
-  it("has the section header and exactly two cards in order", () => {
+  it("has the section header and exactly three cards in order", () => {
     expect(projects.sectionId).toBe("projetos");
     expect(projects.eyebrow).toBe("01 · Destaques");
     expect(projects.title).toBe("Projetos em destaque");
-    expect(projects.items.map((item) => item.title)).toEqual(["Avaria", "My Trello Version"]);
+    expect(projects.items.map((item) => item.title)).toEqual(["Avaria", "My Trello Version", "Este site"]);
   });
 
   it("has the Avaria card strings verbatim", () => {
@@ -122,6 +122,38 @@ describe("homeContent.projects", () => {
       href: "https://github.com/rafaelcsilvadev/my-trello-version",
       external: true,
     });
+  });
+
+  it("has the Este site card strings verbatim", () => {
+    expect(site.context).toEqual(["Projeto pessoal · solo", "Portfólio"]);
+    expect(site.title).toBe("Este site");
+    expect(site.description).toBe(
+      "O próprio portfólio, feito do jeito que eu trabalho: spec, teste vermelho primeiro e commits pequenos, com a IA executando e eu revisando.",
+    );
+    expect(site.tags).toEqual(["TypeScript", "Next.js", "Tailwind CSS", "pnpm"]);
+    expect(site.mainTags).toEqual(["TypeScript", "Next.js"]);
+    expect(site.layout).toBe("wide");
+    expect(site.metricsStyle).toBe("rows");
+    expect(site.metrics).toEqual([
+      { label: "Commits", value: "193" },
+      { label: "Testes", value: "Antes do código" },
+      { label: "Checagens", value: "Gate único" },
+    ]);
+    expect(site.caseLink).toEqual({ label: "Ver o caso", href: "/casos/este-site" });
+    expect(site.repoLink).toEqual({
+      label: "Repositório no GitHub",
+      href: "https://github.com/rafaelcsilvadev/my-web-site",
+      external: true,
+    });
+  });
+
+  it("keeps the Avaria and My Trello Version cards without a wide layout", () => {
+    expect(avaria.layout).toBeUndefined();
+    expect(trello.layout).toBeUndefined();
+  });
+
+  it("has no review marker in the Home content", () => {
+    expect(JSON.stringify(homeContent)).not.toContain("[conferir");
   });
 });
 

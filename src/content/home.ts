@@ -85,6 +85,28 @@ export const homeContent: HomeContent = {
           external: true,
         },
       },
+      {
+        id: "este-site",
+        context: ["Projeto pessoal · solo", "Portfólio"],
+        title: "Este site",
+        description:
+          "O próprio portfólio, feito do jeito que eu trabalho: spec, teste vermelho primeiro e commits pequenos, com a IA executando e eu revisando.",
+        metrics: [
+          { label: "Commits", value: "193" },
+          { label: "Testes", value: "Antes do código" },
+          { label: "Checagens", value: "Gate único" },
+        ],
+        metricsStyle: "rows",
+        layout: "wide",
+        tags: ["TypeScript", "Next.js", "Tailwind CSS", "pnpm"],
+        mainTags: ["TypeScript", "Next.js"],
+        caseLink: { label: "Ver o caso", href: "/casos/este-site" },
+        repoLink: {
+          label: "Repositório no GitHub",
+          href: "https://github.com/rafaelcsilvadev/my-web-site",
+          external: true,
+        },
+      },
     ],
   },
   experience: {
