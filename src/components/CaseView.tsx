@@ -101,6 +101,7 @@ export function CaseView({ content, chrome, brand }: CaseViewProps) {
             title={content.closing.title}
             text={content.closing.text}
             actions={content.closing.actions}
+            next={content.closing.next}
           />
         </div>
       </main>

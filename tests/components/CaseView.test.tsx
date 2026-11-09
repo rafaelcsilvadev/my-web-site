@@ -159,3 +159,23 @@ describe("Case view evidence block", () => {
     expect(texts).toContain("Gate únicoUm comando valida tudo.");
   });
 });
+
+describe("Case view next-case row", () => {
+  it("renders the My Trello Version closing row linking to Este site", () => {
+    const trello = cases.find((entry) => entry.slug === "my-trello-version") as CaseContent;
+    renderCase(trello);
+    const next = trello.closing.next as NonNullable<CaseContent["closing"]["next"]>;
+    const link = screen.getByRole("link", { name: next.action.link.label });
+    expect(link).toHaveAttribute("href", "/casos/este-site");
+    expect(screen.getByText(next.title)).toBeInTheDocument();
+  });
+
+  it("renders no next-case link on Avaria and Este site", () => {
+    for (const slug of ["avaria", "este-site"]) {
+      const entry = cases.find((item) => item.slug === slug) as CaseContent;
+      const { container } = renderCase(entry);
+      expect(container.querySelector('a[href="/casos/este-site"]')).toBeNull();
+      cleanup();
+    }
+  });
+});
