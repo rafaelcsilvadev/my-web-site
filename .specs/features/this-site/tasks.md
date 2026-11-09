@@ -71,7 +71,7 @@ T10 → T11
 
 ## Task Breakdown
 
-### T1: Add `splitInlineCode` ViewModel
+### T1: Add `splitInlineCode` ViewModel ✅
 
 **What**: Pure function that splits a string with backtick marks into `{ text, code }` segments.
 **Where**: `src/viewmodels/inline-code.ts`
@@ -86,12 +86,12 @@ T10 → T11
 
 **Done when**:
 
-- [ ] Text without backticks returns one non-code segment
-- [ ] "Todo texto em um só lugar, em `src/content/`. Nenhum texto fixo nos componentes." returns three segments, the middle one `code: true`
-- [ ] An unmatched backtick stays literal text; empty text returns `[]`
-- [ ] No `react` or `next` import (AD-002)
-- [ ] Gate check passes: `pnpm test`
-- [ ] Test count: 4 new tests pass (no silent deletions)
+- [x] Text without backticks returns one non-code segment
+- [x] "Todo texto em um só lugar, em `src/content/`. Nenhum texto fixo nos componentes." returns three segments, the middle one `code: true`
+- [x] An unmatched backtick stays literal text; empty text returns `[]`
+- [x] No `react` or `next` import (AD-002)
+- [x] Gate check passes: `pnpm test`
+- [x] Test count: 4 new tests pass (no silent deletions)
 
 **Tests**: unit
 **Gate**: quick
