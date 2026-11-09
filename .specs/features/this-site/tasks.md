@@ -100,7 +100,7 @@ T10 → T11
 
 ---
 
-### T2: Render inline code in `CaseCallout`
+### T2: Render inline code in `CaseCallout` ✅
 
 **What**: `CaseCallout` renders each item through `splitInlineCode`, code segments in `<code>` with `font-mono`.
 **Where**: `src/components/CaseCallout.tsx`
@@ -115,12 +115,12 @@ T10 → T11
 
 **Done when**:
 
-- [ ] An item with backticks renders a `<code>` element holding the marked text, without the backticks
-- [ ] An item without backticks renders exactly as before; existing `CaseCallout` tests stay unchanged and green
-- [ ] An empty `items` list still renders no container
-- [ ] No PT-BR literal in the component
-- [ ] Gate check passes: `pnpm test`
-- [ ] Test count: existing + 2 new tests pass
+- [x] An item with backticks renders a `<code>` element holding the marked text, without the backticks
+- [x] An item without backticks renders exactly as before; existing `CaseCallout` tests stay unchanged and green
+- [x] An empty `items` list still renders no container
+- [x] No PT-BR literal in the component
+- [x] Gate check passes: `pnpm test`
+- [x] Test count: existing + 2 new tests pass
 
 **Tests**: unit
 **Gate**: quick
