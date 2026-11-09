@@ -265,7 +265,7 @@ describe("homeContent.method", () => {
     expect(method.eyebrow).toBe("04 · Método (SDD)");
     expect(method.title).toBe("Especificação antes do código");
     expect(method.intro).toBe(
-      "Desenvolvimento guiado por especificações, com a IA onde ela ajuda e eu revisando cada PR antes do merge. É o ciclo que uso no My Trello Version.",
+      "Desenvolvimento guiado por especificações, com a IA, e eu reviso cada PR antes do merge. É o ciclo que uso no My Trello Version.",
     );
   });
 
