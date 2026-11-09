@@ -240,7 +240,7 @@ T10 → T11
 
 ---
 
-### T7: Write Este site case content
+### T7: Write Este site case content ✅
 
 **What**: `esteSiteCase` entry with every string, link, block and chip from the spec; not registered yet.
 **Where**: `src/content/this-site-case.ts`
@@ -255,11 +255,11 @@ T10 → T11
 
 **Done when**:
 
-- [ ] Test asserts verbatim: eyebrow, title, intro, both hero actions (GitHub URL, `/#contato`), the Objetivo text, the three Decisões items (third with backticks around `src/content/`), the three evidence items, the figure (`/this-site-home.png`, 1679x1127, alt, caption "A Home deste site."), the four chips with TypeScript and Next.js as main, and the closing card with its three actions in order
-- [ ] Test asserts `JSON.stringify` of the entry has no `[conferir`
-- [ ] The closing has no `next`
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
-- [ ] Test count: ≥ 10 new tests pass
+- [x] Test asserts verbatim: eyebrow, title, intro, both hero actions (GitHub URL, `/#contato`), the Objetivo text, the three Decisões items (third with backticks around `src/content/`), the three evidence items, the figure (`/this-site-home.png`, 1679x1127, alt, caption "A Home deste site."), the four chips with TypeScript and Next.js as main, and the closing card with its three actions in order
+- [x] Test asserts `JSON.stringify` of the entry has no `[conferir`
+- [x] The closing has no `next`
+- [x] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
+- [x] Test count: ≥ 10 new tests pass
 
 **Tests**: unit
 **Gate**: full
