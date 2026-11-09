@@ -1,4 +1,4 @@
-# Este Site Tasks
+# This Site Tasks
 
 ## Execution Protocol (MANDATORY -- do not skip)
 
@@ -8,7 +8,7 @@ Implement these tasks with the `tlc-spec-driven` skill: **activate it by name an
 
 ---
 
-**Design**: `.specs/features/este-site/design.md`
+**Design**: `.specs/features/this-site/design.md`
 **Status**: Draft
 
 ---
@@ -71,7 +71,7 @@ T10 → T11
 
 ## Task Breakdown
 
-### T1: Add `splitInlineCode` ViewModel
+### T1: Add `splitInlineCode` ViewModel ✅
 
 **What**: Pure function that splits a string with backtick marks into `{ text, code }` segments.
 **Where**: `src/viewmodels/inline-code.ts`
@@ -86,12 +86,12 @@ T10 → T11
 
 **Done when**:
 
-- [ ] Text without backticks returns one non-code segment
-- [ ] "Todo texto em um só lugar, em `src/content/`. Nenhum texto fixo nos componentes." returns three segments, the middle one `code: true`
-- [ ] An unmatched backtick stays literal text; empty text returns `[]`
-- [ ] No `react` or `next` import (AD-002)
-- [ ] Gate check passes: `pnpm test`
-- [ ] Test count: 4 new tests pass (no silent deletions)
+- [x] Text without backticks returns one non-code segment
+- [x] "Todo texto em um só lugar, em `src/content/`. Nenhum texto fixo nos componentes." returns three segments, the middle one `code: true`
+- [x] An unmatched backtick stays literal text; empty text returns `[]`
+- [x] No `react` or `next` import (AD-002)
+- [x] Gate check passes: `pnpm test`
+- [x] Test count: 4 new tests pass (no silent deletions)
 
 **Tests**: unit
 **Gate**: quick
@@ -216,8 +216,8 @@ T10 → T11
 
 ### T6: Serve the Home screenshot
 
-**What**: Copy `~/Pictures/Screenshots/Screenshot from 2026-11-09 19-07-32.png` to `public/este-site-home.png` and add it to the public-assets test.
-**Where**: `public/este-site-home.png`
+**What**: Copy `~/Pictures/Screenshots/Screenshot from 2026-11-09 19-07-32.png` to `public/this-site-home.png` and add it to the public-assets test.
+**Where**: `public/this-site-home.png`
 **Depends on**: None
 **Reuses**: `tests/app/public-assets.test.ts` (allow-list and PNG-size pattern)
 **Requirement**: SITE-03
@@ -243,7 +243,7 @@ T10 → T11
 ### T7: Write Este site case content
 
 **What**: `esteSiteCase` entry with every string, link, block and chip from the spec; not registered yet.
-**Where**: `src/content/este-site-case.ts`
+**Where**: `src/content/this-site-case.ts`
 **Depends on**: T6
 **Reuses**: Phase 1 types (`evidence` block, inline-code marks) and `src/content/my-trello-version-case.ts` shape and `repoUrl` pattern
 **Requirement**: SITE-01, SITE-02, SITE-03, SITE-04, SITE-05
@@ -255,7 +255,7 @@ T10 → T11
 
 **Done when**:
 
-- [ ] Test asserts verbatim: eyebrow, title, intro, both hero actions (GitHub URL, `/#contato`), the Objetivo text, the three Decisões items (third with backticks around `src/content/`), the three evidence items, the figure (`/este-site-home.png`, 1679x1127, alt, caption "A Home deste site."), the four chips with TypeScript and Next.js as main, and the closing card with its three actions in order
+- [ ] Test asserts verbatim: eyebrow, title, intro, both hero actions (GitHub URL, `/#contato`), the Objetivo text, the three Decisões items (third with backticks around `src/content/`), the three evidence items, the figure (`/this-site-home.png`, 1679x1127, alt, caption "A Home deste site."), the four chips with TypeScript and Next.js as main, and the closing card with its three actions in order
 - [ ] Test asserts `JSON.stringify` of the entry has no `[conferir`
 - [ ] The closing has no `next`
 - [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`

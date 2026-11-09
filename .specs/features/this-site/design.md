@@ -1,6 +1,6 @@
-# Este Site Design
+# This Site Design
 
-**Spec**: `.specs/features/este-site/spec.md`
+**Spec**: `.specs/features/this-site/spec.md`
 **Status**: Draft
 
 ---
@@ -11,7 +11,7 @@ No new layer and no new route. The page reuses the case template (`CaseContent` 
 
 ```mermaid
 graph TD
-    C[este-site-case.ts] --> R[cases.ts registry]
+    C[this-site-case.ts] --> R[cases.ts registry]
     R --> P["casos/[slug]/page.tsx (unchanged)"]
     R --> S[sitemap.ts (unchanged)]
     P --> V[CaseView]
@@ -123,12 +123,12 @@ export interface ProjectItem {
 
 **Relationships**: `EvidenceItem` metric shape equals `Metric`; `CaseAction` is the existing type.
 
-### Content: Este site (`src/content/este-site-case.ts`)
+### Content: Este site (`src/content/this-site-case.ts`)
 
 - `slug: "este-site"`, `backLink`, `eyebrow`, `title`, `intro`, `heroActions` (GitHub primary with `github` icon, Contato ghost), `facts: []`.
 - Section 01 Objetivo: `layout: "split"`, one `paragraphs` block.
 - Section 02 Decisões: `layout: "split"`, one `callout` block "O que decidi" with three items (third with backticks around `src/content/`).
-- Section 03 Evidências: `layout: "stacked"`, an `evidence` block (3 items) and a `figure` block (`/este-site-home.png`, 1679x1127).
+- Section 03 Evidências: `layout: "stacked"`, an `evidence` block (3 items) and a `figure` block (`/this-site-home.png`, 1679x1127).
 - `stack`: label "Stack", one unlabeled group (4 chips, 2 main), no note.
 - `closing`: eyebrow "Fim dos casos", three actions; no `next`.
 
@@ -151,7 +151,7 @@ export interface ProjectItem {
 | ------- | -------------------- | ------ | ---------- |
 | Tests assert the exact slug list and project count | `tests/content/cases.test.ts:7`, `tests/content/home.test.ts` | Fail when the third entry is added | Each registering task updates its own test in the same commit (T8, T11). |
 | The `CaseBlock` switch has no default branch | `src/components/CaseView.tsx:CaseBlockView` | A new `kind` without a branch returns `undefined` and breaks typecheck or render | The `evidence` kind and its `CaseView` branch land in one task (T4). |
-| `193` commits is static and grows | `src/content/este-site-case.ts` | Number goes stale | Logged in the spec Assumptions; the author updates it on publish. |
+| `193` commits is static and grows | `src/content/this-site-case.ts` | Number goes stale | Logged in the spec Assumptions; the author updates it on publish. |
 | Public asset allow-list | `tests/app/public-assets.test.ts` | New PNG fails the allow-list test | T6 updates the list with the PNG. |
 | `ProjectCard` is shared by the two validated cards | `src/components/ProjectCard.tsx` | Regression in Avaria and Trello cards | Existing `ProjectCard` tests stay unchanged and green; new behavior only behind `layout` and `rows` (spec SITE-10 AC 8). |
 
