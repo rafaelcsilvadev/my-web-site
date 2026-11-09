@@ -172,5 +172,14 @@ export const myTrelloVersionCase: CaseContent = {
         download: true,
       },
     ],
+    next: {
+      eyebrow: "Próximo caso",
+      title: "Este site",
+      action: {
+        link: { label: "Ver o caso", href: "/casos/este-site" },
+        variant: "ghost",
+        icon: "arrow",
+      },
+    },
   },
 };

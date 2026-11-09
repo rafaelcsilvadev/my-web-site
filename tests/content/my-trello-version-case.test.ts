@@ -191,6 +191,18 @@ describe("myTrelloVersionCase stack and closing", () => {
     ]);
   });
 
+  it("adds the Próximo caso row pointing to Este site", () => {
+    expect(myTrelloVersionCase.closing.next).toEqual({
+      eyebrow: "Próximo caso",
+      title: "Este site",
+      action: {
+        link: { label: "Ver o caso", href: "/casos/este-site" },
+        variant: "ghost",
+        icon: "arrow",
+      },
+    });
+  });
+
   it("has page metadata with the title and a non-empty description", () => {
     expect(myTrelloVersionCase.metadata.title).toBe("My Trello Version · Rafael Couto Silva");
     expect(myTrelloVersionCase.metadata.description.length).toBeGreaterThan(0);

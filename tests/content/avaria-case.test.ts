@@ -87,6 +87,10 @@ describe("avariaCase stack and closing", () => {
     ]);
   });
 
+  it("has no next-case row", () => {
+    expect(avariaCase.closing.next).toBeUndefined();
+  });
+
   it("has the Próximo caso card with three actions", () => {
     expect(avariaCase.closing.eyebrow).toBe("Próximo caso");
     expect(avariaCase.closing.title).toBe("My Trello Version");

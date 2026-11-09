@@ -298,7 +298,7 @@ T10 → T11
 
 ---
 
-### T9: Point My Trello Version closing to Este site
+### T9: Point My Trello Version closing to Este site ✅
 
 **What**: Add `next` ("Próximo caso" / "Este site" / "Ver o caso" to `/casos/este-site`) to the My Trello Version closing; "Código aberto" stays as is.
 **Where**: `src/content/my-trello-version-case.ts`
@@ -313,11 +313,11 @@ T10 → T11
 
 **Done when**:
 
-- [ ] Test asserts the `next` fields verbatim and that the existing closing eyebrow, title, text and three actions are unchanged
-- [ ] Avaria and Este site closings have no `next`
-- [ ] The registry link test still passes (`/casos/este-site` is a registered slug)
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test && pnpm build`
-- [ ] Test count: existing + 3 new tests pass
+- [x] Test asserts the `next` fields verbatim and that the existing closing eyebrow, title, text and three actions are unchanged
+- [x] Avaria and Este site closings have no `next`
+- [x] The registry link test still passes (`/casos/este-site` is a registered slug)
+- [x] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test && pnpm build`
+- [x] Test count: existing + 3 new tests pass
 
 **Tests**: unit
 **Gate**: build
