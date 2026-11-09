@@ -89,6 +89,7 @@ export interface HomeContent {
     main: { name: string; note: string }[];
     otherLabel: string;
     others: string[];
+    mainOthers: string[];
   };
   method: {
     sectionId: string;

@@ -7,7 +7,7 @@ type StackSectionProps = {
 };
 
 export function StackSection({ stack }: StackSectionProps) {
-  const { sectionId, eyebrow, title, main, otherLabel, others } = stack;
+  const { sectionId, eyebrow, title, main, otherLabel, others, mainOthers } = stack;
   const headingId = `${sectionId}-heading`;
   const othersLabelId = `${sectionId}-others-label`;
 
@@ -37,7 +37,7 @@ export function StackSection({ stack }: StackSectionProps) {
           <ul aria-labelledby={othersLabelId} className="mt-3 flex flex-wrap gap-2">
             {others.map((name) => (
               <li key={name}>
-                <Chip label={name} />
+                <Chip label={name} main={mainOthers.includes(name)} />
               </li>
             ))}
           </ul>

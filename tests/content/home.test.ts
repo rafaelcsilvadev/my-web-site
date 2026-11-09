@@ -238,16 +238,22 @@ describe("homeContent.stack", () => {
   it("lists the nine other technologies verbatim, in order, under its label", () => {
     expect(stack.otherLabel).toBe("também já trabalhei com");
     expect(stack.others).toEqual([
-      "Next.js",
       "React Native",
-      "Flutter",
-      "Laravel",
-      "Vue.js",
       "AdonisJS",
       ".NET",
       "Angular",
+      "Next.js",
+      "Flutter",
+      "Laravel",
+      "Vue.js",
       "SQL Server",
     ]);
+  });
+});
+
+describe("homeContent.stack highlighted others", () => {
+  it("highlights React Native, AdonisJS, .NET and Angular", () => {
+    expect(homeContent.stack.mainOthers).toEqual(["React Native", "AdonisJS", ".NET", "Angular"]);
   });
 });
 
