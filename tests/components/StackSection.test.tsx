@@ -23,12 +23,14 @@ describe("StackSection", () => {
     expect(h2s[0]).toHaveTextContent("Onde sou mais forte");
   });
 
-  it("renders three main chips, each with the 'fio principal' label", () => {
+  it("renders three main chips, each with its own note", () => {
     render(<StackSection stack={homeContent.stack} />);
     for (const name of ["TypeScript", "React", "Node"]) {
       expect(screen.getByText(name)).toHaveClass("text-brand-light");
     }
-    expect(screen.getAllByText("fio principal")).toHaveLength(3);
+    expect(screen.getByText("back, web e mobile")).toBeInTheDocument();
+    expect(screen.getByText("web e React Native")).toBeInTheDocument();
+    expect(screen.getByText("API em produção por +3 anos e outras em manutenção")).toBeInTheDocument();
   });
 
   it("lays the main items out as a three-column grid of cards", () => {
@@ -38,7 +40,7 @@ describe("StackSection", () => {
     expect(card).toHaveClass("rounded-xl", "border", "border-line", "bg-linear-to-b", "p-6");
   });
 
-  it("renders the nine secondary chips after the 'também já trabalhei com' label", () => {
+  it("renders the eight secondary chips after the 'também já trabalhei com' label", () => {
     render(<StackSection stack={homeContent.stack} />);
     expect(screen.getByText("também já trabalhei com")).toBeInTheDocument();
     const list = screen.getByRole("list", { name: "também já trabalhei com" });
@@ -48,7 +50,6 @@ describe("StackSection", () => {
       "AdonisJS",
       ".NET",
       "Angular",
-      "Next.js",
       "Flutter",
       "Laravel",
       "Vue.js",

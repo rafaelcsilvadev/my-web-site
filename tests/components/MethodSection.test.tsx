@@ -27,7 +27,7 @@ describe("MethodSection", () => {
     render(<MethodSection method={homeContent.method} />);
     expect(
       screen.getByText(
-        "Desenvolvimento guiado por especificações, com a IA, e eu reviso cada PR antes do merge. É o ciclo que uso no My Trello Version.",
+        "Eu decido, a IA executa, e cada PR passa por mim antes do merge. Esse é o ciclo do My Trello Version.",
       ),
     ).toBeInTheDocument();
   });
@@ -48,7 +48,7 @@ describe("MethodSection", () => {
   it("renders the summary line and the link to the case", () => {
     render(<MethodSection method={homeContent.method} />);
     expect(
-      screen.getByText("~456 PRs mergeados · ~238 arquivos de teste · CI com checagens obrigatórias"),
+      screen.getByText("CI com checagens obrigatórias"),
     ).toBeInTheDocument();
     expect(screen.getByRole("link", { name: "Ver o método no My Trello Version" })).toHaveAttribute(
       "href",
