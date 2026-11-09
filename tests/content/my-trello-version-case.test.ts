@@ -18,7 +18,7 @@ describe("myTrelloVersionCase hero", () => {
     expect(myTrelloVersionCase.eyebrow).toBe("Caso · Projeto pessoal, feito sozinho");
     expect(myTrelloVersionCase.title).toBe("My Trello Version");
     expect(myTrelloVersionCase.intro).toBe(
-      "Uma versão própria de um quadro estilo Trello, do requisito ao código. A prova aberta do ciclo completo de construir software.",
+      "Um quadro estilo Trello que eu construí sozinho, do requisito ao código. Cada Pull Request está aberto no GitHub, para você conferir.",
     );
   });
 
@@ -45,7 +45,7 @@ describe("myTrelloVersionCase sections", () => {
     expect(new Set(ids).size).toBe(ids.length);
   });
 
-  it("has the Objetivo cards with the lead-in between A dor and the other two", () => {
+  it("has the Objetivo cards: A dor, then Construir and Mostrar", () => {
     expect(myTrelloVersionCase.sections[0].blocks).toEqual([
       {
         kind: "cards",
@@ -57,19 +57,15 @@ describe("myTrelloVersionCase sections", () => {
         ],
       },
       {
-        kind: "paragraphs",
-        items: ["Em cima dessa dor, dois propósitos no mesmo projeto."],
-      },
-      {
         kind: "cards",
         items: [
           {
             label: "Construir",
-            text: "Uma API com práticas de produção: arquitetura modular, três níveis de teste, erros padronizados, logs estruturados, tudo em Docker.",
+            text: "Um app completo com práticas de produção: API modular, erros padronizados, logs estruturados e tudo em Docker.",
           },
           {
             label: "Mostrar",
-            text: "Um jeito disciplinado de construir software com IA: especificação antes do código, TDD, commits pequenos, verificação independente e revisão humana de cada Pull Request.",
+            text: "Um jeito disciplinado de construir software com IA: eu especifico, a IA executa, eu reviso cada Pull Request.",
           },
         ],
       },
@@ -78,7 +74,7 @@ describe("myTrelloVersionCase sections", () => {
 
   it("has the Processo intro and six steps in order with step 04 highlighted", () => {
     expect(myTrelloVersionCase.sections[1].intro).toBe(
-      "Desenvolvimento guiado por especificações. Uma tarefa por branch e por PR, com commits pequenos e o teste vermelho antes do código.",
+      "Cada feature segue o mesmo ciclo: spec, design, tarefas, teste vermelho, código e PR. Uma tarefa por branch, commits pequenos.",
     );
     const [steps] = blocks(1, "steps");
     expect(steps.items).toEqual([
@@ -97,18 +93,17 @@ describe("myTrelloVersionCase sections", () => {
       { value: "~456", label: "Pull Requests mergeados" },
       { value: "~1.400", label: "commits na branch principal" },
       { value: "~238", label: "arquivos de teste" },
-      { value: "7", label: "funcionalidades no back-end" },
+      { value: "3", label: "níveis de teste: unitário, integração e e2e" },
     ]);
   });
 
-  it("has the four Evidências highlights", () => {
+  it("has the three Evidências highlights", () => {
     const [highlights] = blocks(2, "highlights");
     expect(highlights.items).toEqual([
       {
         title: "Back-end e front-end separados",
         text: "Com contrato de API compartilhado entre os dois.",
       },
-      { title: "Três níveis de teste", text: "Unitários, de integração e e2e." },
       {
         title: "CI com checagens obrigatórias",
         text: "Na branch principal, em GitHub Actions.",
@@ -172,7 +167,7 @@ describe("myTrelloVersionCase stack and closing", () => {
 
   it("has the status note", () => {
     expect(myTrelloVersionCase.stack.note).toBe(
-      "Estado: a versão web está completa. O app mobile não foi iniciado, em coerência com o foco em web.",
+      "Estado: a versão web está completa. O app mobile ainda não foi iniciado.",
     );
   });
 

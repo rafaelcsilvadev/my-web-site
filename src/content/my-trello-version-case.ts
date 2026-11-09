@@ -7,13 +7,13 @@ export const myTrelloVersionCase: CaseContent = {
   metadata: {
     title: "My Trello Version · Rafael Couto Silva",
     description:
-      "Caso My Trello Version: um quadro estilo Trello feito sozinho, do requisito ao código, com especificação antes do código, TDD e revisão humana de cada Pull Request.",
+      "Caso My Trello Version: quadro estilo Trello feito do zero e sozinho. Código aberto, testes em 3 níveis, CI e revisão de cada Pull Request.",
   },
   backLink: { label: "Voltar para o início", href: "/" },
   eyebrow: "Caso · Projeto pessoal, feito sozinho",
   title: "My Trello Version",
   intro:
-    "Uma versão própria de um quadro estilo Trello, do requisito ao código. A prova aberta do ciclo completo de construir software.",
+    "Um quadro estilo Trello que eu construí sozinho, do requisito ao código. Cada Pull Request está aberto no GitHub, para você conferir.",
   heroActions: [
     {
       link: { label: "Ver no GitHub", href: repoUrl, external: true },
@@ -40,19 +40,15 @@ export const myTrelloVersionCase: CaseContent = {
           ],
         },
         {
-          kind: "paragraphs",
-          items: ["Em cima dessa dor, dois propósitos no mesmo projeto."],
-        },
-        {
           kind: "cards",
           items: [
             {
               label: "Construir",
-              text: "Uma API com práticas de produção: arquitetura modular, três níveis de teste, erros padronizados, logs estruturados, tudo em Docker.",
+              text: "Um app completo com práticas de produção: API modular, erros padronizados, logs estruturados e tudo em Docker.",
             },
             {
               label: "Mostrar",
-              text: "Um jeito disciplinado de construir software com IA: especificação antes do código, TDD, commits pequenos, verificação independente e revisão humana de cada Pull Request.",
+              text: "Um jeito disciplinado de construir software com IA: eu especifico, a IA executa, eu reviso cada Pull Request.",
             },
           ],
         },
@@ -64,7 +60,7 @@ export const myTrelloVersionCase: CaseContent = {
       title: "Processo",
       layout: "stacked",
       intro:
-        "Desenvolvimento guiado por especificações. Uma tarefa por branch e por PR, com commits pequenos e o teste vermelho antes do código.",
+        "Cada feature segue o mesmo ciclo: spec, design, tarefas, teste vermelho, código e PR. Uma tarefa por branch, commits pequenos.",
       blocks: [
         {
           kind: "steps",
@@ -91,7 +87,7 @@ export const myTrelloVersionCase: CaseContent = {
             { value: "~456", label: "Pull Requests mergeados" },
             { value: "~1.400", label: "commits na branch principal" },
             { value: "~238", label: "arquivos de teste" },
-            { value: "7", label: "funcionalidades no back-end" },
+            { value: "3", label: "níveis de teste: unitário, integração e e2e" },
           ],
         },
         {
@@ -101,7 +97,6 @@ export const myTrelloVersionCase: CaseContent = {
               title: "Back-end e front-end separados",
               text: "Com contrato de API compartilhado entre os dois.",
             },
-            { title: "Três níveis de teste", text: "Unitários, de integração e e2e." },
             {
               title: "CI com checagens obrigatórias",
               text: "Na branch principal, em GitHub Actions.",
@@ -157,7 +152,7 @@ export const myTrelloVersionCase: CaseContent = {
         mainChips: ["Docker"],
       },
     ],
-    note: "Estado: a versão web está completa. O app mobile não foi iniciado, em coerência com o foco em web.",
+    note: "Estado: a versão web está completa. O app mobile ainda não foi iniciado.",
   },
   closing: {
     eyebrow: "Código aberto",
