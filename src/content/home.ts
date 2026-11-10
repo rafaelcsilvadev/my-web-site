@@ -23,7 +23,7 @@ export const homeContent: HomeContent = {
     },
   },
   hero: {
-    label: "Desenvolvedor de software",
+    label: "Desenvolvedor Full Stack",
     headline: { lead: "Desenvolvedor Full Stack", accent: "resolvendo problemas de forma moderna" },
     badge: {
       label: "SDD",

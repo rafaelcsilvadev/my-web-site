@@ -43,7 +43,7 @@ describe("homeContent.hero", () => {
   const { hero } = homeContent;
 
   it("has the label, headline, badge, intro and stack line", () => {
-    expect(hero.label).toBe("Desenvolvedor de software");
+    expect(hero.label).toBe("Desenvolvedor Full Stack");
     expect(hero.headline).toEqual({
       lead: "Desenvolvedor Full Stack",
       accent: "resolvendo problemas de forma moderna",

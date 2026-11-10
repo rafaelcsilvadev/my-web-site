@@ -35,7 +35,8 @@ describe("Hero", () => {
 
   it("renders the label, badge, intro and stack line", () => {
     render(<Hero hero={hero} />);
-    expect(screen.getByText("Desenvolvedor de software")).toBeInTheDocument();
+    const label = screen.getAllByText("Desenvolvedor Full Stack").find((el) => el.tagName === "P");
+    expect(label).toBeInTheDocument();
     expect(screen.getByText("SDD")).toBeInTheDocument();
     expect(
       screen.getByText("Spec-Driven Development, com IA e revisão humana"),
