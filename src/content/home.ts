@@ -27,9 +27,9 @@ export const homeContent: HomeContent = {
     headline: { lead: "Desenvolvedor Full Stack", accent: "do requisito à produção" },
     badge: {
       label: "SDD",
-      text: "Com IA, revisão humana em cada PR",
+      text: "Spec-Driven Development, com IA e revisão humana",
     },
-    intro: "Especificação, teste e revisão. Qualidade desde o primeiro commit.",
+    intro: "Especifico, decido a arquitetura, entrego com testes e reviso cada mudança. A IA executa; a responsabilidade é minha.",
     stackLine: ["TypeScript", "React", "Node"],
     actions: {
       contact: { label: "Contato", href: "#contato" },
@@ -66,10 +66,10 @@ export const homeContent: HomeContent = {
       },
       {
         id: "my-trello-version",
-        context: ["Projeto pessoal · solo", "Código aberto"],
+        context: ["Projeto pessoal · ponta a ponta", "Código aberto"],
         title: "My Trello Version",
         description:
-          "Construí o app de tarefas que eu queria usar. Do requisito ao código, sozinho, com testes e CI. Cada PR está aberto no GitHub.",
+          "App de tarefas que projetei e entreguei de ponta a ponta: back-end e front-end separados, testes em 3 níveis e CI. Cada PR está aberto no GitHub.",
         metrics: [
           { label: "PRs mergeados", value: "~456" },
           { label: "commits na main", value: "~1.400" },
@@ -87,14 +87,14 @@ export const homeContent: HomeContent = {
       },
       {
         id: "este-site",
-        context: ["Projeto pessoal · solo", "Portfólio"],
+        context: ["Projeto pessoal · ponta a ponta", "Portfólio"],
         title: "Este site",
         description:
-          "O próprio portfólio, feito do jeito que eu trabalho: spec, teste vermelho primeiro e commits pequenos, com a IA executando e eu revisando.",
+          "O próprio portfólio, projetado e entregue por mim de ponta a ponta: spec antes do código, teste vermelho primeiro, commits pequenos e arquitetura com fronteiras checadas por lint. A IA executa; eu decido e reviso cada mudança.",
         metrics: [
           { label: "Commits", value: "193" },
           { label: "Testes", value: "Antes do código" },
-          { label: "Checagens", value: "Gate único" },
+          { label: "Checagens", value: "Lint, tipos, testes, build" },
         ],
         metricsStyle: "rows",
         layout: "wide",
@@ -130,7 +130,7 @@ export const homeContent: HomeContent = {
           },
           {
             lead: "MyMobs, MobsTrack, Mobs2 School e Boletim Diário.",
-            text: "Construí, mantive e evoluí os 4 apps, do software ao acompanhamento de QA e UI/UX. Ajudaram a empresa a fechar e manter clientes.",
+            text: "Construí e evoluí os 4 apps, incluindo o acompanhamento de QA e UI/UX. Apoiaram a venda e a retenção de clientes.",
           },
         ],
         tags: ["React Native", "Node.js", "React", "Flutter", "Laravel", "Vue.js", "SQL Server", "Azure DevOps"],
@@ -159,7 +159,7 @@ export const homeContent: HomeContent = {
         role: "Desenvolvedor Full Stack",
         achievements: [
           {
-            text: "Em 3 meses, evoluí o sistema de monitoramento de estradas de uma concessionária com novas features. Integrei as câmeras, que passaram a ser controladas de um painel só, e implementei as telas seguindo o desenho do time de UX.",
+            text: "Em 3 meses, evoluí o sistema de monitoramento de estradas de uma concessionária com novas features. Integrei as câmeras, que passaram a ser controladas de um painel só.",
           },
         ],
         tags: [".NET", "Angular", "Integração com hardware"],

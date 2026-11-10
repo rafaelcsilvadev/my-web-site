@@ -50,9 +50,9 @@ describe("homeContent.hero", () => {
     });
     expect(hero.badge).toEqual({
       label: "SDD",
-      text: "Com IA, revisão humana em cada PR",
+      text: "Spec-Driven Development, com IA e revisão humana",
     });
-    expect(hero.intro).toBe("Especificação, teste e revisão. Qualidade desde o primeiro commit.");
+    expect(hero.intro).toBe("Especifico, decido a arquitetura, entrego com testes e reviso cada mudança. A IA executa; a responsabilidade é minha.");
     expect(hero.stackLine).toEqual(["TypeScript", "React", "Node"]);
   });
 
@@ -104,9 +104,9 @@ describe("homeContent.projects", () => {
   });
 
   it("has the My Trello Version card strings verbatim", () => {
-    expect(trello.context).toEqual(["Projeto pessoal · solo", "Código aberto"]);
+    expect(trello.context).toEqual(["Projeto pessoal · ponta a ponta", "Código aberto"]);
     expect(trello.description).toBe(
-      "Construí o app de tarefas que eu queria usar. Do requisito ao código, sozinho, com testes e CI. Cada PR está aberto no GitHub.",
+      "App de tarefas que projetei e entreguei de ponta a ponta: back-end e front-end separados, testes em 3 níveis e CI. Cada PR está aberto no GitHub.",
     );
     expect(trello.metrics).toEqual([
       { label: "PRs mergeados", value: "~456" },
@@ -125,10 +125,10 @@ describe("homeContent.projects", () => {
   });
 
   it("has the Este site card strings verbatim", () => {
-    expect(site.context).toEqual(["Projeto pessoal · solo", "Portfólio"]);
+    expect(site.context).toEqual(["Projeto pessoal · ponta a ponta", "Portfólio"]);
     expect(site.title).toBe("Este site");
     expect(site.description).toBe(
-      "O próprio portfólio, feito do jeito que eu trabalho: spec, teste vermelho primeiro e commits pequenos, com a IA executando e eu revisando.",
+      "O próprio portfólio, projetado e entregue por mim de ponta a ponta: spec antes do código, teste vermelho primeiro, commits pequenos e arquitetura com fronteiras checadas por lint. A IA executa; eu decido e reviso cada mudança.",
     );
     expect(site.tags).toEqual(["TypeScript", "Next.js", "Tailwind CSS", "pnpm"]);
     expect(site.mainTags).toEqual(["TypeScript", "Next.js"]);
@@ -137,7 +137,7 @@ describe("homeContent.projects", () => {
     expect(site.metrics).toEqual([
       { label: "Commits", value: "193" },
       { label: "Testes", value: "Antes do código" },
-      { label: "Checagens", value: "Gate único" },
+      { label: "Checagens", value: "Lint, tipos, testes, build" },
     ]);
     expect(site.caseLink).toEqual({ label: "Ver o caso", href: "/casos/este-site" });
     expect(site.repoLink).toEqual({
@@ -198,7 +198,7 @@ describe("homeContent.experience", () => {
       },
       {
         lead: "MyMobs, MobsTrack, Mobs2 School e Boletim Diário.",
-        text: "Construí, mantive e evoluí os 4 apps, do software ao acompanhamento de QA e UI/UX. Ajudaram a empresa a fechar e manter clientes.",
+        text: "Construí e evoluí os 4 apps, incluindo o acompanhamento de QA e UI/UX. Apoiaram a venda e a retenção de clientes.",
       },
     ]);
     expect(mobs2.tags).toEqual([
@@ -230,7 +230,7 @@ describe("homeContent.experience", () => {
   it("has the Globals entry verbatim", () => {
     expect(globals.achievements).toEqual([
       {
-        text: "Em 3 meses, evoluí o sistema de monitoramento de estradas de uma concessionária com novas features. Integrei as câmeras, que passaram a ser controladas de um painel só, e implementei as telas seguindo o desenho do time de UX.",
+        text: "Em 3 meses, evoluí o sistema de monitoramento de estradas de uma concessionária com novas features. Integrei as câmeras, que passaram a ser controladas de um painel só.",
       },
     ]);
     expect(globals.tags).toEqual([".NET", "Angular", "Integração com hardware"]);

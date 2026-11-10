@@ -47,7 +47,7 @@ describe("buildSiteMetadata", () => {
     expect(meta.metadataBase.href).toBe("https://example.com/");
     expect(meta.title).toBe("Rafael Couto Silva · Desenvolvedor Full Stack");
     expect(meta.description).toBe(
-      "Desenvolvedor Full Stack. Especificação, teste e revisão. Qualidade desde o primeiro commit.",
+      "Desenvolvedor Full Stack. Especifico, decido a arquitetura, entrego com testes e reviso cada mudança. A IA executa; a responsabilidade é minha.",
     );
   });
 
@@ -57,7 +57,7 @@ describe("buildSiteMetadata", () => {
     expect(og.locale).toBe("pt_BR");
     expect(og.title).toBe("Rafael Couto Silva · Desenvolvedor Full Stack");
     expect(og.description).toBe(
-      "Desenvolvedor Full Stack. Especificação, teste e revisão. Qualidade desde o primeiro commit.",
+      "Desenvolvedor Full Stack. Especifico, decido a arquitetura, entrego com testes e reviso cada mudança. A IA executa; a responsabilidade é minha.",
     );
   });
 
@@ -80,7 +80,7 @@ describe("buildSiteMetadata", () => {
     expect(build().twitter).toEqual({
       card: "summary_large_image",
       title: "Rafael Couto Silva · Desenvolvedor Full Stack",
-      description: "Desenvolvedor Full Stack. Especificação, teste e revisão. Qualidade desde o primeiro commit.",
+      description: "Desenvolvedor Full Stack. Especifico, decido a arquitetura, entrego com testes e reviso cada mudança. A IA executa; a responsabilidade é minha.",
       images: ["https://example.com/og-image.png"],
     });
   });

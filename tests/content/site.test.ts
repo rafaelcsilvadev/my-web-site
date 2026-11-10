@@ -12,7 +12,7 @@ describe("siteContent", () => {
   });
 
   it("has the site description", () => {
-    expect(siteContent.description).toBe("Desenvolvedor Full Stack. Especificação, teste e revisão. Qualidade desde o primeiro commit.");
+    expect(siteContent.description).toBe("Desenvolvedor Full Stack. Especifico, decido a arquitetura, entrego com testes e reviso cada mudança. A IA executa; a responsabilidade é minha.");
   });
 
   it("has the Open Graph image alt text", () => {
