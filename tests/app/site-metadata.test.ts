@@ -47,7 +47,7 @@ describe("buildSiteMetadata", () => {
     expect(meta.metadataBase.href).toBe("https://example.com/");
     expect(meta.title).toBe("Rafael Couto Silva · Desenvolvedor Full Stack");
     expect(meta.description).toBe(
-      "Desenvolvedor Full Stack. Especifico, decido a arquitetura, entrego com testes e reviso cada mudança. A IA executa; a responsabilidade é minha.",
+      "Desenvolvedor Full Stack resolvendo problemas de forma moderna. Utilizo IA para entregar produtos de qualidade em pouco tempo, evitando bugs e agilizando pontos complexos.",
     );
   });
 
@@ -57,7 +57,7 @@ describe("buildSiteMetadata", () => {
     expect(og.locale).toBe("pt_BR");
     expect(og.title).toBe("Rafael Couto Silva · Desenvolvedor Full Stack");
     expect(og.description).toBe(
-      "Desenvolvedor Full Stack. Especifico, decido a arquitetura, entrego com testes e reviso cada mudança. A IA executa; a responsabilidade é minha.",
+      "Desenvolvedor Full Stack resolvendo problemas de forma moderna. Utilizo IA para entregar produtos de qualidade em pouco tempo, evitando bugs e agilizando pontos complexos.",
     );
   });
 
@@ -71,7 +71,7 @@ describe("buildSiteMetadata", () => {
         url: "https://example.com/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Rafael Couto Silva, Desenvolvedor Full Stack, do requisito à produção",
+        alt: "Rafael Couto Silva, Desenvolvedor Full Stack, resolvendo problemas de forma moderna",
       },
     ]);
   });
@@ -80,7 +80,7 @@ describe("buildSiteMetadata", () => {
     expect(build().twitter).toEqual({
       card: "summary_large_image",
       title: "Rafael Couto Silva · Desenvolvedor Full Stack",
-      description: "Desenvolvedor Full Stack. Especifico, decido a arquitetura, entrego com testes e reviso cada mudança. A IA executa; a responsabilidade é minha.",
+      description: "Desenvolvedor Full Stack resolvendo problemas de forma moderna. Utilizo IA para entregar produtos de qualidade em pouco tempo, evitando bugs e agilizando pontos complexos.",
       images: ["https://example.com/og-image.png"],
     });
   });

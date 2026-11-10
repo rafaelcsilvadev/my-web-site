@@ -12,12 +12,12 @@ describe("siteContent", () => {
   });
 
   it("has the site description", () => {
-    expect(siteContent.description).toBe("Desenvolvedor Full Stack. Especifico, decido a arquitetura, entrego com testes e reviso cada mudança. A IA executa; a responsabilidade é minha.");
+    expect(siteContent.description).toBe("Desenvolvedor Full Stack resolvendo problemas de forma moderna. Utilizo IA para entregar produtos de qualidade em pouco tempo, evitando bugs e agilizando pontos complexos.");
   });
 
   it("has the Open Graph image alt text", () => {
     expect(siteContent.ogImageAlt).toBe(
-      "Rafael Couto Silva, Desenvolvedor Full Stack, do requisito à produção",
+      "Rafael Couto Silva, Desenvolvedor Full Stack, resolvendo problemas de forma moderna",
     );
   });
 
