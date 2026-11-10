@@ -24,12 +24,12 @@ export const homeContent: HomeContent = {
   },
   hero: {
     label: "Desenvolvedor de software",
-    headline: { lead: "Desenvolvedor Full Stack", accent: "do requisito à produção" },
+    headline: { lead: "Desenvolvedor Full Stack", accent: "resolvendo problemas de forma moderna" },
     badge: {
       label: "SDD",
       text: "Spec-Driven Development, com IA e revisão humana",
     },
-    intro: "Especifico, decido a arquitetura, entrego com testes e reviso cada mudança. A IA executa; a responsabilidade é minha.",
+    intro: "Utilizo IA para entregar produtos de qualidade em pouco tempo, evitando bugs e agilizando pontos complexos.",
     stackLine: ["TypeScript", "React", "Node"],
     actions: {
       contact: { label: "Contato", href: "#contato" },
@@ -53,10 +53,10 @@ export const homeContent: HomeContent = {
         context: ["Trabalho · Mobs2", "App + API"],
         title: "Avaria",
         description:
-          "Refiz um app difícil de manter. Propus a solução, decidi a arquitetura e entreguei app e API. Ficou +3 anos no ar, com +1 mil clientes.",
+          "Um app difícil de manter precisava ser refeito. Propus a reformulação de um projeto de grande importância para a empresa. Ficou em produção por ~3 anos, com uso de ~1 mil funcionários das empresas clientes.",
         metrics: [
-          { label: "Em produção", value: "+3 anos" },
-          { label: "Clientes", value: "+1 mil" },
+          { label: "Em produção", value: "~3 anos" },
+          { label: "Funcionários das empresas clientes", value: "~1 mil" },
           { label: "Responsável técnico", value: "App e API" },
         ],
         metricsStyle: "text",
@@ -69,7 +69,7 @@ export const homeContent: HomeContent = {
         context: ["Projeto pessoal · ponta a ponta", "Código aberto"],
         title: "My Trello Version",
         description:
-          "App de tarefas que projetei e entreguei de ponta a ponta: back-end e front-end separados, testes em 3 níveis e CI. Cada PR está aberto no GitHub.",
+          "Quis projetar o meu gerenciador de tarefas e mostrar como utilizo o SDD. Com isso criei o My Trello Version, um projeto completo de como utilizo o Spec-Driven Development, do back-end ao front-end, passando pela infraestrutura.",
         metrics: [
           { label: "PRs mergeados", value: "~456" },
           { label: "commits na main", value: "~1.400" },
@@ -90,7 +90,7 @@ export const homeContent: HomeContent = {
         context: ["Projeto pessoal · ponta a ponta", "Portfólio"],
         title: "Este site",
         description:
-          "O próprio portfólio, projetado e entregue por mim de ponta a ponta: spec antes do código, teste vermelho primeiro, commits pequenos e arquitetura com fronteiras checadas por lint. A IA executa; eu decido e reviso cada mudança.",
+          "Criei este site para ser mais uma forma de mostrar como uso o Spec-Driven Development em sites institucionais, além de apresentar melhor toda a minha bagagem na área de desenvolvimento de software.",
         metrics: [
           { label: "Commits", value: "193" },
           { label: "Testes", value: "Antes do código" },
@@ -122,7 +122,7 @@ export const homeContent: HomeContent = {
         achievements: [
           {
             lead: "Avaria.",
-            text: "Responsável técnico na construção: propus a reconstrução, defini a arquitetura e entreguei app (React Native) e API (Node.js). +3 anos em produção, +1 mil clientes.",
+            text: "Propus uma arquitetura simples, baseada em MVC, para um app mobile complexo demais para escalar. Mantive React Native no mobile e escolhi AdonisJS no back-end, por ser próximo do Laravel, que as outras equipes dominavam. A versão lançada ficou em uso por ~3 anos.",
           },
           {
             lead: "M2, produto principal da empresa.",
@@ -130,7 +130,7 @@ export const homeContent: HomeContent = {
           },
           {
             lead: "MyMobs, MobsTrack, Mobs2 School e Boletim Diário.",
-            text: "Construí e evoluí os 4 apps, incluindo o acompanhamento de QA e UI/UX. Apoiaram a venda e a retenção de clientes.",
+            text: "Com o crescimento da squad mobile, surgiram novos problemas para as transportadoras. Atuei com a squad de negócio nas decisões de design e no desenvolvimento, sempre com arquitetura hexagonal e Flutter. Os projetos foram de extrema importância para conquistar e manter clientes.",
           },
         ],
         tags: ["React Native", "Node.js", "React", "Flutter", "Laravel", "Vue.js", "SQL Server", "Azure DevOps"],
@@ -139,31 +139,19 @@ export const homeContent: HomeContent = {
         link: { label: "Ver o caso Avaria", href: "/casos/avaria" },
       },
       {
-        company: "Duo Technology",
+        company: "DUO Technology",
         period: "ago. de 2025 - set. de 2026",
         role: "Desenvolvedor Full Stack",
         achievements: [
-          { text: "Entreguei o app FOCO Aluguel de Carros em React Native e o publiquei para os usuários." },
+          { lead: "FOCO Aluguel de Carros.", text: "O app limitava o avanço da empresa. Apoiei a equipe mobile na reescrita, propus arquitetura hexagonal com princípios de DDD e migrei de Flutter para React Native. Publiquei o app para os usuários, com boa escalabilidade e manutenibilidade." },
           {
-            text: "No Coral, principal sistema da FOCO, criei em Node.js as features que o time de operação precisava.",
+            lead: "Coral, principal sistema da FOCO.",
+            text: "Tinha funcionalidades pendentes para o time de operação. Criei essas features em Node.js, aplicando IA em cada tarefa. Entreguei atividades complexas em menos tempo e com boa qualidade.",
           },
         ],
         tags: ["Node.js · NestJS", "React Native", "Angular", "Jest", "DDD · SOLID"],
         mainTags: ["Node.js · NestJS", "React Native"],
         note: "Claude Code no dia a dia, com revisão de todo código gerado antes do PR.",
-      },
-      {
-        company: "Globals",
-        companyDetail: "· Missão Crítica",
-        period: "nov. de 2022 - jan. de 2023",
-        role: "Desenvolvedor Full Stack",
-        achievements: [
-          {
-            text: "Em 3 meses, evoluí o sistema de monitoramento de estradas de uma concessionária com novas features. Integrei as câmeras, que passaram a ser controladas de um painel só.",
-          },
-        ],
-        tags: [".NET", "Angular", "Integração com hardware"],
-        mainTags: [".NET", "Angular"],
       },
     ],
   },
@@ -174,7 +162,7 @@ export const homeContent: HomeContent = {
     main: [
       { name: "TypeScript", note: "back, web e mobile" },
       { name: "React", note: "web e React Native" },
-      { name: "Node", note: "API em produção por +3 anos e outras em manutenção" },
+      { name: "Node", note: "API em produção por ~3 anos e outras em manutenção" },
     ],
     otherLabel: "também já trabalhei com",
     others: [

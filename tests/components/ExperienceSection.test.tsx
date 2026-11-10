@@ -23,13 +23,12 @@ describe("ExperienceSection", () => {
     expect(h2s[0]).toHaveTextContent("Onde construí");
   });
 
-  it("renders three h3 entries in order: Mobs2, Duo Technology, Globals · Missão Crítica", () => {
+  it("renders two h3 entries in order: Mobs2, DUO Technology", () => {
     render(<ExperienceSection experience={homeContent.experience} />);
     const h3s = screen.getAllByRole("heading", { level: 3 });
     expect(h3s.map((h) => h.textContent)).toEqual([
       "Mobs2",
-      "Duo Technology",
-      "Globals · Missão Crítica",
+      "DUO Technology",
     ]);
   });
 

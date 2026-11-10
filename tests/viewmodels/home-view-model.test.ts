@@ -12,7 +12,7 @@ import {
 } from "@/viewmodels/home-view-model";
 
 const entry: ExperienceEntry = {
-  company: "Duo Technology",
+  company: "DUO Technology",
   period: "ago. de 2025 - set. de 2026",
   duration: "1 ano",
   role: "Desenvolvedor Full Stack",
@@ -38,7 +38,7 @@ describe("toExperienceEntryView", () => {
 
   it("passes the other fields through unchanged", () => {
     const view = toExperienceEntryView(entry);
-    expect(view.company).toBe("Duo Technology");
+    expect(view.company).toBe("DUO Technology");
     expect(view.duration).toBe("1 ano");
     expect(view.role).toBe("Desenvolvedor Full Stack");
     expect(view.achievements).toEqual(entry.achievements);

@@ -12,12 +12,12 @@ describe("Hero", () => {
     render(<Hero hero={hero} />);
     const headings = screen.getAllByRole("heading", { level: 1 });
     expect(headings).toHaveLength(1);
-    expect(headings[0]).toHaveTextContent("Desenvolvedor Full Stack do requisito à produção");
+    expect(headings[0]).toHaveTextContent("Desenvolvedor Full Stack resolvendo problemas de forma moderna");
   });
 
   it("highlights the headline accent on its own line in the brand color", () => {
     render(<Hero hero={hero} />);
-    const accent = screen.getByText("do requisito à produção");
+    const accent = screen.getByText("resolvendo problemas de forma moderna");
     expect(accent.tagName).toBe("SPAN");
     expect(accent).toHaveClass("block", "text-brand-text");
   });
@@ -41,7 +41,7 @@ describe("Hero", () => {
       screen.getByText("Spec-Driven Development, com IA e revisão humana"),
     ).toBeInTheDocument();
     expect(
-      screen.getByText("Especifico, decido a arquitetura, entrego com testes e reviso cada mudança. A IA executa; a responsabilidade é minha."),
+      screen.getByText("Utilizo IA para entregar produtos de qualidade em pouco tempo, evitando bugs e agilizando pontos complexos."),
     ).toBeInTheDocument();
     expect(
       screen.getByText((_, element) => element?.tagName === "P" && element.textContent === "TypeScript · React · Node"),

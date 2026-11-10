@@ -46,13 +46,13 @@ describe("homeContent.hero", () => {
     expect(hero.label).toBe("Desenvolvedor de software");
     expect(hero.headline).toEqual({
       lead: "Desenvolvedor Full Stack",
-      accent: "do requisito à produção",
+      accent: "resolvendo problemas de forma moderna",
     });
     expect(hero.badge).toEqual({
       label: "SDD",
       text: "Spec-Driven Development, com IA e revisão humana",
     });
-    expect(hero.intro).toBe("Especifico, decido a arquitetura, entrego com testes e reviso cada mudança. A IA executa; a responsabilidade é minha.");
+    expect(hero.intro).toBe("Utilizo IA para entregar produtos de qualidade em pouco tempo, evitando bugs e agilizando pontos complexos.");
     expect(hero.stackLine).toEqual(["TypeScript", "React", "Node"]);
   });
 
@@ -89,11 +89,11 @@ describe("homeContent.projects", () => {
   it("has the Avaria card strings verbatim", () => {
     expect(avaria.context).toEqual(["Trabalho · Mobs2", "App + API"]);
     expect(avaria.description).toBe(
-      "Refiz um app difícil de manter. Propus a solução, decidi a arquitetura e entreguei app e API. Ficou +3 anos no ar, com +1 mil clientes.",
+      "Um app difícil de manter precisava ser refeito. Propus a reformulação de um projeto de grande importância para a empresa. Ficou em produção por ~3 anos, com uso de ~1 mil funcionários das empresas clientes.",
     );
     expect(avaria.metrics).toEqual([
-      { label: "Em produção", value: "+3 anos" },
-      { label: "Clientes", value: "+1 mil" },
+      { label: "Em produção", value: "~3 anos" },
+      { label: "Funcionários das empresas clientes", value: "~1 mil" },
       { label: "Responsável técnico", value: "App e API" },
     ]);
     expect(avaria.tags).toEqual(["TypeScript", "React Native", "Node.js · AdonisJS", "SQL Server"]);
@@ -106,7 +106,7 @@ describe("homeContent.projects", () => {
   it("has the My Trello Version card strings verbatim", () => {
     expect(trello.context).toEqual(["Projeto pessoal · ponta a ponta", "Código aberto"]);
     expect(trello.description).toBe(
-      "App de tarefas que projetei e entreguei de ponta a ponta: back-end e front-end separados, testes em 3 níveis e CI. Cada PR está aberto no GitHub.",
+      "Quis projetar o meu gerenciador de tarefas e mostrar como utilizo o SDD. Com isso criei o My Trello Version, um projeto completo de como utilizo o Spec-Driven Development, do back-end ao front-end, passando pela infraestrutura.",
     );
     expect(trello.metrics).toEqual([
       { label: "PRs mergeados", value: "~456" },
@@ -128,7 +128,7 @@ describe("homeContent.projects", () => {
     expect(site.context).toEqual(["Projeto pessoal · ponta a ponta", "Portfólio"]);
     expect(site.title).toBe("Este site");
     expect(site.description).toBe(
-      "O próprio portfólio, projetado e entregue por mim de ponta a ponta: spec antes do código, teste vermelho primeiro, commits pequenos e arquitetura com fronteiras checadas por lint. A IA executa; eu decido e reviso cada mudança.",
+      "Criei este site para ser mais uma forma de mostrar como uso o Spec-Driven Development em sites institucionais, além de apresentar melhor toda a minha bagagem na área de desenvolvimento de software.",
     );
     expect(site.tags).toEqual(["TypeScript", "Next.js", "Tailwind CSS", "pnpm"]);
     expect(site.mainTags).toEqual(["TypeScript", "Next.js"]);
@@ -159,7 +159,7 @@ describe("homeContent.projects", () => {
 
 describe("homeContent.experience", () => {
   const { experience } = homeContent;
-  const [mobs2, duo, globals] = experience.entries;
+  const [mobs2, duo] = experience.entries;
 
   it("has the section heading and id", () => {
     expect(experience.sectionId).toBe("experiencia");
@@ -167,17 +167,14 @@ describe("homeContent.experience", () => {
     expect(experience.title).toBe("Onde construí");
   });
 
-  it("lists the three entries in order with period or duration", () => {
+  it("lists the two entries in order with period or duration", () => {
     expect(experience.entries.map((entry) => entry.company)).toEqual([
       "Mobs2",
-      "Duo Technology",
-      "Globals",
+      "DUO Technology",
     ]);
-    expect(globals.companyDetail).toBe("· Missão Crítica");
     expect(mobs2.duration).toBe("4 anos");
     expect(mobs2.period).toBe("jun. de 2021 - set. de 2025");
     expect(duo.period).toBe("ago. de 2025 - set. de 2026");
-    expect(globals.period).toBe("nov. de 2022 - jan. de 2023");
   });
 
   it("gives every entry the Full Stack role", () => {
@@ -190,7 +187,7 @@ describe("homeContent.experience", () => {
     expect(mobs2.achievements).toEqual([
       {
         lead: "Avaria.",
-        text: "Responsável técnico na construção: propus a reconstrução, defini a arquitetura e entreguei app (React Native) e API (Node.js). +3 anos em produção, +1 mil clientes.",
+        text: "Propus uma arquitetura simples, baseada em MVC, para um app mobile complexo demais para escalar. Mantive React Native no mobile e escolhi AdonisJS no back-end, por ser próximo do Laravel, que as outras equipes dominavam. A versão lançada ficou em uso por ~3 anos.",
       },
       {
         lead: "M2, produto principal da empresa.",
@@ -198,7 +195,7 @@ describe("homeContent.experience", () => {
       },
       {
         lead: "MyMobs, MobsTrack, Mobs2 School e Boletim Diário.",
-        text: "Construí e evoluí os 4 apps, incluindo o acompanhamento de QA e UI/UX. Apoiaram a venda e a retenção de clientes.",
+        text: "Com o crescimento da squad mobile, surgiram novos problemas para as transportadoras. Atuei com a squad de negócio nas decisões de design e no desenvolvimento, sempre com arquitetura hexagonal e Flutter. Os projetos foram de extrema importância para conquistar e manter clientes.",
       },
     ]);
     expect(mobs2.tags).toEqual([
@@ -215,27 +212,17 @@ describe("homeContent.experience", () => {
     expect(mobs2.link).toEqual({ label: "Ver o caso Avaria", href: "/casos/avaria" });
   });
 
-  it("has the Duo Technology entry verbatim", () => {
+  it("has the DUO Technology entry verbatim", () => {
     expect(duo.achievements).toEqual([
-      { text: "Entreguei o app FOCO Aluguel de Carros em React Native e o publiquei para os usuários." },
+      { lead: "FOCO Aluguel de Carros.", text: "O app limitava o avanço da empresa. Apoiei a equipe mobile na reescrita, propus arquitetura hexagonal com princípios de DDD e migrei de Flutter para React Native. Publiquei o app para os usuários, com boa escalabilidade e manutenibilidade." },
       {
-        text: "No Coral, principal sistema da FOCO, criei em Node.js as features que o time de operação precisava.",
+        lead: "Coral, principal sistema da FOCO.",
+            text: "Tinha funcionalidades pendentes para o time de operação. Criei essas features em Node.js, aplicando IA em cada tarefa. Entreguei atividades complexas em menos tempo e com boa qualidade.",
       },
     ]);
     expect(duo.tags).toEqual(["Node.js · NestJS", "React Native", "Angular", "Jest", "DDD · SOLID"]);
     expect(duo.note).toBe("Claude Code no dia a dia, com revisão de todo código gerado antes do PR.");
     expect(duo.link).toBeUndefined();
-  });
-
-  it("has the Globals entry verbatim", () => {
-    expect(globals.achievements).toEqual([
-      {
-        text: "Em 3 meses, evoluí o sistema de monitoramento de estradas de uma concessionária com novas features. Integrei as câmeras, que passaram a ser controladas de um painel só.",
-      },
-    ]);
-    expect(globals.tags).toEqual([".NET", "Angular", "Integração com hardware"]);
-    expect(globals.note).toBeUndefined();
-    expect(globals.link).toBeUndefined();
   });
 
   it("contains no placeholder text", () => {
@@ -256,7 +243,7 @@ describe("homeContent.stack", () => {
     expect(stack.main).toEqual([
       { name: "TypeScript", note: "back, web e mobile" },
       { name: "React", note: "web e React Native" },
-      { name: "Node", note: "API em produção por +3 anos e outras em manutenção" },
+      { name: "Node", note: "API em produção por ~3 anos e outras em manutenção" },
     ]);
   });
 
