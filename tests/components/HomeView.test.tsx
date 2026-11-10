@@ -1,6 +1,6 @@
 import { readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
-import { cleanup, render, screen } from "@testing-library/react";
+import { cleanup, render, screen, within } from "@testing-library/react";
 import { afterEach, describe, expect, it } from "vitest";
 import { HomeView } from "@/components/HomeView";
 import { homeContent } from "@/content/home";
@@ -53,6 +53,13 @@ describe("HomeView", () => {
     expect(screen.getAllByRole("heading", { level: 1 })).toHaveLength(1);
     expect(screen.getAllByRole("heading", { level: 2 })).toHaveLength(5);
     expect(screen.getAllByRole("heading", { level: 3 }).length).toBeGreaterThan(0);
+  });
+
+  it("renders three project cards, the last one spanning both columns", () => {
+    render(<HomeView content={homeContent} brand="Rafael Couto Silva" />);
+    const cards = within(screen.getByRole("region", { name: "Projetos em destaque" })).getAllByRole("article");
+    expect(cards).toHaveLength(3);
+    expect(cards[2]).toHaveClass("md:col-span-2");
   });
 
   it("renders the hero headline and the contact heading", () => {

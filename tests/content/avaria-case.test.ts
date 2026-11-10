@@ -44,13 +44,13 @@ describe("avariaCase sections", () => {
 
   it("has the Problema paragraphs", () => {
     expect(block(0, "paragraphs").items).toEqual([
-      "Já existia uma versão do aplicativo, mas ela não estava boa e era difícil de manter. Cada correção pesava mais do que deveria. Por isso reconstruí.",
+      "Já existia uma versão do aplicativo, mas a manutenção era cara: cada correção pesava mais do que deveria. Reescrever compensava mais do que continuar corrigindo.",
     ]);
   });
 
   it("has the Decisão paragraph and the AdonisJS callout with three reasons", () => {
     expect(block(1, "paragraphs").items).toEqual([
-      "Propus a reconstrução quando ainda era dev júnior, e ela foi aprovada. Passei a decidir a arquitetura, o app em React Native e a API em Node.js.",
+      "Propus a reconstrução e ela foi aprovada. Passei a decidir a arquitetura, o app em React Native e a API em Node.js.",
     ]);
     expect(block(1, "callout")).toEqual({
       kind: "callout",
@@ -65,7 +65,7 @@ describe("avariaCase sections", () => {
 
   it("has the Resultado paragraph and three metrics", () => {
     expect(block(2, "paragraphs").items).toEqual([
-      "O app entrou em produção e ficou no ar por mais de 3 anos, atendendo mais de 1 mil clientes. Depois da entrega, a manutenção passou para outra squad.",
+      "O app entrou em produção e ficou no ar por mais de 3 anos, atendendo mais de 1 mil clientes. Depois da entrega, outra squad assumiu a manutenção.",
     ]);
     expect(block(2, "metrics").items).toEqual([
       { value: "+3 anos", label: "em produção" },
@@ -87,10 +87,14 @@ describe("avariaCase stack and closing", () => {
     ]);
   });
 
+  it("has no next-case row", () => {
+    expect(avariaCase.closing.next).toBeUndefined();
+  });
+
   it("has the Próximo caso card with three actions", () => {
     expect(avariaCase.closing.eyebrow).toBe("Próximo caso");
     expect(avariaCase.closing.title).toBe("My Trello Version");
-    expect(avariaCase.closing.text).toBe("Projeto pessoal, feito sozinho, do requisito ao código.");
+    expect(avariaCase.closing.text).toBe("Projeto pessoal, de ponta a ponta, do requisito ao código.");
     expect(avariaCase.closing.actions).toEqual([
       { link: { label: "Ver o caso", href: "/casos/my-trello-version" }, variant: "ghost", icon: "arrow" },
       { link: { label: "Contato", href: "/#contato" }, variant: "primary" },

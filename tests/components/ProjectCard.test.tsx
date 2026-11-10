@@ -107,6 +107,45 @@ describe("ProjectCard", () => {
     expect(button).not.toHaveClass("border-brand-text/50");
   });
 
+  describe("wide layout with rows metrics", () => {
+    const wide = {
+      ...trello,
+      layout: "wide" as const,
+      metricsStyle: "rows" as const,
+      metrics: [
+        { label: "Commits", value: "193" },
+        { label: "Testes", value: "Antes do código" },
+        { label: "Checagens", value: "Gate único" },
+      ],
+    };
+
+    it("spans two columns from md only when layout is wide", () => {
+      const { unmount } = render(<ProjectCard project={wide} />);
+      expect(screen.getByRole("article")).toHaveClass("md:col-span-2");
+      unmount();
+      render(<ProjectCard project={avaria} />);
+      expect(screen.getByRole("article")).not.toHaveClass("md:col-span-2");
+    });
+
+    it("splits text and rows into two columns from md", () => {
+      render(<ProjectCard project={wide} />);
+      expect(screen.getByRole("article")).toHaveClass("md:grid", "md:grid-cols-2");
+    });
+
+    it("renders each row as dt then dd, label before value", () => {
+      render(<ProjectCard project={wide} />);
+      for (const { label, value } of wide.metrics) {
+        const dt = screen.getByText(label);
+        const dd = screen.getByText(value);
+        expect(dt.tagName).toBe("DT");
+        expect(dd.tagName).toBe("DD");
+        expect(dt.parentElement?.firstElementChild).toBe(dt);
+        expect(dt.nextElementSibling).toBe(dd);
+        expect(dt.parentElement).toHaveClass("justify-between");
+      }
+    });
+  });
+
   it("uses small corner radii like the design", () => {
     render(<ProjectCard project={avaria} />);
     expect(screen.getByRole("article")).toHaveClass("rounded-xl");

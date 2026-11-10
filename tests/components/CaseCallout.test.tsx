@@ -21,6 +21,22 @@ describe("CaseCallout", () => {
     expect(listItems.map((item) => item.textContent)).toEqual(items);
   });
 
+  it("renders backtick-marked text in a monospace code element without the backticks", () => {
+    render(<CaseCallout label="Any callout label" items={["Keep it in `any/path/` only"]} />);
+
+    const code = screen.getByText("any/path/");
+
+    expect(code.tagName).toBe("CODE");
+    expect(code).toHaveClass("font-mono");
+    expect(screen.getByRole("listitem").textContent).toBe("Keep it in any/path/ only");
+  });
+
+  it("renders an item without backticks with no code element", () => {
+    const { container } = render(<CaseCallout label="Any callout label" items={items} />);
+
+    expect(container.querySelector("code")).toBeNull();
+  });
+
   it("renders nothing when the reasons list is empty", () => {
     const { container } = render(<CaseCallout label="Any callout label" items={[]} />);
 

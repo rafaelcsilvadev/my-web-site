@@ -1,7 +1,7 @@
 import { cleanup, render, screen } from "@testing-library/react";
 import { afterEach, describe, expect, it } from "vitest";
 import { CaseClosing } from "@/components/CaseClosing";
-import type { CaseAction } from "@/models/case-content";
+import type { CaseAction, CaseClosing as CaseClosingModel } from "@/models/case-content";
 
 afterEach(cleanup);
 
@@ -22,13 +22,14 @@ const external: CaseAction = {
   icon: "github",
 };
 
-function renderClosing(actions: CaseAction[]) {
+function renderClosing(actions: CaseAction[], next?: CaseClosingModel["next"]) {
   return render(
     <CaseClosing
       eyebrow="Any eyebrow"
       title="Any title"
       text="Any closing text"
       actions={actions}
+      next={next}
     />,
   );
 }
@@ -83,5 +84,29 @@ describe("CaseClosing", () => {
     const { container } = renderClosing([]);
     expect(screen.queryAllByRole("link")).toHaveLength(0);
     expect(container.querySelector(":empty")).toBeNull();
+  });
+
+  it("renders the next-case eyebrow, title and a link with the action label and href", () => {
+    renderClosing([], {
+      eyebrow: "Any next eyebrow",
+      title: "Any next title",
+      action: {
+        link: { label: "Any next label", href: "/casos/any-next" },
+        variant: "ghost",
+        icon: "arrow",
+      },
+    });
+    expect(screen.getByText("Any next eyebrow")).toBeInTheDocument();
+    expect(screen.getByText("Any next title")).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: "Any next label" })).toHaveAttribute(
+      "href",
+      "/casos/any-next",
+    );
+  });
+
+  it("renders no divider and no extra row without next", () => {
+    const { container } = renderClosing([internal]);
+    expect(container.querySelector("hr")).toBeNull();
+    expect(screen.getAllByRole("link")).toHaveLength(1);
   });
 });

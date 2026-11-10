@@ -38,10 +38,10 @@ describe("Hero", () => {
     expect(screen.getByText("Desenvolvedor de software")).toBeInTheDocument();
     expect(screen.getByText("SDD")).toBeInTheDocument();
     expect(
-      screen.getByText("Com IA, revisão humana em cada PR"),
+      screen.getByText("Spec-Driven Development, com IA e revisão humana"),
     ).toBeInTheDocument();
     expect(
-      screen.getByText("Especificação, teste e revisão. Qualidade desde o primeiro commit."),
+      screen.getByText("Especifico, decido a arquitetura, entrego com testes e reviso cada mudança. A IA executa; a responsabilidade é minha."),
     ).toBeInTheDocument();
     expect(
       screen.getByText((_, element) => element?.tagName === "P" && element.textContent === "TypeScript · React · Node"),

@@ -15,7 +15,8 @@ export interface ProjectItem {
   title: string;
   description: string;
   metrics: Metric[];
-  metricsStyle: "text" | "number";
+  metricsStyle: "text" | "number" | "rows";
+  layout?: "wide";
   tags: string[];
   mainTags: string[];
   caseLink: Link;

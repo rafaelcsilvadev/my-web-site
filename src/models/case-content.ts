@@ -9,6 +9,10 @@ export interface CaseAction {
   download?: boolean;
 }
 
+export type EvidenceItem =
+  | { kind: "metric"; value: string; label: string }
+  | { kind: "highlight"; title: string; text: string };
+
 export type CaseBlock =
   | { kind: "paragraphs"; items: string[] }
   | { kind: "callout"; label: string; items: string[] }
@@ -19,6 +23,7 @@ export type CaseBlock =
       items: { number: string; title: string; caption: string; highlight?: boolean }[];
     }
   | { kind: "highlights"; items: { title: string; text: string }[] }
+  | { kind: "evidence"; items: EvidenceItem[] }
   | {
       kind: "figure";
       src: string;
@@ -54,6 +59,7 @@ export interface CaseClosing {
   title: string;
   text: string;
   actions: CaseAction[];
+  next?: { eyebrow: string; title: string; action: CaseAction };
 }
 
 export interface CaseContent {

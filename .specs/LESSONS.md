@@ -32,6 +32,12 @@ Seen once or not yet corroborated. Tracked, not trusted.
 - evidence: validation.md P2 AC3 (src/components/CaseSteps.tsx:19) (components)
 - last seen: 2026-11-08T15:03:03Z
 
+### L-004 - When a component gains an optional prop, add a page-level test that renders real content through the parent view and asserts the new output, not only the component and content in isolation
+- signal: `ac_gap` · recurrence: 1 feature(s) · scope: `views` · harmful: 0
+- features: this-site
+- evidence: src/components/CaseView.tsx:99-104 (Chain AC2, AC4) (views)
+- last seen: 2026-11-09T23:15:02Z
+
 ## Quarantined (failed when applied - ignore)
 
 A confirmed lesson that recurred alongside failure. Kept for the maintainer to review.

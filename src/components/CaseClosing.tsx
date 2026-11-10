@@ -3,7 +3,7 @@ import type { CaseClosing as CaseClosingModel } from "@/models/case-content";
 
 type CaseClosingProps = CaseClosingModel;
 
-export function CaseClosing({ eyebrow, title, text, actions }: CaseClosingProps) {
+export function CaseClosing({ eyebrow, title, text, actions, next }: CaseClosingProps) {
   return (
     <section
       aria-labelledby="case-closing-title"
@@ -29,6 +29,25 @@ export function CaseClosing({ eyebrow, title, text, actions }: CaseClosingProps)
             />
           ))}
         </div>
+      ) : null}
+      {next ? (
+        <>
+          <hr className="m-0 mt-2 w-full border-0 border-t border-line" />
+          <div className="flex w-full flex-wrap items-center justify-between gap-4">
+            <div className="flex flex-col gap-1">
+              <p className="m-0 font-mono text-xs uppercase tracking-widest text-brand-text">
+                {next.eyebrow}
+              </p>
+              <p className="m-0 text-xl font-bold text-fg">{next.title}</p>
+            </div>
+            <ButtonLink
+              link={next.action.link}
+              variant={next.action.variant}
+              icon={next.action.icon}
+              download={next.action.download}
+            />
+          </div>
+        </>
       ) : null}
     </section>
   );

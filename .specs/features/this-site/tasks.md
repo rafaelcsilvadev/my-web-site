@@ -100,7 +100,7 @@ T10 → T11
 
 ---
 
-### T2: Render inline code in `CaseCallout`
+### T2: Render inline code in `CaseCallout` ✅
 
 **What**: `CaseCallout` renders each item through `splitInlineCode`, code segments in `<code>` with `font-mono`.
 **Where**: `src/components/CaseCallout.tsx`
@@ -115,12 +115,12 @@ T10 → T11
 
 **Done when**:
 
-- [ ] An item with backticks renders a `<code>` element holding the marked text, without the backticks
-- [ ] An item without backticks renders exactly as before; existing `CaseCallout` tests stay unchanged and green
-- [ ] An empty `items` list still renders no container
-- [ ] No PT-BR literal in the component
-- [ ] Gate check passes: `pnpm test`
-- [ ] Test count: existing + 2 new tests pass
+- [x] An item with backticks renders a `<code>` element holding the marked text, without the backticks
+- [x] An item without backticks renders exactly as before; existing `CaseCallout` tests stay unchanged and green
+- [x] An empty `items` list still renders no container
+- [x] No PT-BR literal in the component
+- [x] Gate check passes: `pnpm test`
+- [x] Test count: existing + 2 new tests pass
 
 **Tests**: unit
 **Gate**: quick
@@ -129,7 +129,7 @@ T10 → T11
 
 ---
 
-### T3: Add `CaseEvidenceRow` component
+### T3: Add `CaseEvidenceRow` component ✅
 
 **What**: One list of cards, each a metric (`value` + `label`) or a highlight (`title` + `text`), three columns from `md`, one column on mobile.
 **Where**: `src/components/CaseEvidenceRow.tsx`
@@ -144,12 +144,12 @@ T10 → T11
 
 **Done when**:
 
-- [ ] Renders `193` / "commits", "Testes antes do código" / its text and "Gate único" / its text, in that order, as list items
-- [ ] The list has `grid-cols-1` and `md:grid-cols-3` classes
-- [ ] Empty `items` renders no container
-- [ ] The component declares its own `EvidenceItem` prop type from `@/models/case-content` only after T4; until then it imports nothing from models (type kept local and moved in T4)
-- [ ] Gate check passes: `pnpm test`
-- [ ] Test count: 4 new tests pass
+- [x] Renders `193` / "commits", "Testes antes do código" / its text and "Gate único" / its text, in that order, as list items
+- [x] The list has `grid-cols-1` and `md:grid-cols-3` classes
+- [x] Empty `items` renders no container
+- [x] The component declares its own `EvidenceItem` prop type from `@/models/case-content` only after T4; until then it imports nothing from models (type kept local and moved in T4)
+- [x] Gate check passes: `pnpm test`
+- [x] Test count: 4 new tests pass
 
 **Tests**: unit
 **Gate**: quick
@@ -158,7 +158,7 @@ T10 → T11
 
 ---
 
-### T4: Add `evidence` block to the case model and `CaseView`
+### T4: Add `evidence` block to the case model and `CaseView` ✅
 
 **What**: `EvidenceItem` and the `{ kind: "evidence" }` block in `case-content.ts`; `CaseView` renders it with `CaseEvidenceRow`, whose local prop type now imports `EvidenceItem`.
 **Where**: `src/components/CaseView.tsx`
@@ -173,11 +173,11 @@ T10 → T11
 
 **Done when**:
 
-- [ ] A case with an `evidence` block renders its three cards inside the section
-- [ ] Existing `CaseView` tests stay unchanged and green
-- [ ] `pnpm typecheck` passes (the switch handles every `kind`)
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
-- [ ] Test count: existing + 1 new test pass
+- [x] A case with an `evidence` block renders its three cards inside the section
+- [x] Existing `CaseView` tests stay unchanged and green
+- [x] `pnpm typecheck` passes (the switch handles every `kind`)
+- [x] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
+- [x] Test count: existing + 1 new test pass
 
 **Tests**: unit
 **Gate**: full
@@ -186,7 +186,7 @@ T10 → T11
 
 ---
 
-### T5: Add optional `next` row to `CaseClosing`
+### T5: Add optional `next` row to `CaseClosing` ✅
 
 **What**: `CaseClosing.next?` in the model; the card renders a divider and a "Próximo caso" row (eyebrow, title, one `ButtonLink`) after the actions when `next` is present.
 **Where**: `src/components/CaseClosing.tsx`
@@ -201,11 +201,11 @@ T10 → T11
 
 **Done when**:
 
-- [ ] With `next`, the card shows its eyebrow, title and a link with the action's label and `href`
-- [ ] Without `next`, the card renders no divider and no extra row; existing `CaseClosing` tests stay unchanged and green
-- [ ] No PT-BR literal in the component
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
-- [ ] Test count: existing + 2 new tests pass
+- [x] With `next`, the card shows its eyebrow, title and a link with the action's label and `href`
+- [x] Without `next`, the card renders no divider and no extra row; existing `CaseClosing` tests stay unchanged and green
+- [x] No PT-BR literal in the component
+- [x] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
+- [x] Test count: existing + 2 new tests pass
 
 **Tests**: unit
 **Gate**: full
@@ -214,7 +214,7 @@ T10 → T11
 
 ---
 
-### T6: Serve the Home screenshot
+### T6: Serve the Home screenshot ✅
 
 **What**: Copy `~/Pictures/Screenshots/Screenshot from 2026-11-09 19-07-32.png` to `public/this-site-home.png` and add it to the public-assets test.
 **Where**: `public/this-site-home.png`
@@ -229,9 +229,9 @@ T10 → T11
 
 **Done when**:
 
-- [ ] Test asserts the file exists, has the PNG signature and size 1679x1127, and fails before the copy
-- [ ] Gate check passes: `pnpm test`
-- [ ] Test count: 3 new assertions pass
+- [x] Test asserts the file exists, has the PNG signature and size 1679x1127, and fails before the copy
+- [x] Gate check passes: `pnpm test`
+- [x] Test count: 3 new assertions pass
 
 **Tests**: unit
 **Gate**: quick
@@ -240,7 +240,7 @@ T10 → T11
 
 ---
 
-### T7: Write Este site case content
+### T7: Write Este site case content ✅
 
 **What**: `esteSiteCase` entry with every string, link, block and chip from the spec; not registered yet.
 **Where**: `src/content/this-site-case.ts`
@@ -255,11 +255,11 @@ T10 → T11
 
 **Done when**:
 
-- [ ] Test asserts verbatim: eyebrow, title, intro, both hero actions (GitHub URL, `/#contato`), the Objetivo text, the three Decisões items (third with backticks around `src/content/`), the three evidence items, the figure (`/this-site-home.png`, 1679x1127, alt, caption "A Home deste site."), the four chips with TypeScript and Next.js as main, and the closing card with its three actions in order
-- [ ] Test asserts `JSON.stringify` of the entry has no `[conferir`
-- [ ] The closing has no `next`
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
-- [ ] Test count: ≥ 10 new tests pass
+- [x] Test asserts verbatim: eyebrow, title, intro, both hero actions (GitHub URL, `/#contato`), the Objetivo text, the three Decisões items (third with backticks around `src/content/`), the three evidence items, the figure (`/this-site-home.png`, 1679x1127, alt, caption "A Home deste site."), the four chips with TypeScript and Next.js as main, and the closing card with its three actions in order
+- [x] Test asserts `JSON.stringify` of the entry has no `[conferir`
+- [x] The closing has no `next`
+- [x] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
+- [x] Test count: ≥ 10 new tests pass
 
 **Tests**: unit
 **Gate**: full
@@ -268,7 +268,7 @@ T10 → T11
 
 ---
 
-### T8: Register the Este site case
+### T8: Register the Este site case ✅
 
 **What**: Append the entry to `cases` so the route, the sitemap and the metadata include `este-site`.
 **Where**: `src/content/cases.ts`
@@ -283,13 +283,13 @@ T10 → T11
 
 **Done when**:
 
-- [ ] `tests/content/cases.test.ts` expects `["avaria", "my-trello-version", "este-site"]` and the title "Este site · Rafael Couto Silva" plus the description from the spec; red before the change
-- [ ] Sitemap test lists `/casos/este-site` with priority 0.8
-- [ ] The parametric metadata test covers the new slug: title, description, Open Graph `url` under `NEXT_PUBLIC_SITE_URL`, image `/og-image.png`
-- [ ] A page test renders `/casos/este-site` through `CaseView` and finds the h1 "Este site"; one `h1` only; sections `h2` with `aria-labelledby`
-- [ ] Unknown slug still reaches `notFound()`
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
-- [ ] Test count: existing + ≥ 5 new tests pass
+- [x] `tests/content/cases.test.ts` expects `["avaria", "my-trello-version", "este-site"]` and the title "Este site · Rafael Couto Silva" plus the description from the spec; red before the change
+- [x] Sitemap test lists `/casos/este-site` with priority 0.8
+- [x] The parametric metadata test covers the new slug: title, description, Open Graph `url` under `NEXT_PUBLIC_SITE_URL`, image `/og-image.png`
+- [x] A page test renders `/casos/este-site` through `CaseView` and finds the h1 "Este site"; one `h1` only; sections `h2` with `aria-labelledby`
+- [x] Unknown slug still reaches `notFound()`
+- [x] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
+- [x] Test count: existing + ≥ 5 new tests pass
 
 **Tests**: unit
 **Gate**: full
@@ -298,7 +298,7 @@ T10 → T11
 
 ---
 
-### T9: Point My Trello Version closing to Este site
+### T9: Point My Trello Version closing to Este site ✅
 
 **What**: Add `next` ("Próximo caso" / "Este site" / "Ver o caso" to `/casos/este-site`) to the My Trello Version closing; "Código aberto" stays as is.
 **Where**: `src/content/my-trello-version-case.ts`
@@ -313,11 +313,11 @@ T10 → T11
 
 **Done when**:
 
-- [ ] Test asserts the `next` fields verbatim and that the existing closing eyebrow, title, text and three actions are unchanged
-- [ ] Avaria and Este site closings have no `next`
-- [ ] The registry link test still passes (`/casos/este-site` is a registered slug)
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test && pnpm build`
-- [ ] Test count: existing + 3 new tests pass
+- [x] Test asserts the `next` fields verbatim and that the existing closing eyebrow, title, text and three actions are unchanged
+- [x] Avaria and Este site closings have no `next`
+- [x] The registry link test still passes (`/casos/este-site` is a registered slug)
+- [x] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test && pnpm build`
+- [x] Test count: existing + 3 new tests pass
 
 **Tests**: unit
 **Gate**: build
@@ -326,7 +326,7 @@ T10 → T11
 
 ---
 
-### T10: Add wide layout and rows metrics to `ProjectCard`
+### T10: Add wide layout and rows metrics to `ProjectCard` ✅
 
 **What**: `ProjectItem.layout?: "wide"` and `metricsStyle: "rows"` in the model; `ProjectCard` spans two columns from `md`, splits text and rows, and renders label/value rows when asked.
 **Where**: `src/components/ProjectCard.tsx`
@@ -341,12 +341,12 @@ T10 → T11
 
 **Done when**:
 
-- [ ] A `wide` card has the `md:col-span-2` class; a card without `layout` keeps its current classes
-- [ ] With `rows`, each metric renders its label and its value as `dt` / `dd` in label-then-value order
-- [ ] Existing `ProjectCard` tests stay unchanged and green (Avaria and Trello render as before)
-- [ ] No PT-BR literal in the component
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
-- [ ] Test count: existing + 3 new tests pass
+- [x] A `wide` card has the `md:col-span-2` class; a card without `layout` keeps its current classes
+- [x] With `rows`, each metric renders its label and its value as `dt` / `dd` in label-then-value order
+- [x] Existing `ProjectCard` tests stay unchanged and green (Avaria and Trello render as before)
+- [x] No PT-BR literal in the component
+- [x] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test`
+- [x] Test count: existing + 3 new tests pass
 
 **Tests**: unit
 **Gate**: full
@@ -355,7 +355,7 @@ T10 → T11
 
 ---
 
-### T11: Add the Este site card to the Home
+### T11: Add the Este site card to the Home ✅
 
 **What**: Append the third project item to `homeContent.projects.items`.
 **Where**: `src/content/home.ts`
@@ -370,12 +370,12 @@ T10 → T11
 
 **Done when**:
 
-- [ ] `tests/content/home.test.ts` expects three items in order Avaria, My Trello Version, Este site, and asserts verbatim the context, title, text, four chips (two main), three rows (`Commits` / `193`, `Testes` / "Antes do código", `Checagens` / "Gate único"), `caseLink` to `/casos/este-site` and `repoLink` to `https://github.com/rafaelcsilvadev/my-web-site` with `external: true`; red before the change
-- [ ] The Avaria and Trello items are unchanged
-- [ ] `ProjectsSection` and `HomeView` tests render three cards, the last one spanning both columns
-- [ ] `[conferir` appears nowhere in the Home content
-- [ ] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test && pnpm build`
-- [ ] Test count: existing + ≥ 4 new tests pass
+- [x] `tests/content/home.test.ts` expects three items in order Avaria, My Trello Version, Este site, and asserts verbatim the context, title, text, four chips (two main), three rows (`Commits` / `193`, `Testes` / "Antes do código", `Checagens` / "Gate único"), `caseLink` to `/casos/este-site` and `repoLink` to `https://github.com/rafaelcsilvadev/my-web-site` with `external: true`; red before the change
+- [x] The Avaria and Trello items are unchanged
+- [x] `ProjectsSection` and `HomeView` tests render three cards, the last one spanning both columns
+- [x] `[conferir` appears nowhere in the Home content
+- [x] Gate check passes: `pnpm lint && pnpm typecheck && pnpm test && pnpm build`
+- [x] Test count: existing + ≥ 4 new tests pass
 
 **Tests**: unit
 **Gate**: build

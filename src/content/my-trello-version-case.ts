@@ -7,13 +7,13 @@ export const myTrelloVersionCase: CaseContent = {
   metadata: {
     title: "My Trello Version · Rafael Couto Silva",
     description:
-      "Caso My Trello Version: quadro estilo Trello feito do zero e sozinho. Código aberto, testes em 3 níveis, CI e revisão de cada Pull Request.",
+      "Caso My Trello Version: quadro estilo Trello projetado e entregue de ponta a ponta. Código aberto, testes em 3 níveis, CI e revisão de cada Pull Request.",
   },
   backLink: { label: "Voltar para o início", href: "/" },
-  eyebrow: "Caso · Projeto pessoal, feito sozinho",
+  eyebrow: "Caso · Projeto pessoal, de ponta a ponta",
   title: "My Trello Version",
   intro:
-    "Um quadro estilo Trello que eu construí sozinho, do requisito ao código. Cada Pull Request está aberto no GitHub, para você conferir.",
+    "Quadro estilo Trello que projetei e entreguei de ponta a ponta, com contrato de API compartilhado, testes em 3 níveis e CI. Cada Pull Request está aberto no GitHub, para você conferir.",
   heroActions: [
     {
       link: { label: "Ver no GitHub", href: repoUrl, external: true },
@@ -35,7 +35,7 @@ export const myTrelloVersionCase: CaseContent = {
           items: [
             {
               label: "A dor",
-              text: "Eu queria um app de controle de tarefas mais simples, gratuito e customizado. Como não achei, construí o meu.",
+              text: "Não achei um app de tarefas simples, gratuito e customizável. Defini o escopo e construí o meu.",
             },
           ],
         },
@@ -48,7 +48,7 @@ export const myTrelloVersionCase: CaseContent = {
             },
             {
               label: "Mostrar",
-              text: "Um jeito disciplinado de construir software com IA: eu especifico, a IA executa, eu reviso cada Pull Request.",
+              text: "Um jeito disciplinado de construir software com IA: eu especifico e decido a arquitetura, a IA executa, eu reviso cada Pull Request.",
             },
           ],
         },
@@ -152,7 +152,7 @@ export const myTrelloVersionCase: CaseContent = {
         mainChips: ["Docker"],
       },
     ],
-    note: "Estado: a versão web está completa. O app mobile ainda não foi iniciado.",
+    note: "Escopo: a versão web está completa. O app mobile está fora do escopo por ora.",
   },
   closing: {
     eyebrow: "Código aberto",
@@ -172,5 +172,14 @@ export const myTrelloVersionCase: CaseContent = {
         download: true,
       },
     ],
+    next: {
+      eyebrow: "Próximo caso",
+      title: "Este site",
+      action: {
+        link: { label: "Ver o caso", href: "/casos/este-site" },
+        variant: "ghost",
+        icon: "arrow",
+      },
+    },
   },
 };

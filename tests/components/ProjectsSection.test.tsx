@@ -21,14 +21,22 @@ describe("ProjectsSection", () => {
     expect(h2s[0]).toHaveTextContent("Projetos em destaque");
   });
 
-  it("renders two h3 cards, Avaria then My Trello Version", () => {
+  it("renders three h3 cards: Avaria, My Trello Version, Este site", () => {
     render(<ProjectsSection projects={homeContent.projects} />);
     const h3s = screen.getAllByRole("heading", { level: 3 });
-    expect(h3s.map((h) => h.textContent)).toEqual(["Avaria", "My Trello Version"]);
+    expect(h3s.map((h) => h.textContent)).toEqual(["Avaria", "My Trello Version", "Este site"]);
   });
 
   it("renders one article per project", () => {
     render(<ProjectsSection projects={homeContent.projects} />);
-    expect(screen.getAllByRole("article")).toHaveLength(2);
+    expect(screen.getAllByRole("article")).toHaveLength(3);
+  });
+
+  it("makes only the last card span both columns from md", () => {
+    render(<ProjectsSection projects={homeContent.projects} />);
+    const [avaria, trello, site] = screen.getAllByRole("article");
+    expect(site).toHaveClass("md:col-span-2");
+    expect(avaria).not.toHaveClass("md:col-span-2");
+    expect(trello).not.toHaveClass("md:col-span-2");
   });
 });
