@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Avaria · Rafael Couto Silva</title>
+<meta name="description" content="Caso Avaria: de um app difícil de manter a um sistema com +3 anos em produção e +1 mil clientes.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B0B10">
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<!-- TODO: troque SEU-DOMINIO pelo endereço real antes de publicar (o preview em redes sociais exige URL absoluta). -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Avaria · Rafael Couto Silva">
+<meta property="og:description" content="Caso Avaria: de um app difícil de manter a um sistema com +3 anos em produção e +1 mil clientes.">
+<meta property="og:url" content="https://SEU-DOMINIO/caso-avaria.html">
+<meta property="og:image" content="https://SEU-DOMINIO/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Rafael Couto Silva, Desenvolvedor Full Stack, resolvendo problemas de forma moderna">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="stylesheet" href="css/style.css">
+<script src="js/menu.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<div class="site case" id="topo">
+
+
+<header class="wrap" style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:20px">
+<a class="brand" href="index.html"><span style="font-size:15px">Rafael Couto Silva</span><span class="caret" aria-hidden="true"></span></a>
+<nav class="nav-links" aria-label="Principal" style="display:flex;align-items:center;gap:24px">
+<a class="navlink" href="index.html">Início</a>
+<a class="navlink" href="index.html#projetos">Projetos</a>
+<a class="navlink" href="index.html#experiencia">Experiência</a>
+<a class="navlink" href="index.html#stack">Stack</a>
+<a class="navlink" href="index.html#metodo">Método</a>
+</nav>
+<div style="display:flex;align-items:center;gap:10px">
+<a class="btn btn-primary btn-sm" href="#contato">Contato</a>
+<button class="menu-btn" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-mobile"><svg class="icon-open" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="icon-close" viewBox="0 0 24 24" aria-hidden="true" hidden><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+</div>
+<nav class="menu-panel" id="menu-mobile" aria-label="Menu" hidden>
+<a class="menu-link" href="index.html">Início<span class="mono">00</span></a>
+<a class="menu-link" href="index.html#projetos">Projetos<span class="mono">01</span></a>
+<a class="menu-link" href="index.html#experiencia">Experiência<span class="mono">02</span></a>
+<a class="menu-link" href="index.html#stack">Stack<span class="mono">03</span></a>
+<a class="menu-link" href="index.html#metodo">Método<span class="mono">04</span></a>
+<a class="menu-link" href="#contato">Contato<span class="mono">05</span></a>
+</nav>
+</header>
+<main id="conteudo">
+
+<section class="wrap" style="display:flex;flex-direction:column;gap:28px;padding-block:clamp(32px,5vw,64px) clamp(32px,4vw,56px);align-items:flex-start">
+<a class="link" href="index.html" style="display:inline-flex;align-items:center;gap:8px;min-height:44px"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"></path></svg>Voltar para o início</a>
+<span class="eyebrow">Caso · Mobs2</span>
+<h1 style="margin:0;font-size:clamp(44px,8vw,88px);line-height:1;letter-spacing:-.04em;font-weight:800">Avaria</h1>
+<p class="muted" style="margin:0;font-size:clamp(18px,2.2vw,22px);max-width:720px">Um app difícil de manter virou um sistema com ~3 anos em produção e ~1 mil funcionários das empresas clientes. Eu propus a reconstrução e fui o responsável técnico por app e API.</p>
+<dl style="margin:0;width:100%;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr));gap:0;border:1px solid rgba(255,255,255,.08);border-radius:14px;background:rgba(255,255,255,.02)">
+<div style="padding:20px 24px"><dt class="mono muted" style="font-size:12.5px">Empresa</dt><dd style="margin:4px 0 0;font-weight:700">Mobs2</dd></div>
+<div style="padding:20px 24px"><dt class="mono muted" style="font-size:12.5px">Papel</dt><dd style="margin:4px 0 0;font-weight:700">App + API</dd></div>
+<div style="padding:20px 24px"><dt class="mono muted" style="font-size:12.5px">Contexto</dt><dd style="margin:4px 0 0;font-weight:700">Empresa de pequeno porte</dd></div>
+</dl>
+</section>
+
+<section class="wrap sec" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:24px 64px">
+<div style="display:flex;align-items:flex-start;gap:16px"><span class="step-no">01</span><h2 class="h2" style="font-size:clamp(26px,3.4vw,34px);padding-top:4px">Problema</h2></div>
+<div style="grid-column:span 1;display:flex;flex-direction:column;gap:16px">
+<p style="margin:0">Já existia uma versão do aplicativo, mas a manutenção era cara: cada correção pesava mais do que deveria. Reescrever compensava mais do que continuar corrigindo.</p>
+</div>
+</section>
+<div class="wrap"><hr class="rule"></div>
+
+<section class="wrap sec" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:24px 64px">
+<div style="display:flex;align-items:flex-start;gap:16px"><span class="step-no">02</span><h2 class="h2" style="font-size:clamp(26px,3.4vw,34px);padding-top:4px">Decisão</h2></div>
+<div style="display:flex;flex-direction:column;gap:20px">
+<p style="margin:0">Propus a reconstrução e ela foi aprovada. Passei a decidir a arquitetura, o app em React Native e a API em Node.js.</p>
+<div class="card" style="padding:24px;display:flex;flex-direction:column;gap:14px">
+<span class="eyebrow">Por que AdonisJS</span>
+<p style="margin:0">Parecido com o Laravel, a stack principal da empresa: os outros devs se adaptariam mais fácil.</p>
+<hr class="rule">
+<p style="margin:0">Mantém TypeScript no back-end e no mobile.</p>
+<hr class="rule">
+<p style="margin:0">Descartei o Laravel porque eu e o colega do mobile dominávamos mais o Node.js. Descartei o NestJS porque o AdonisJS é mais próximo do Laravel.</p>
+</div>
+</div>
+</section>
+<div class="wrap"><hr class="rule"></div>
+
+<section class="wrap sec" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(440px,100%),1fr));gap:24px 64px">
+<div style="display:flex;align-items:flex-start;gap:16px"><span class="step-no">03</span><h2 class="h2" style="font-size:clamp(26px,3.4vw,34px);padding-top:4px">Resultado</h2></div>
+<div style="display:flex;flex-direction:column;gap:20px">
+<p style="margin:0">O app entrou em produção e ficou no ar por ~3 anos, atendendo ~1 mil funcionários das empresas clientes. Depois da entrega, outra squad assumiu a manutenção.</p>
+</div>
+<div class="met2">
+<div class="card" style="padding:20px"><span class="mono" style="font-size:22px;font-weight:700;color:#E3B5F0;display:block">~3 anos</span><span class="muted" style="font-size:14px">em produção</span></div>
+<div class="card" style="padding:20px"><span class="mono" style="font-size:22px;font-weight:700;color:#E3B5F0;display:block">~1 mil</span><span class="muted" style="font-size:14px">funcionários das empresas clientes</span></div>
+</div>
+</section>
+<div class="wrap"><hr class="rule"></div>
+
+<section class="wrap sec" style="display:flex;flex-direction:column;gap:20px">
+<span class="eyebrow">Stack</span>
+<div style="display:flex;gap:10px;flex-wrap:wrap"><span class="chip chip-main">TypeScript</span><span class="chip chip-main">React Native</span><span class="chip chip-main">Node.js (AdonisJS)</span><span class="chip chip-main">SQL Server</span></div>
+</section>
+
+<section class="wrap sec" id="contato">
+<div class="card" style="padding:clamp(28px,5vw,48px);display:flex;flex-direction:column;gap:28px;background:radial-gradient(600px 260px at 100% 0,rgba(136,30,155,.35),transparent 70%),linear-gradient(180deg,#16161F,#101018)">
+<div style="display:flex;flex-direction:column;gap:10px">
+<span class="eyebrow">Próximo caso</span>
+<h2 class="h2">My Trello Version</h2>
+<p class="muted" style="margin:0;max-width:560px">Projeto pessoal, de ponta a ponta, do requisito ao código.</p>
+</div>
+<div style="display:flex;gap:14px;flex-wrap:wrap">
+<a class="btn btn-ghost" href="caso-my-trello-version.html">Ver o caso<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<a class="btn btn-primary" href="index.html#contato">Contato</a>
+<a class="btn btn-ghost" href="assets/cv.pdf" download>Baixar CV<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"></path></svg></a>
+</div>
+</div>
+</section>
+
+</main>
+<footer class="wrap" style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-block:32px 48px;border-top:1px solid rgba(255,255,255,.08)">
+<span class="mono muted" style="font-size:13px">© 2026 Rafael Couto Silva</span>
+<a class="link" href="#topo" style="display:inline-flex;align-items:center;min-height:44px">Voltar ao topo</a>
+</footer>
+
+</div>
+</body>
+</html>
