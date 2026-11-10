@@ -15,10 +15,10 @@ describe("myTrelloVersionCase hero", () => {
   it("has the slug, back link, eyebrow, title and intro", () => {
     expect(myTrelloVersionCase.slug).toBe("my-trello-version");
     expect(myTrelloVersionCase.backLink).toEqual({ label: "Voltar para o início", href: "/" });
-    expect(myTrelloVersionCase.eyebrow).toBe("Caso · Projeto pessoal, feito sozinho");
+    expect(myTrelloVersionCase.eyebrow).toBe("Caso · Projeto pessoal, de ponta a ponta");
     expect(myTrelloVersionCase.title).toBe("My Trello Version");
     expect(myTrelloVersionCase.intro).toBe(
-      "Um quadro estilo Trello que eu construí sozinho, do requisito ao código. Cada Pull Request está aberto no GitHub, para você conferir.",
+      "Quadro estilo Trello que projetei e entreguei de ponta a ponta, com contrato de API compartilhado, testes em 3 níveis e CI. Cada Pull Request está aberto no GitHub, para você conferir.",
     );
   });
 
@@ -52,7 +52,7 @@ describe("myTrelloVersionCase sections", () => {
         items: [
           {
             label: "A dor",
-            text: "Eu queria um app de controle de tarefas mais simples, gratuito e customizado. Como não achei, construí o meu.",
+            text: "Não achei um app de tarefas simples, gratuito e customizável. Defini o escopo e construí o meu.",
           },
         ],
       },
@@ -65,7 +65,7 @@ describe("myTrelloVersionCase sections", () => {
           },
           {
             label: "Mostrar",
-            text: "Um jeito disciplinado de construir software com IA: eu especifico, a IA executa, eu reviso cada Pull Request.",
+            text: "Um jeito disciplinado de construir software com IA: eu especifico e decido a arquitetura, a IA executa, eu reviso cada Pull Request.",
           },
         ],
       },
@@ -167,7 +167,7 @@ describe("myTrelloVersionCase stack and closing", () => {
 
   it("has the status note", () => {
     expect(myTrelloVersionCase.stack.note).toBe(
-      "Estado: a versão web está completa. O app mobile ainda não foi iniciado.",
+      "Escopo: a versão web está completa. O app mobile está fora do escopo por ora.",
     );
   });
 
