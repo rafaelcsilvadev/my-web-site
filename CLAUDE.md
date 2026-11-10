@@ -75,6 +75,6 @@ Static-first portfolio site. Public content is in PT-BR.
 `ui/` is the source for everything that comes from outside the code. Treat it as read-only input.
 
 - `ui/images/`: photos, favicons, OG image. Copy what the app serves into `public/`; do not import from `ui/`.
-- `ui/Site vitrine pessoal-png/`: design boards exported as PNG, the visual source of truth for UI (`Sistema visual`, `Home`, `Caso Avaria`, `Caso My Trello Version`, desktop and mobile). Read the matching board before building or changing UI.
+- `ui/boards/`: design boards exported as PNG, the visual source of truth for UI (`Home`, `Caso Avaria`, `Caso My Trello Version`, desktop and mobile). Read the matching board before building or changing UI.
 - `ui/head-snippet.html`: reference for `<head>` metadata (theme color, favicons, Open Graph, Twitter). Port it to the Next.js `metadata` API and replace `https://SEU-DOMINIO` with the real domain.
 - Visual direction from the snippet: dark color scheme, `#0B0B10` theme color.
