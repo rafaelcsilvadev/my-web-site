@@ -5,7 +5,7 @@ export const avariaCase: CaseContent = {
   metadata: {
     title: "Avaria · Rafael Couto Silva",
     description:
-      "Caso Avaria: reconstruí um app difícil de manter. +3 anos em produção, +1 mil clientes.",
+      "Caso Avaria: reconstruí um app difícil de manter, como responsável técnico por app e API. +3 anos em produção, +1 mil clientes.",
   },
   backLink: { label: "Voltar para o início", href: "/" },
   eyebrow: "Caso · Mobs2",
@@ -29,7 +29,7 @@ export const avariaCase: CaseContent = {
         {
           kind: "paragraphs",
           items: [
-            "Já existia uma versão do aplicativo, mas ela não estava boa e era difícil de manter. Cada correção pesava mais do que deveria. Por isso reconstruí.",
+            "Já existia uma versão do aplicativo, mas a manutenção era cara: cada correção pesava mais do que deveria. Reescrever compensava mais do que continuar corrigindo.",
           ],
         },
       ],
@@ -43,7 +43,7 @@ export const avariaCase: CaseContent = {
         {
           kind: "paragraphs",
           items: [
-            "Propus a reconstrução quando ainda era dev júnior, e ela foi aprovada. Passei a decidir a arquitetura, o app em React Native e a API em Node.js.",
+            "Propus a reconstrução e ela foi aprovada. Passei a decidir a arquitetura, o app em React Native e a API em Node.js.",
           ],
         },
         {
@@ -66,7 +66,7 @@ export const avariaCase: CaseContent = {
         {
           kind: "paragraphs",
           items: [
-            "O app entrou em produção e ficou no ar por mais de 3 anos, atendendo mais de 1 mil clientes. Depois da entrega, a manutenção passou para outra squad.",
+            "O app entrou em produção e ficou no ar por mais de 3 anos, atendendo mais de 1 mil clientes. Depois da entrega, outra squad assumiu a manutenção.",
           ],
         },
         {
@@ -92,7 +92,7 @@ export const avariaCase: CaseContent = {
   closing: {
     eyebrow: "Próximo caso",
     title: "My Trello Version",
-    text: "Projeto pessoal, feito sozinho, do requisito ao código.",
+    text: "Projeto pessoal, de ponta a ponta, do requisito ao código.",
     actions: [
       {
         link: { label: "Ver o caso", href: "/casos/my-trello-version" },
