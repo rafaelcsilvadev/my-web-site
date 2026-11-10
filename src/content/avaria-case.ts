@@ -5,19 +5,18 @@ export const avariaCase: CaseContent = {
   metadata: {
     title: "Avaria · Rafael Couto Silva",
     description:
-      "Caso Avaria: reconstruí um app difícil de manter, como responsável técnico por app e API. +3 anos em produção, +1 mil clientes.",
+      "Caso Avaria: reconstruí um app difícil de manter, como responsável técnico por app e API. ~3 anos em produção, ~1 mil funcionários das empresas clientes.",
   },
   backLink: { label: "Voltar para o início", href: "/" },
   eyebrow: "Caso · Mobs2",
   title: "Avaria",
   intro:
-    "Um app difícil de manter virou um sistema com +3 anos em produção e +1 mil clientes. Eu propus a reconstrução e fui o responsável técnico por app e API.",
+    "Um app difícil de manter virou um sistema com ~3 anos em produção e ~1 mil funcionários das empresas clientes. Eu propus a reconstrução e fui o responsável técnico por app e API.",
   heroActions: [],
   facts: [
     { label: "Empresa", value: "Mobs2" },
-    { label: "Papel", value: "Responsável técnico na construção · app e API" },
-    { label: "Contexto", value: "Empresa pequena, 2 devs nos apps" },
-    { label: "Em produção", value: "+3 anos" },
+    { label: "Papel", value: "App + API" },
+    { label: "Contexto", value: "Empresa de pequeno porte" },
   ],
   sections: [
     {
@@ -66,14 +65,14 @@ export const avariaCase: CaseContent = {
         {
           kind: "paragraphs",
           items: [
-            "O app entrou em produção e ficou no ar por mais de 3 anos, atendendo mais de 1 mil clientes. Depois da entrega, outra squad assumiu a manutenção.",
+            "O app entrou em produção e ficou no ar por ~3 anos, atendendo ~1 mil funcionários das empresas clientes. Depois da entrega, outra squad assumiu a manutenção.",
           ],
         },
         {
           kind: "metrics",
           items: [
-            { value: "+3 anos", label: "em produção" },
-            { value: "+1 mil", label: "clientes" },
+            { value: "~3 anos", label: "em produção" },
+            { value: "~1 mil", label: "funcionários das empresas clientes" },
             { value: "App e API", label: "construídos por mim" },
           ],
         },

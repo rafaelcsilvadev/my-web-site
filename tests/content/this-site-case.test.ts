@@ -11,7 +11,7 @@ describe("esteSiteCase hero", () => {
     expect(esteSiteCase.eyebrow).toBe("Caso · Projeto pessoal, de ponta a ponta");
     expect(esteSiteCase.title).toBe("Este site");
     expect(esteSiteCase.intro).toBe(
-      "Projetei, especifiquei e entreguei este site sozinho, como conduziria um produto em time: spec antes do código, teste vermelho primeiro e commits pequenos e revisáveis. A IA executa; eu decido a arquitetura e reviso cada mudança.",
+      "Site para mostrar minhas habilidades com Spec-Driven Development e apresentar, de forma detalhada, pontos da minha carreira.",
     );
   });
 
@@ -30,7 +30,7 @@ describe("esteSiteCase hero", () => {
     expect(esteSiteCase.metadata).toEqual({
       title: "Este site · Rafael Couto Silva",
       description:
-        "Caso Este site: portfólio projetado e entregue de ponta a ponta, com spec, teste vermelho primeiro, arquitetura MVVM com fronteiras checadas por lint e revisão humana de cada mudança.",
+        "Caso Este site: portfólio para mostrar minhas habilidades com Spec-Driven Development e apresentar, de forma detalhada, pontos da minha carreira.",
     });
   });
 });
@@ -58,16 +58,29 @@ describe("esteSiteCase sections", () => {
     ]);
   });
 
-  it("has the Decisões callout with three items, the third marking src/content/ as code", () => {
+  it("has the Decisões as A dor, Construir and Mostrar cards, one on the left and two on the right", () => {
     expect(esteSiteCase.sections[1].layout).toBe("split");
     expect(esteSiteCase.sections[1].blocks).toEqual([
       {
-        kind: "callout",
-        label: "O que decidi e por quê",
+        kind: "cards",
         items: [
-          "Next.js App Router com Server Components por padrão: o HTML já chega pronto do servidor, bom para SEO, com menos JavaScript no cliente. Client Components só onde há estado ou efeito.",
-          "MVVM com fronteiras impostas pelo ESLint: Model, ViewModel e View só se importam na direção certa, então a arquitetura não depende de disciplina.",
-          "Todo texto em `src/content/`, sem texto fixo nos componentes: mudar copy não toca em lógica, e a regra é cobrada em revisão.",
+          {
+            label: "A dor",
+            text: "Um currículo não mostra como eu trabalho. Faltava um lugar para provar minhas habilidades com evidência, e não com adjetivo.",
+          },
+        ],
+      },
+      {
+        kind: "cards",
+        items: [
+          {
+            label: "Construir",
+            text: "Um portfólio estático, rápido e acessível: Next.js App Router com Server Components por padrão, MVVM com fronteiras impostas pelo ESLint e todo texto em src/content/, sem texto fixo nos componentes.",
+          },
+          {
+            label: "Mostrar",
+            text: "Como uso o Spec-Driven Development em um site institucional: spec antes do código, teste vermelho primeiro e commits pequenos. A IA executa; eu decido a arquitetura e reviso cada mudança.",
+          },
         ],
       },
     ]);
@@ -98,9 +111,9 @@ describe("esteSiteCase sections", () => {
     expect(esteSiteCase.sections[2].blocks[1]).toEqual({
       kind: "figure",
       src: "/this-site-home.png",
-      width: 1679,
-      height: 1127,
-      alt: "Tela da Home deste site, com o título Desenvolvedor Full Stack do requisito à produção e o retrato de Rafael",
+      width: 1660,
+      height: 1071,
+      alt: "Tela da Home deste site, com o título Desenvolvedor Full Stack resolvendo problemas de forma moderna e o retrato de Rafael",
       caption: "A Home deste site.",
     });
     expect(esteSiteCase.sections[2].blocks).toHaveLength(2);
@@ -128,15 +141,19 @@ describe("esteSiteCase stack", () => {
 
 describe("esteSiteCase closing", () => {
   it("has the eyebrow, title and text", () => {
-    expect(esteSiteCase.closing.eyebrow).toBe("Fim dos casos");
-    expect(esteSiteCase.closing.title).toBe("De volta ao início");
-    expect(esteSiteCase.closing.text).toBe("Projetos, experiência, stack e método em uma página.");
+    expect(esteSiteCase.closing.eyebrow).toBe("Código aberto");
+    expect(esteSiteCase.closing.title).toBe("Leia o código e o histórico");
+    expect(esteSiteCase.closing.text).toBe("Cada commit está no repositório.");
   });
 
-  it("has Voltar ao início, Contato and Baixar CV actions in order", () => {
+  it("has Ver no GitHub, Contato and Baixar CV actions in order", () => {
     expect(esteSiteCase.closing.actions).toEqual([
-      { link: { label: "Voltar ao início", href: "/" }, variant: "ghost", icon: "arrow" },
-      { link: { label: "Contato", href: "/#contato" }, variant: "primary" },
+      {
+        link: { label: "Ver no GitHub", href: "https://github.com/rafaelcsilvadev/my-web-site", external: true },
+        variant: "primary",
+        icon: "arrow",
+      },
+      { link: { label: "Contato", href: "/#contato" }, variant: "ghost" },
       {
         link: { label: "Baixar CV", href: "/cv-rafael-couto-silva.pdf" },
         variant: "ghost",
@@ -146,8 +163,16 @@ describe("esteSiteCase closing", () => {
     ]);
   });
 
-  it("has no next-case row", () => {
-    expect(esteSiteCase.closing.next).toBeUndefined();
+  it("points the next-case row to Avaria", () => {
+    expect(esteSiteCase.closing.next).toEqual({
+      eyebrow: "Próximo caso",
+      title: "Avaria",
+      action: {
+        link: { label: "Ver o caso", href: "/casos/avaria" },
+        variant: "ghost",
+        icon: "arrow",
+      },
+    });
   });
 });
 

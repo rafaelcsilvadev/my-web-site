@@ -30,7 +30,7 @@ describe("StackSection", () => {
     }
     expect(screen.getByText("back, web e mobile")).toBeInTheDocument();
     expect(screen.getByText("web e React Native")).toBeInTheDocument();
-    expect(screen.getByText("API em produção por +3 anos e outras em manutenção")).toBeInTheDocument();
+    expect(screen.getByText("API em produção por ~3 anos e outras em manutenção")).toBeInTheDocument();
   });
 
   it("lays the main items out as a three-column grid of cards", () => {
