@@ -50,13 +50,13 @@ describe("public assets", () => {
     expect(bytes.readUInt32BE(20)).toBe(915);
   });
 
-  it("serves this-site-home.png as a 1679x1127 PNG", () => {
+  it("serves this-site-home.png as a 1660x1071 PNG", () => {
     const bytes = readFileSync(join(publicDir, "this-site-home.png"));
     const signature = bytes.subarray(0, 8).toString("hex");
     expect(signature).toBe("89504e470d0a1a0a");
     expect(bytes.subarray(12, 16).toString("ascii")).toBe("IHDR");
-    expect(bytes.readUInt32BE(16)).toBe(1679);
-    expect(bytes.readUInt32BE(20)).toBe(1127);
+    expect(bytes.readUInt32BE(16)).toBe(1660);
+    expect(bytes.readUInt32BE(20)).toBe(1071);
   });
 
   it("serves cv-rafael-couto-silva.pdf as a non-empty PDF", () => {
