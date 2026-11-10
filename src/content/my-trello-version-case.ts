@@ -35,7 +35,7 @@ export const myTrelloVersionCase: CaseContent = {
           items: [
             {
               label: "A dor",
-              text: "Não achei um app de tarefas simples, gratuito e customizável. Defini o escopo e construí o meu.",
+              text: "Não achei um app de tarefas simples, gratuito e customizável. Quis construir o meu e mostrar como uso o Spec-Driven Development.",
             },
           ],
         },
