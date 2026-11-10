@@ -28,7 +28,7 @@ describe("case registry", () => {
     expect(bySlug["my-trello-version"].title).toBe("My Trello Version · Rafael Couto Silva");
     expect(bySlug["este-site"].title).toBe("Este site · Rafael Couto Silva");
     expect(bySlug["este-site"].description).toBe(
-      "Caso Este site: o portfólio feito com spec, teste vermelho primeiro e commits pequenos, com a IA executando e revisão humana de cada mudança.",
+      "Caso Este site: portfólio projetado e entregue de ponta a ponta, com spec, teste vermelho primeiro, arquitetura MVVM com fronteiras checadas por lint e revisão humana de cada mudança.",
     );
     for (const entry of cases) {
       expect(entry.metadata.description.trim()).not.toBe("");

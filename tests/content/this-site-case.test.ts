@@ -8,10 +8,10 @@ describe("esteSiteCase hero", () => {
   it("has the slug, back link, eyebrow, title and intro", () => {
     expect(esteSiteCase.slug).toBe("este-site");
     expect(esteSiteCase.backLink).toEqual({ label: "Voltar para o início", href: "/" });
-    expect(esteSiteCase.eyebrow).toBe("Caso · Projeto pessoal, feito sozinho");
+    expect(esteSiteCase.eyebrow).toBe("Caso · Projeto pessoal, de ponta a ponta");
     expect(esteSiteCase.title).toBe("Este site");
     expect(esteSiteCase.intro).toBe(
-      "O site é a prova do meu jeito de trabalhar. Fiz com spec, teste vermelho primeiro e commits pequenos, com a IA executando e eu revisando.",
+      "Projetei, especifiquei e entreguei este site sozinho, como conduziria um produto em time: spec antes do código, teste vermelho primeiro e commits pequenos e revisáveis. A IA executa; eu decido a arquitetura e reviso cada mudança.",
     );
   });
 
@@ -30,7 +30,7 @@ describe("esteSiteCase hero", () => {
     expect(esteSiteCase.metadata).toEqual({
       title: "Este site · Rafael Couto Silva",
       description:
-        "Caso Este site: o portfólio feito com spec, teste vermelho primeiro e commits pequenos, com a IA executando e revisão humana de cada mudança.",
+        "Caso Este site: portfólio projetado e entregue de ponta a ponta, com spec, teste vermelho primeiro, arquitetura MVVM com fronteiras checadas por lint e revisão humana de cada mudança.",
     });
   });
 });
@@ -52,7 +52,7 @@ describe("esteSiteCase sections", () => {
       {
         kind: "paragraphs",
         items: [
-          "Um portfólio estático, rápido e acessível, que mostra o trabalho com evidência e não com adjetivo.",
+          "Um portfólio estático, rápido e acessível, que mostra o trabalho com evidência e não com adjetivo. Também é onde aplico, em escala pequena, o mesmo processo que levo para produção.",
         ],
       },
     ]);
@@ -63,11 +63,11 @@ describe("esteSiteCase sections", () => {
     expect(esteSiteCase.sections[1].blocks).toEqual([
       {
         kind: "callout",
-        label: "O que decidi",
+        label: "O que decidi e por quê",
         items: [
-          "Next.js App Router, com Server Components por padrão e Client Components só onde precisa.",
-          "Arquitetura MVVM: Model, ViewModel e View. As regras de importação são checadas pelo ESLint.",
-          "Todo texto em um só lugar, em `src/content/`. Nenhum texto fixo nos componentes.",
+          "Next.js App Router com Server Components por padrão: o HTML já chega pronto do servidor, bom para SEO, com menos JavaScript no cliente. Client Components só onde há estado ou efeito.",
+          "MVVM com fronteiras impostas pelo ESLint: Model, ViewModel e View só se importam na direção certa, então a arquitetura não depende de disciplina.",
+          "Todo texto em `src/content/`, sem texto fixo nos componentes: mudar copy não toca em lógica, e a regra é cobrada em revisão.",
         ],
       },
     ]);
@@ -83,12 +83,12 @@ describe("esteSiteCase sections", () => {
         {
           kind: "highlight",
           title: "Testes antes do código",
-          text: "O teste vermelho vem primeiro, em cada feature.",
+          text: "Cada feature começa por um teste que falha pelo motivo certo.",
         },
         {
           kind: "highlight",
           title: "Gate único",
-          text: "Lint, typecheck, testes e build.",
+          text: "Lint, typecheck, testes e build precisam passar em cada commit.",
         },
       ],
     });

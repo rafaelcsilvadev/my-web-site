@@ -7,13 +7,13 @@ export const esteSiteCase: CaseContent = {
   metadata: {
     title: "Este site · Rafael Couto Silva",
     description:
-      "Caso Este site: o portfólio feito com spec, teste vermelho primeiro e commits pequenos, com a IA executando e revisão humana de cada mudança.",
+      "Caso Este site: portfólio projetado e entregue de ponta a ponta, com spec, teste vermelho primeiro, arquitetura MVVM com fronteiras checadas por lint e revisão humana de cada mudança.",
   },
   backLink: { label: "Voltar para o início", href: "/" },
-  eyebrow: "Caso · Projeto pessoal, feito sozinho",
+  eyebrow: "Caso · Projeto pessoal, de ponta a ponta",
   title: "Este site",
   intro:
-    "O site é a prova do meu jeito de trabalhar. Fiz com spec, teste vermelho primeiro e commits pequenos, com a IA executando e eu revisando.",
+    "Projetei, especifiquei e entreguei este site sozinho, como conduziria um produto em time: spec antes do código, teste vermelho primeiro e commits pequenos e revisáveis. A IA executa; eu decido a arquitetura e reviso cada mudança.",
   heroActions: [
     {
       link: { label: "Ver no GitHub", href: repoUrl, external: true },
@@ -33,7 +33,7 @@ export const esteSiteCase: CaseContent = {
         {
           kind: "paragraphs",
           items: [
-            "Um portfólio estático, rápido e acessível, que mostra o trabalho com evidência e não com adjetivo.",
+            "Um portfólio estático, rápido e acessível, que mostra o trabalho com evidência e não com adjetivo. Também é onde aplico, em escala pequena, o mesmo processo que levo para produção.",
           ],
         },
       ],
@@ -46,11 +46,11 @@ export const esteSiteCase: CaseContent = {
       blocks: [
         {
           kind: "callout",
-          label: "O que decidi",
+          label: "O que decidi e por quê",
           items: [
-            "Next.js App Router, com Server Components por padrão e Client Components só onde precisa.",
-            "Arquitetura MVVM: Model, ViewModel e View. As regras de importação são checadas pelo ESLint.",
-            "Todo texto em um só lugar, em `src/content/`. Nenhum texto fixo nos componentes.",
+            "Next.js App Router com Server Components por padrão: o HTML já chega pronto do servidor, bom para SEO, com menos JavaScript no cliente. Client Components só onde há estado ou efeito.",
+            "MVVM com fronteiras impostas pelo ESLint: Model, ViewModel e View só se importam na direção certa, então a arquitetura não depende de disciplina.",
+            "Todo texto em `src/content/`, sem texto fixo nos componentes: mudar copy não toca em lógica, e a regra é cobrada em revisão.",
           ],
         },
       ],
@@ -68,12 +68,12 @@ export const esteSiteCase: CaseContent = {
             {
               kind: "highlight",
               title: "Testes antes do código",
-              text: "O teste vermelho vem primeiro, em cada feature.",
+              text: "Cada feature começa por um teste que falha pelo motivo certo.",
             },
             {
               kind: "highlight",
               title: "Gate único",
-              text: "Lint, typecheck, testes e build.",
+              text: "Lint, typecheck, testes e build precisam passar em cada commit.",
             },
           ],
         },
