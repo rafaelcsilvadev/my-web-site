@@ -2,7 +2,7 @@
 
 Personal portfolio of Rafael Couto Silva. Static-first site with public content in PT-BR, featuring a home page and three case studies (Avaria, My Trello Version and this site).
 
-Production URL: https://rafacoutodev.dev.br
+🌐 **Live site:** [rafacoutodev.dev.br](https://rafacoutodev.dev.br)
 
 ## Stack
 
