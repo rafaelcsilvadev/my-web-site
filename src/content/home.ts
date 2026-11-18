@@ -249,20 +249,6 @@ export const homeContent: HomeContent = {
         href: "https://github.com/rafaelcsilvadev",
         external: true,
       },
-      {
-        icon: "youtube",
-        label: "YouTube",
-        value: "youtube.com/@rafa_couto_dev",
-        href: "https://www.youtube.com/@rafa_couto_dev",
-        external: true,
-      },
-      {
-        icon: "instagram",
-        label: "Instagram",
-        value: "instagram.com/rafa_couto_dev",
-        href: "https://www.instagram.com/rafa_couto_dev",
-        external: true,
-      },
     ],
   },
 };
